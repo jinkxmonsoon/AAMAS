@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "CCT Failure Diagnosis (Protocol-First Scaffold)"
+message: "If you use this repository, please cite it as software."
+type: software
+authors:
+  - family-names: "Team"
+    given-names: "CCTDiag"
+version: "0.0.0"
+date-released: "2026-05-13"

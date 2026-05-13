@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cctdiag"
+version = "0.0.0"
+description = "Protocol-first scaffold for CCT failure diagnosis"
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "Proprietary (research-internal placeholder)" }
+authors = [{ name = "CCTDiag Team" }]
+dependencies = []
