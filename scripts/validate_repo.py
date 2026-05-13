@@ -83,10 +83,31 @@ REQUIRED_DIRS = [
 ]
 
 
+
+AMBIGUOUS_NAMES = [
+    "io",
+    "schema",
+    "metrics",
+    "stats",
+    "reporting",
+    "baselines",
+    "diagnosis",
+    "perturbations",
+    "features",
+    "cct",
+]
+
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
     missing_files = [p for p in REQUIRED_FILES if not (root / p).is_file()]
     missing_dirs = [p for p in REQUIRED_DIRS if not (root / p).is_dir()]
+
+    ambiguous = []
+    for name in AMBIGUOUS_NAMES:
+        mod = root / "src" / "cctdiag" / f"{name}.py"
+        pkg = root / "src" / "cctdiag" / name
+        if mod.exists() and pkg.is_dir():
+            ambiguous.append(name)
 
     print("=== Repository Validation Report ===")
     print(f"Root: {root}")
@@ -107,7 +128,14 @@ def main() -> int:
     else:
         print("\nFiles: PASS")
 
-    if missing_dirs or missing_files:
+    if ambiguous:
+        print("\nAmbiguous module/package names:")
+        for name in ambiguous:
+            print(f"  - {name}")
+    else:
+        print("\nAmbiguity check: PASS")
+
+    if missing_dirs or missing_files or ambiguous:
         print("\nFINAL: FAIL")
         return 1
 
