@@ -1,0 +1,15 @@
+status: taxonomy_frozen
+perturbation_taxonomy:
+  - none
+  - paraphrase
+  - tool_output_truncation
+  - partial_observability
+  - non_causal_textual_distraction
+  - evidence_order_shuffle
+  - irrelevant_tool_noise
+  - handoff_ambiguity
+analysis_requirements:
+  - robustness_by_perturbation_type
+  - robustness_by_perturbation_intensity
+  - robustness_step_stability
+  - robustness_tuple_stability

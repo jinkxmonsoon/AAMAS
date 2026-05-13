@@ -1,0 +1,15 @@
+{
+  "record": {
+    "trace_id": "t2", "dataset_version": "BRACIS-Journal-v1", "scenario_group": "clean_broken_handoff",
+    "case_id": "c2", "case_variant": "clean", "perturbation_type": "none", "perturbation_intensity": null,
+    "step_id": "s2", "agent_id": "a2", "agent_role": "reviewer", "input_message": "i", "output_message": "o",
+    "tool_call": null, "tool_output": null, "handoff_from": "a1", "handoff_to": "a2", "evidence_items": [], "evidence_used": [],
+    "terminal_outcome": "fail", "gold_failure_step": "s9", "gold_failure_agent": "a99", "gold_irreversibility": false,
+    "gold_propagation": true, "gold_recoverability": true, "label_source": "manual", "label_confidence": 0.8,
+    "annotator_or_generator": "annotator_x", "provenance_notes": "historical motivation only"
+  },
+  "trace_steps": [
+    {"step_id": "s1", "agent_id": "a1"},
+    {"step_id": "s2", "agent_id": "a2"}
+  ]
+}
