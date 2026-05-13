@@ -20,6 +20,7 @@ REQUIRED_FILES = [
     "docs/04_metrics_definition.md",
     "docs/05_reproducibility_checklist.md",
     "docs/06_journal_positioning.md",
+    "docs/07_desk_reject_artifact_audit.md",
     "src/cctdiag/__init__.py",
     "src/cctdiag/schema/__init__.py",
     "src/cctdiag/io/__init__.py",
@@ -48,6 +49,7 @@ REQUIRED_FILES = [
     "results/tables/.gitkeep",
     "results/figures/.gitkeep",
     "results/reports/.gitkeep",
+    "results/reports/bracis_v0_reported_results.md",
     "notebooks/exploratory/.gitkeep",
 ]
 
