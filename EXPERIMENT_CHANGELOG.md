@@ -29,3 +29,29 @@ All protocol, evaluation, and experiment-design changes must be recorded here.
 - Justification: Pilot lessons reviewed; no additional protocol/config structural changes required beyond explicit readiness gate formalization.
 - Authorization reference: Task 9 instruction
 - Expected validity impact: Improves gating discipline before main-corpus generation; no empirical results affected.
+
+
+- Date (UTC): 2026-05-13
+- Author: Codex TL
+- Change type: Main controlled corpus generation and audit (non-metric, non-claim)
+- Affected artifact(s): data/processed/journal_v1/*, results/reports/journal_v1/*, scripts/build_main_corpus.py, scripts/audit_main_corpus.py, tests/test_main_corpus_builder.py, tests/test_main_corpus_audit.py
+- Justification: Execute Task 10 under frozen protocol to generate independent Journal-v1 main controlled corpus and verify structural/semantic governance gates.
+- Authorization reference: Task 10 instruction
+- Expected validity impact: Enables downstream hypothesis-testing phases without introducing empirical performance claims in this task.
+
+
+- Date (UTC): 2026-05-13
+- Author: Codex TL
+- Change type: Corpus freeze + semantic spot-check governance
+- Affected artifact(s): docs/artifact_manifests/journal_v1_main_corpus_manifest.md, results/reports/journal_v1/main_semantic_spotcheck_report.md, results/reports/journal_v1/main_label_distribution_report.md, results/reports/journal_v1/main_generation_risk_report.md, scripts/make_journal_v1_manifest.py, scripts/audit_main_corpus_semantics.py
+- Justification: Freeze Task 10 corpus artifact and document semantic diversity/bias risks before any evaluation implementation.
+- Authorization reference: Task 10A instruction
+- Expected validity impact: Strengthens pre-evaluation artifact immutability and exposes residual semantic templating risk.
+
+- Date (UTC): 2026-05-13
+- Author: Codex TL
+- Change type: Evaluation block notice
+- Affected artifact(s): results/reports/journal_v1/main_semantic_spotcheck_report.md, PROTOCOL_LOCK.md
+- Justification: Spot-check produced revise recommendations; evaluation remains blocked until explicit correction task approval.
+- Authorization reference: Task 10A instruction (revise/reject handling)
+- Expected validity impact: Prevents premature evaluation on potentially biased corpus samples.
