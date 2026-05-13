@@ -146,3 +146,12 @@ Chronological decisions, assumptions, caveats, and methodological notes.
   - Scientific result: No hypothesis test; no full corpus generation; no metric/baseline/CCT scoring/result table work.
   - Remaining risks: H6 semantics still require richer adjudication exemplars before broad generation confidence.
   - Next mandatory step: approve/waive all listed deltas, then implement the future approved main-corpus builder task under lock rules.
+
+
+- 2026-05-13 (UTC):
+  - Current stage: Task 10 main controlled corpus generation and audit.
+  - Task executed: Generated Journal-v1 main controlled corpus (84 clean + 336 perturbed = 420 total) and ran schema/label/leakage/integrity/split-safety-interface/H6 audits.
+  - Technical result: Added main corpus builder/auditor scripts, generated processed corpus JSONL files, and emitted inventory/audit/H6/leakage/integrity reports.
+  - Scientific result: No hypothesis test, no metric/baseline/CCT scoring/calibration/result table execution; corpus creation only.
+  - Remaining risks: semantic correctness remains dependent on future adjudication quality controls despite gate passes.
+  - Next mandatory step: proceed to protocol-approved downstream evaluation phases without modifying frozen protected items.

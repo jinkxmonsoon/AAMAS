@@ -48,3 +48,9 @@ Any change to these sections requires:
 - Full corpus generation remains blocked until pilot semantic audit and lessons report are complete.
 - Full corpus generation remains blocked until Task 9 readiness check passes.
 - If Task 9 passes, generation is allowed only through a future approved main-corpus builder task.
+
+
+## Task 10 main-corpus generation and audit gate
+- Main controlled corpus generation is permitted only through `scripts/build_main_corpus.py` and must write only to `data/processed/journal_v1/`.
+- Main corpus acceptance requires PASS on schema, label, leakage, integrity, split-safety-interface, and H6 distribution audits via `scripts/audit_main_corpus.py`.
+- This gate does not permit metrics, baselines, CCT scoring, calibration, or result-table generation.
