@@ -1,0 +1,37 @@
+dataset_version: BRACIS-Journal-v1
+relationship_to_v0: independent_reconstruction
+v0_numbers_forbidden_as_targets_or_evidence: true
+phases:
+  - pilot_validation_corpus
+  - main_controlled_corpus
+  - robustness_extension
+  - optional_external_probe
+scenario_groups:
+  - clean_broken_handoff
+  - tool_evidence_usage
+  - same_agent_continuation
+  - cross_agent_propagation
+  - recoverable_irreversible_failure
+  - semantic_collision
+  - complex_collaboration
+core_perturbations:
+  - paraphrase
+  - tool_output_truncation
+  - partial_observability
+  - non_causal_textual_distraction
+optional_robustness_perturbations:
+  - evidence_order_shuffle
+  - irrelevant_tool_noise
+  - handoff_ambiguity
+counts:
+  scenario_group_count: 7
+  clean_cases_per_group: 12
+  total_clean_cases: 84
+  core_perturbations_per_clean_case: 4
+  total_perturbation_variants: 336
+  total_main_controlled_traces: 420
+id_conventions:
+  clean_case_id_pattern: SG_<group_short>_C###
+  clean_trace_id_pattern: JV1_<group_short>_C###_clean
+  perturbed_trace_id_pattern: JV1_<group_short>_C###_<perturbation_type>_P##
+  requires_clean_parent_trace_id: true

@@ -1,0 +1,42 @@
+phase: journal_v1_protocol_frozen
+path_status: path_b_activated
+journal_v1_dataset_version: BRACIS-Journal-v1
+schema_contract_ref: docs/10_journal_v1_operational_contracts.md
+scenario_groups:
+  - clean_broken_handoff
+  - tool_evidence_usage
+  - same_agent_continuation
+  - cross_agent_propagation
+  - recoverable_irreversible_failure
+  - semantic_collision
+  - complex_collaboration
+case_schema_required_keys:
+  - trace_id
+  - dataset_version
+  - scenario_group
+  - case_id
+  - case_variant
+  - perturbation_type
+  - perturbation_intensity
+  - step_id
+  - agent_id
+  - agent_role
+  - input_message
+  - output_message
+  - tool_call
+  - tool_output
+  - handoff_from
+  - handoff_to
+  - evidence_items
+  - evidence_used
+  - terminal_outcome
+  - gold_failure_step
+  - gold_failure_agent
+  - gold_irreversibility
+  - gold_propagation
+  - gold_recoverability
+  - label_source
+  - label_confidence
+  - annotator_or_generator
+  - provenance_notes
+acceptance_gate: frozen_before_execution
