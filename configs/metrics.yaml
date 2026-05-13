@@ -1,0 +1,13 @@
+status: interface_only_frozen
+metric_interfaces:
+  - step_accuracy
+  - agent_accuracy
+  - tuple_accuracy
+  - irreversibility_accuracy
+  - propagation_accuracy
+  - recoverability_accuracy
+  - robustness_step_stability
+  - robustness_tuple_stability
+  - refinement_call_rate
+  - fixed_worsened_unchanged_counts
+  - runtime_or_cost_if_available

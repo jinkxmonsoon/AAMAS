@@ -1,0 +1,10 @@
+status: policy_frozen
+seed_policy:
+  no_silent_changes: true
+  record_all_generation_and_evaluation_seeds: true
+  loso_groups_predefined_before_calibration: true
+  perturbation_must_link_to_clean_case_id: true
+seed_registry_placeholder:
+  generation_seed: TBD
+  evaluation_seed: TBD
+  calibration_seed: TBD
