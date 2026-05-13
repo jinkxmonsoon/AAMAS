@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+ruff_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Data/results generated artifacts
+results/**/*.csv
+results/**/*.json
+results/**/*.parquet
+results/**/*.png
+results/**/*.pdf
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
