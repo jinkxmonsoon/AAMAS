@@ -1,0 +1,2 @@
+# Initialization-phase requirements placeholder.
+# Add pinned dependencies only after protocol approval.
