@@ -1,0 +1,17 @@
+status: registry_only_frozen
+baseline_registry:
+  - random_step
+  - majority_step
+  - flat_log_keyword
+  - flat_log_llm_judge_placeholder
+  - spectrum_inspired
+  - cct_uncalibrated
+  - cct_calibrated_v1
+  - cct_no_criticality
+  - cct_no_irreversibility
+  - cct_no_propagation
+  - cct_no_evidence_flow
+  - cct_no_handoff
+  - refinement_v2a
+  - refinement_v2b
+  - refinement_v2c

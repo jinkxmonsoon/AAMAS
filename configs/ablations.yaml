@@ -1,0 +1,7 @@
+status: placeholder_frozen
+ablation_registry:
+  - cct_no_criticality
+  - cct_no_irreversibility
+  - cct_no_propagation
+  - cct_no_evidence_flow
+  - cct_no_handoff

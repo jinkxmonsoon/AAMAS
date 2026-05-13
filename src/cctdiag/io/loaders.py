@@ -1,0 +1,12 @@
+"""Non-experimental corpus loaders."""
+import json
+from pathlib import Path
+
+
+def load_jsonl(path: str):
+    rows = []
+    for line in Path(path).read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if line:
+            rows.append(json.loads(line))
+    return rows

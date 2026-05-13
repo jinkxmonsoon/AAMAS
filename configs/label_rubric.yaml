@@ -1,0 +1,43 @@
+label_semantics:
+  gold_failure_step: first_decisive_failure_step
+  gold_failure_agent: agent_responsible_for_failure_step
+  gold_irreversibility:
+    positive: no_viable_downstream_correction
+    negative: downstream_correction_viable
+    borderline: depends_on_unstated_assumptions
+    uncertain_when: insufficient_evidence
+  gold_propagation:
+    positive: downstream_material_dependency_on_faulty_output
+    negative: error_local_not_reused
+    borderline: lexical_repetition_without_decision_dependency
+  gold_recoverability:
+    recoverable_failure: terminal_fix_possible
+    unrecoverable_failure: terminal_fix_not_possible
+    recovered_intermediate_error: early_error_resolved_before_terminal
+label_provenance_fields:
+  - synthetic_control_rule
+  - primary_labeler
+  - secondary_labeler
+  - adjudicator
+  - manual_audit_status
+  - label_confidence
+  - label_rationale
+  - disagreement_type
+  - adjudication_decision
+anti_leakage_rules:
+  - gold_fields_not_in_input_or_output_messages
+  - no_explicit_failing_step_marker_in_trace
+  - scenario_names_must_not_directly_reveal_label
+  - perturbations_must_not_introduce_label_hints
+  - label_rationale_separate_from_model_visible_fields
+acceptance_criteria:
+  schema_validation_pass_rate: 1.0
+  label_consistency_pass_rate: 1.0
+  require_unique_trace_id: true
+  require_parent_link_for_perturbations: true
+  require_expected_perturbation_variants_per_clean_case: true
+  require_scenario_target_counts: true
+  require_gold_failure_step_exists: true
+  require_gold_failure_agent_in_trace: true
+  require_rationale_for_irreversibility_propagation_recoverability: true
+  require_leakage_audit_before_metrics: true
