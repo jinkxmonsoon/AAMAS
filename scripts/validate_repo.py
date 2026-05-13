@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate required repository structure for initialization task."""
+"""Validate required repository structure for protocol-first scaffold hardening."""
 
 from pathlib import Path
 
@@ -9,6 +9,10 @@ REQUIRED_FILES = [
     "PROTOCOL_LOCK.md",
     "EXPERIMENT_CHANGELOG.md",
     "RESEARCH_LOG.md",
+    "requirements.txt",
+    "pyproject.toml",
+    ".gitignore",
+    "CITATION.cff",
     "docs/00_project_scope.md",
     "docs/01_research_questions.md",
     "docs/02_claims_allowed_forbidden.md",
@@ -17,22 +21,65 @@ REQUIRED_FILES = [
     "docs/05_reproducibility_checklist.md",
     "docs/06_journal_positioning.md",
     "src/cctdiag/__init__.py",
-    "src/cctdiag/io.py",
-    "src/cctdiag/schema.py",
+    "src/cctdiag/schema/__init__.py",
+    "src/cctdiag/io/__init__.py",
+    "src/cctdiag/cct/__init__.py",
+    "src/cctdiag/features/__init__.py",
+    "src/cctdiag/baselines/__init__.py",
+    "src/cctdiag/diagnosis/__init__.py",
+    "src/cctdiag/perturbations/__init__.py",
+    "src/cctdiag/metrics/__init__.py",
+    "src/cctdiag/stats/__init__.py",
+    "src/cctdiag/reporting/__init__.py",
     "configs/protocol.yaml",
     "configs/metrics.yaml",
     "configs/seeds.yaml",
+    "configs/baselines.yaml",
+    "configs/ablations.yaml",
+    "configs/robustness.yaml",
     "tests/test_placeholder.py",
     "scripts/validate_repo.py",
+    "scripts/validate_protocol.py",
+    "data/raw/.gitkeep",
+    "data/interim/.gitkeep",
+    "data/processed/.gitkeep",
+    "data/external/.gitkeep",
+    "results/raw/.gitkeep",
+    "results/tables/.gitkeep",
+    "results/figures/.gitkeep",
+    "results/reports/.gitkeep",
+    "notebooks/exploratory/.gitkeep",
 ]
 
 REQUIRED_DIRS = [
     "docs",
     "src",
     "src/cctdiag",
+    "src/cctdiag/schema",
+    "src/cctdiag/io",
+    "src/cctdiag/cct",
+    "src/cctdiag/features",
+    "src/cctdiag/baselines",
+    "src/cctdiag/diagnosis",
+    "src/cctdiag/perturbations",
+    "src/cctdiag/metrics",
+    "src/cctdiag/stats",
+    "src/cctdiag/reporting",
     "configs",
     "tests",
     "scripts",
+    "data",
+    "data/raw",
+    "data/interim",
+    "data/processed",
+    "data/external",
+    "results",
+    "results/raw",
+    "results/tables",
+    "results/figures",
+    "results/reports",
+    "notebooks",
+    "notebooks/exploratory",
 ]
 
 
@@ -43,6 +90,8 @@ def main() -> int:
 
     print("=== Repository Validation Report ===")
     print(f"Root: {root}")
+    print(f"Checked directories: {len(REQUIRED_DIRS)}")
+    print(f"Checked files: {len(REQUIRED_FILES)}")
 
     if missing_dirs:
         print("\nMissing directories:")
