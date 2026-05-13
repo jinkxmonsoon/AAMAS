@@ -29,3 +29,12 @@ All protocol, evaluation, and experiment-design changes must be recorded here.
 - Justification: Pilot lessons reviewed; no additional protocol/config structural changes required beyond explicit readiness gate formalization.
 - Authorization reference: Task 9 instruction
 - Expected validity impact: Improves gating discipline before main-corpus generation; no empirical results affected.
+
+
+- Date (UTC): 2026-05-13
+- Author: Codex TL
+- Change type: Main controlled corpus generation and audit (non-metric, non-claim)
+- Affected artifact(s): data/processed/journal_v1/*, results/reports/journal_v1/*, scripts/build_main_corpus.py, scripts/audit_main_corpus.py, tests/test_main_corpus_builder.py, tests/test_main_corpus_audit.py
+- Justification: Execute Task 10 under frozen protocol to generate independent Journal-v1 main controlled corpus and verify structural/semantic governance gates.
+- Authorization reference: Task 10 instruction
+- Expected validity impact: Enables downstream hypothesis-testing phases without introducing empirical performance claims in this task.
