@@ -136,3 +136,9 @@ No traces, labels, perturbations, metrics, baselines, or results are generated i
 - Pilot findings are for protocol refinement only before main corpus generation.
 
 - Main corpus readiness gate is defined in `docs/12_journal_v1_main_corpus_generation_readiness.md` and must pass before generation.
+
+
+## Main corpus status (Task 10)
+- Main controlled corpus generation is now implemented via `scripts/build_main_corpus.py` under frozen plan counts (84/336/420).
+- Main corpus must pass schema, label, leakage, integrity, split-safety, and H6 distribution audits via `scripts/audit_main_corpus.py`.
+- This task generates corpus assets only; no metrics, baselines, scoring, calibration, or claim tables are produced.

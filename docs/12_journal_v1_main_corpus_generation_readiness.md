@@ -83,3 +83,6 @@ Main corpus generation may begin only if:
 
 ## Readiness blockers
 - none
+
+## Post-gate execution note
+- Task 10 execution status: completed under controlled builder + audit pipeline.
