@@ -1,0 +1,34 @@
+{
+  "case_id": "SG_CLE_C001",
+  "case_variant": "clean",
+  "dataset_version": "BRACIS-Journal-v1",
+  "perturbation_intensity": null,
+  "perturbation_type": "none",
+  "private_labels": {
+    "adjudication_decision": "auto_fixture",
+    "adjudicator": "not_required",
+    "disagreement_type": "none",
+    "gold_failure_agent": "a2",
+    "gold_failure_step": "s2",
+    "gold_irreversibility": true,
+    "gold_propagation": true,
+    "gold_recoverability": false,
+    "irreversibility_evidence": "Review does not repair the omitted constraint.",
+    "label_confidence": 0.91,
+    "label_rationale": "Private rationale: s2/a2 omits safety constraint and downstream steps reuse it.",
+    "label_source": "fixture_controlled",
+    "manual_audit_status": "fixture_only",
+    "primary_labeler": "fixture_author",
+    "propagation_evidence": "Downstream steps reuse the incomplete handoff from s2.",
+    "recovery_opportunity": "available_but_missed",
+    "secondary_labeler": "fixture_reviewer"
+  },
+  "provenance": {
+    "annotator_or_generator": "task13_fixture",
+    "provenance_notes": "non-experimental full-trace validator fixture",
+    "synthetic_control_rule": "task13_full_trace_fixture"
+  },
+  "scenario_group": "clean_broken_handoff",
+  "terminal_outcome": "degraded_execution",
+  "trace_id": "JV1_full_trace_fixture_valid"
+}

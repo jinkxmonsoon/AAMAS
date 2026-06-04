@@ -93,3 +93,39 @@ Any change to these sections requires:
 - Current final corpus gate status: cleared; `gold_failure_step` distribution is `s2/s3/s4/s5 = 105/105/105/105`, H6 semantic consistency passes, semantic spot-check passes, and the manual sanity-check sample passes.
 - Shortcut gates pass: no failure step exceeds 40%, no failure agent exceeds 50%, no scenario group or perturbation type collapses to one failure step, `always_s2=25.00%`, and `majority_step=25.00%`.
 - A future explicitly approved task may implement metric interfaces and trivial baselines; this gate still does not authorize CCT scoring, calibration, refinement, empirical evaluation, or paper result tables.
+
+## Task 11 metric-interface and trivial-baseline sanity gate
+- Basic metric interfaces and allowed trivial baselines are authorized only for diagnostic shortcut-risk checks on the corrected BRACIS-Journal-v1 corpus.
+- Task 11 diagnostic outputs must not be treated as paper-ready result tables, CCT comparisons, CCT evidence, calibration evidence, refinement evidence, ablation evidence, or evidence for H1.
+- H6 diagnostic accuracies must be `NA` when a baseline does not produce the relevant H6 prediction.
+- The standalone trivial-baseline gate blocks future evaluation if any standalone trivial step baseline exceeds 50% step accuracy or if `majority_agent` exceeds 50% agent accuracy; random and first/last active agent diagnostics above 50% require review.
+- Current Task 11 status: diagnostic trivial-baseline gate passed on `data/processed/journal_v1/main_all_traces.jsonl`; no CCT scoring, calibration, refinement variant, ablation, or paper-ready result table was implemented.
+
+## Task 12 non-CCT baseline diagnostic gate
+- Flat-log and spectrum-inspired baselines are authorized only as diagnostic non-CCT shortcut checks for BRACIS-Journal-v1.
+- Task 12 does not authorize CCT graph construction, CCT scoring, calibration, V2 refinement, ablations, empirical hypothesis tests, or paper-ready result tables.
+- If any non-CCT baseline exceeds 70% step or agent accuracy, evaluation is flagged for corpus/baseline review; if any exceeds 85%, evaluation is blocked pending investigation.
+- Current Task 12 status: non-CCT diagnostics are implemented and explicitly mark the gate as blocked because simple non-CCT log/metadata heuristics exceed the 85% blocker threshold; no CCT implementation was added.
+
+## Task 12A evaluation-input leakage correction gate
+- All diagnostic baselines and future evaluation code must consume sanitized prediction views from `src/cctdiag/io/views.py`; raw records are private evaluation artifacts, not model inputs.
+- Prediction views must exclude gold labels, private label metadata, H6 rationale/evidence fields that state outcomes, provenance/control fields, and target-equivalent top-level `step_id`, `agent_id`, and failure-centered handoff pointers.
+- Current Task 12A status: direct target-equivalent baseline input leakage is corrected, but evaluation remains blocked because the corpus is failure-centered and lacks full ordered multi-step traces; sanitized visible content still permits blocked step attribution.
+- No CCT graph construction, CCT scoring, calibration, refinement, ablation, empirical evaluation, or paper-ready result table may proceed until a full-trace prediction-view correction task clears this gate.
+
+## Task 12B full ordered trace schema migration freeze
+- The current 420-record Journal-v1 corpus is formally marked failure-centered and not evaluation-ready; no result from it may be used as paper evidence.
+- The next evaluation-ready corpus schema must use one record per complete ordered multi-step trace with a model-visible `steps` array and private labels/rationales/provenance outside prediction input.
+- Top-level failure-centered `step_id`, `agent_id`, and target-equivalent handoff pointers are prohibited in future prediction views.
+- Existing records may be converted only if a future audit proves enough information exists for lossless full-trace reconstruction; otherwise the corpus must be regenerated from an approved full-trace builder.
+- Evaluation, CCT graph construction, CCT scoring, calibration, refinement, ablations, and paper-ready result tables remain blocked until the full-trace schema migration is implemented and audited.
+
+## Task 13 full-trace schema validator infrastructure gate
+- Full-trace schema contracts, validators, prediction-view helpers, scripts, and non-experimental fixtures are implemented for future corpus migration work only.
+- These validators do not make the current failure-centered 420-record corpus evaluation-ready and do not authorize corpus regeneration.
+- The Task 12B block remains active: evaluation, CCT graph construction, CCT scoring, calibration, refinement, ablations, and paper-ready result tables remain blocked until a future full-trace corpus is generated/migrated and audited.
+
+## Task 14 full-trace pilot corpus gate
+- A 14-trace non-final, non-evidential full-trace pilot may exist under `data/interim/journal_v1_full_trace_pilot/` solely to validate schema, prediction-view, and audit infrastructure.
+- The pilot does not replace the blocked failure-centered main corpus, does not authorize full 420-trace regeneration, and must not be used as paper evidence.
+- Current Task 14 status: pilot build/audit scripts and reports are diagnostic only; all CCT graph construction, CCT scoring, calibration, refinement, ablations, and paper-ready result tables remain blocked.
