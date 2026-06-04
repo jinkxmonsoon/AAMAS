@@ -7,6 +7,6 @@
 - min_steps_per_trace: 4
 - max_steps_per_trace: 5
 - avg_agents_per_trace: 3.00
-- semantic_spotcheck_summary: sampled=18, accept=18, revise=0, reject=0
+- semantic_spotcheck_summary: sampled=19, accept=19, revise=0, reject=0
 - templating_risk_level: low
 - blocker: cleared

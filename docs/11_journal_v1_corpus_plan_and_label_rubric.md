@@ -147,3 +147,11 @@ No traces, labels, perturbations, metrics, baselines, or results are generated i
 ## Task 10B clarification
 - Main-corpus generator must maintain lexical/structural diversity across scenario groups while preserving frozen counts and label semantics.
 - Semantic spot-check summary must explicitly report sampled/accept/revise/reject counts and blocker status before evaluation starts.
+
+## Task 10E pre-evaluation shortcut-risk gate
+- Before metrics, baselines, CCT scoring, calibration, or result tables are implemented, the main corpus must be audited with `scripts/audit_label_position_bias.py`.
+- The audit must report `gold_failure_step` and `gold_failure_agent` distributions overall, by `scenario_group`, and by `perturbation_type`.
+- Diagnostic-only shortcut estimates must include `majority_step`, `majority_agent`, `always_s2`, `first_active_agent` when computable, and `most_common_agent`.
+- These diagnostics are corpus-risk checks only and must not be reported as method results.
+- Evaluation remains blocked if one `gold_failure_step` or any trivial shortcut diagnostic exceeds 50% without explicit written justification or an approved corpus-revision task.
+- Current audit status: blocked because all 420 main-corpus traces have `gold_failure_step=s2`, making `majority_step` and `always_s2` diagnostics 100.00%.
