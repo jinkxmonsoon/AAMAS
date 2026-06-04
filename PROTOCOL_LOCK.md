@@ -71,3 +71,19 @@ Any change to these sections requires:
 ## Task 10D H6 semantic consistency gate
 - Main corpus evaluation remains blocked unless `scripts/audit_h6_semantic_consistency.py` reports FINAL: PASS.
 - Any future H6 contradiction requires corpus correction via approved builder and manifest regeneration before evaluation resumes.
+
+## Task 10E label-position and trivial-shortcut risk gate
+- Main corpus evaluation is blocked unless `scripts/audit_label_position_bias.py` reports shortcut risk below the pre-evaluation thresholds or an explicit written corpus justification/revision task is approved.
+- No single `gold_failure_step` may exceed 50% of the corpus without explicit justification.
+- If any trivial corpus-risk diagnostic (`majority_step`, `majority_agent`, `always_s2`, `first_active_agent` when computable, or `most_common_agent`) exceeds 50%, metric, baseline, CCT scoring, calibration, and result-table work remain blocked.
+- Current Task 10E status: blocked because `gold_failure_step=s2` appears in 420/420 traces (100.00%), so `majority_step` and `always_s2` diagnostic expected accuracy are both 100.00%.
+
+## Task 10F failure-step positional-bias correction gate
+- Main corpus generation now uses semantically grounded failure-step assignment across `s2`, `s3`, `s4`, and `s5` where trace length supports `s5`.
+- Task 10F acceptance requires no single `gold_failure_step` above 40%, at least 3 step values each at or above 15%, `majority_step <= 40%`, and `always_s2 <= 40%`.
+- Current Task 10F status: cleared by regenerated corpus with `s2/s3/s4/s5 = 105/105/105/105` traces (25.00% each); metric, baseline, CCT scoring, calibration, and result-table implementation remain prohibited until a separate explicitly approved evaluation task.
+
+## Task 10G manual failure-step semantic sanity gate
+- Corrected failure-step labels require a qualitative manual sanity check before any downstream evaluation-stage implementation.
+- Current Task 10G status: cleared for the inspected sample; 6/6 inspected records were accepted, including clean `s2`, `s3`, `s4`, `s5` traces and two perturbed traces that preserved parent labels.
+- This gate does not authorize metrics, baselines, CCT scoring, calibration, empirical evaluation, or result-table generation.

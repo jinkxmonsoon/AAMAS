@@ -147,3 +147,18 @@ No traces, labels, perturbations, metrics, baselines, or results are generated i
 ## Task 10B clarification
 - Main-corpus generator must maintain lexical/structural diversity across scenario groups while preserving frozen counts and label semantics.
 - Semantic spot-check summary must explicitly report sampled/accept/revise/reject counts and blocker status before evaluation starts.
+
+## Task 10E pre-evaluation shortcut-risk gate
+- Before metrics, baselines, CCT scoring, calibration, or result tables are implemented, the main corpus must be audited with `scripts/audit_label_position_bias.py`.
+- The audit must report `gold_failure_step` and `gold_failure_agent` distributions overall, by `scenario_group`, and by `perturbation_type`.
+- Diagnostic-only shortcut estimates must include `majority_step`, `majority_agent`, `always_s2`, `first_active_agent` when computable, and `most_common_agent`.
+- These diagnostics are corpus-risk checks only and must not be reported as method results.
+- Evaluation remains blocked if one `gold_failure_step` or any trivial shortcut diagnostic exceeds 50% without explicit written justification or an approved corpus-revision task.
+- Current audit status: blocked because all 420 main-corpus traces have `gold_failure_step=s2`, making `majority_step` and `always_s2` diagnostics 100.00%.
+
+## Task 10F failure-step positional-bias correction
+- The main-corpus generator must assign `gold_failure_step` from semantically grounded trace phases rather than a fixed position.
+- Required supported values are `s2`, `s3`, `s4`, and `s5` when the trace has length 5.
+- The selected failure step must be reflected in `step_id`, `gold_failure_step`, `gold_failure_agent`, handoff context, phase-specific trace text, H6 evidence fields, and `label_rationale`.
+- Perturbation variants preserve the clean parent case's `gold_failure_step` unless an explicitly documented degraded-observability change is approved.
+- Current corrected distribution is `s2/s3/s4/s5 = 105/105/105/105` traces (25.00% each), satisfying the <=40% majority-step and always-s2 constraints.
