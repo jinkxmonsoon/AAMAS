@@ -184,3 +184,22 @@ Chronological decisions, assumptions, caveats, and methodological notes.
   - Inconsistency summary: detected 660 pre-correction issues across irreversibility, recoverability, and propagation semantics; corrected via regeneration; post-correction unresolved contradictions = 0.
   - Scientific result: No metrics, baselines, CCT scoring, calibration, or result tables executed.
   - Next mandatory step: proceed only with protocol-approved evaluation tasks now that H6 semantic consistency gate passes.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 10E Journal-v1 label-position and trivial-baseline risk audit.
+  - Task executed: Added `scripts/audit_label_position_bias.py`, generated label-position and trivial-shortcut risk reports, added a correction plan, and expanded semantic spot-check sampling to force positive/negative H6 coverage when available.
+  - Technical result: `gold_failure_step=s2` occurs in 420/420 traces (100.00%); top `gold_failure_agent=a11` occurs in 55/420 traces (13.10%).
+  - Trivial-risk diagnostics: `always_s2=100.00%`, `majority_step=100.00%`, `majority_agent=13.10%`.
+  - Gate result: evaluation remains blocked because label-position concentration and trivial step shortcuts exceed the 50% threshold.
+  - Scientific result: No empirical hypothesis tested; no metric implementation, baseline implementation, CCT scoring, calibration, or result table added.
+  - Caveat: The corpus was not edited because gold labels and dataset composition are protected items; correction requires explicit authorization or a written scientific justification.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 10F Journal-v1 failure-step positional-bias correction.
+  - Task executed: Revised `scripts/build_main_corpus.py` to assign semantically grounded failure steps across `s2`, `s3`, `s4`, and supported `s5` traces, regenerated the main corpus, reran audits, and regenerated the manifest.
+  - Distribution correction: before correction `s2=420/420 (100.00%)`; after correction `s2=105`, `s3=105`, `s4=105`, `s5=105` out of 420 traces (25.00% each).
+  - Trivial-risk diagnostics after correction: `majority_step=25.00%`, `always_s2=25.00%`, `majority_agent=17.86%` (`a8=75/420`).
+  - H6 distribution after correction remains balanced: propagation true/false = 210/210, irreversibility true/false = 210/210, recoverability true/false = 210/210; H6 semantic consistency reports PASS.
+  - Semantic spot-check outcome: sampled=19, accept=19, revise=0, reject=0; no semantic spot-check blocker.
+  - Scientific result: No empirical hypothesis tested; no metric implementation, baseline implementation, CCT scoring, calibration, or result table added.
+  - Caveat: The corrected corpus remains synthetic and controlled; future evaluation still requires a separate approved task under the protocol lock.

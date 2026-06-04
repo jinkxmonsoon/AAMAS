@@ -73,3 +73,19 @@ All protocol, evaluation, and experiment-design changes must be recorded here.
 - Justification: Resolve detected contradictions between H6 labels and evidence fields before any evaluation-stage implementation.
 - Authorization reference: Task 10D instruction
 - Expected validity impact: Removes label-evidence semantic contradictions and strengthens H6 proxy validity for downstream evaluation.
+
+- Date (UTC): 2026-06-04
+- Author: Codex TL
+- Change type: Pre-evaluation label-position and trivial-shortcut risk gate
+- Affected artifact(s): scripts/audit_label_position_bias.py, results/reports/journal_v1/main_label_position_bias_report.md, results/reports/journal_v1/main_trivial_baseline_risk_report.md, results/reports/journal_v1/main_label_position_bias_correction_plan.md, results/reports/journal_v1/main_semantic_spotcheck_report.md, PROTOCOL_LOCK.md, RESEARCH_LOG.md, docs/11_journal_v1_corpus_plan_and_label_rubric.md
+- Justification: Audit Journal-v1 main corpus for positional shortcuts and trivial corpus-risk diagnostics before any evaluation-stage implementation.
+- Authorization reference: Task 10E instruction
+- Expected validity impact: Blocks evaluation until label-position shortcut risk is corrected or explicitly justified; protects future H1–H4/H6 tests from trivial step-position solutions.
+
+- Date (UTC): 2026-06-04
+- Author: Codex TL
+- Change type: Main-corpus gold-failure-step positional-bias correction and re-freeze
+- Affected artifact(s): scripts/build_main_corpus.py, data/processed/journal_v1/*.jsonl, results/reports/journal_v1/*, docs/artifact_manifests/journal_v1_main_corpus_manifest.md, PROTOCOL_LOCK.md, RESEARCH_LOG.md, docs/11_journal_v1_corpus_plan_and_label_rubric.md
+- Justification: Resolve Task 10E blocking positional shortcut where all traces had `gold_failure_step=s2`, while preserving protocol counts and avoiding any evaluation-stage implementation.
+- Authorization reference: Task 10F instruction
+- Expected validity impact: Restores viability of future structural step-attribution evaluation by reducing majority/always-s2 shortcut risk to 25.00%; no performance claims introduced.

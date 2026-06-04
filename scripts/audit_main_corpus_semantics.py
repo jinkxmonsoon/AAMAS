@@ -41,8 +41,35 @@ def main():
 
     baseline_input = clean[0]['input_message'] if clean else ''
 
+    selected = sampled_clean + sampled_pert
+
+    def add_first_matching(predicate):
+        existing = {r['trace_id'] for r in selected}
+        for candidate in rows:
+            if candidate['trace_id'] not in existing and predicate(candidate):
+                selected.append(candidate)
+                return
+
+    # Task 10E coverage guard: include positive and negative H6 examples when
+    # they exist. Step diversity is also attempted, but not fabricated when the
+    # frozen corpus exposes fewer than three available failure-step values.
+    for field in ['gold_propagation', 'gold_irreversibility', 'gold_recoverability']:
+        for value in [True, False]:
+            if any(r.get(field) is value for r in rows) and not any(r.get(field) is value for r in selected):
+                add_first_matching(lambda candidate, field=field, value=value: candidate.get(field) is value)
+
+    available_steps = sorted({str(r.get('gold_failure_step')) for r in rows})
+    sampled_steps = {str(r.get('gold_failure_step')) for r in selected}
+    if len(available_steps) >= 3 and len(sampled_steps) < 3:
+        for step in available_steps:
+            if step not in sampled_steps:
+                add_first_matching(lambda candidate, step=step: str(candidate.get('gold_failure_step')) == step)
+                sampled_steps.add(step)
+            if len(sampled_steps) >= 3:
+                break
+
     sampled = []
-    for r in sampled_clean + sampled_pert:
+    for r in selected:
         overly_templated = (r.get('input_message') == baseline_input and r.get('agent_role') == 'reviewer')
         recommendation = 'accept' if not overly_templated else 'revise'
         sampled.append({
@@ -61,6 +88,20 @@ def main():
     reject_n = sum(1 for r in sampled if r['recommendation'] == 'reject')
     risk_level = 'low' if revise_n == 0 and reject_n == 0 else ('medium' if revise_n <= 3 else 'high')
     blocked = 'no' if reject_n == 0 and revise_n <= 3 else 'yes'
+    h6_coverage = {
+        'propagation_true': any(r['gold_propagation'] is True for r in sampled),
+        'propagation_false': any(r['gold_propagation'] is False for r in sampled),
+        'irreversibility_true': any(r['gold_irreversibility'] is True for r in sampled),
+        'irreversibility_false': any(r['gold_irreversibility'] is False for r in sampled),
+        'recoverability_true': any(r['gold_recoverability'] is True for r in sampled),
+        'recoverability_false': any(r['gold_recoverability'] is False for r in sampled),
+    }
+    sampled_step_values = sorted({str(r['gold_failure_step']) for r in sampled})
+    step_diversity_caveat = (
+        'at least 3 sampled step values'
+        if len(sampled_step_values) >= 3
+        else 'fewer than 3 sampled step values because fewer than 3 are available in the corpus'
+    )
 
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     (REPORT_DIR / 'main_label_distribution_report.md').write_text(
@@ -79,10 +120,15 @@ def main():
 
     (REPORT_DIR / 'main_semantic_spotcheck_report.md').write_text(
         '# Main Semantic Spot-check Report\n\n'
-        '- Procedure: 2 clean traces per scenario group + 1 perturbed trace per perturbation type.\n'
+        '- Procedure: 2 clean traces per scenario group + 1 perturbed trace per perturbation type, plus H6 coverage additions if needed.\n'
         f'- Summary counts: sampled={len(sampled)}, accept={accept_n}, revise={revise_n}, reject={reject_n}.\n'
+        f'- H6 spot-check coverage: {h6_coverage}.\n'
+        f'- Available gold_failure_step values in corpus: {available_steps}.\n'
+        f'- Sampled gold_failure_step values: {sampled_step_values}.\n'
+        f'- Step-diversity caveat: {step_diversity_caveat}.\n'
         f'- Templating risk level: {risk_level}.\n'
-        f'- Evaluation blocked: {blocked}.\n\n' + '\n'.join(tbl) + '\n', encoding='utf-8')
+        f'- Evaluation blocked by semantic spot-check: {blocked}.\n\n' + '\n'.join(tbl) + '\n', encoding='utf-8')
+
 
     (REPORT_DIR / 'main_generation_risk_report.md').write_text(
         '# Main Generation Risk Report\n\n'
