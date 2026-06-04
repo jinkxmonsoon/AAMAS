@@ -41,3 +41,11 @@ acceptance_criteria:
   require_gold_failure_agent_in_trace: true
   require_rationale_for_irreversibility_propagation_recoverability: true
   require_leakage_audit_before_metrics: true
+
+# Task 12B label placement under full-trace schema
+full_trace_label_placement:
+  private_labels_outside_model_visible_steps: true
+  gold_failure_step_must_reference_steps_array: true
+  gold_failure_agent_must_reference_steps_array: true
+  h6_evidence_private_not_prediction_visible: true
+  label_rationale_private_not_prediction_visible: true
