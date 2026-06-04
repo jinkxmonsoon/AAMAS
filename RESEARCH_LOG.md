@@ -184,3 +184,40 @@ Chronological decisions, assumptions, caveats, and methodological notes.
   - Inconsistency summary: detected 660 pre-correction issues across irreversibility, recoverability, and propagation semantics; corrected via regeneration; post-correction unresolved contradictions = 0.
   - Scientific result: No metrics, baselines, CCT scoring, calibration, or result tables executed.
   - Next mandatory step: proceed only with protocol-approved evaluation tasks now that H6 semantic consistency gate passes.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 10E Journal-v1 label-position and trivial-baseline risk audit.
+  - Task executed: Added `scripts/audit_label_position_bias.py`, generated label-position and trivial-shortcut risk reports, added a correction plan, and expanded semantic spot-check sampling to force positive/negative H6 coverage when available.
+  - Technical result: `gold_failure_step=s2` occurs in 420/420 traces (100.00%); top `gold_failure_agent=a11` occurs in 55/420 traces (13.10%).
+  - Trivial-risk diagnostics: `always_s2=100.00%`, `majority_step=100.00%`, `majority_agent=13.10%`.
+  - Gate result: evaluation remains blocked because label-position concentration and trivial step shortcuts exceed the 50% threshold.
+  - Scientific result: No empirical hypothesis tested; no metric implementation, baseline implementation, CCT scoring, calibration, or result table added.
+  - Caveat: The corpus was not edited because gold labels and dataset composition are protected items; correction requires explicit authorization or a written scientific justification.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 10F Journal-v1 failure-step positional-bias correction.
+  - Task executed: Revised `scripts/build_main_corpus.py` to assign semantically grounded failure steps across `s2`, `s3`, `s4`, and supported `s5` traces, regenerated the main corpus, reran audits, and regenerated the manifest.
+  - Distribution correction: before correction `s2=420/420 (100.00%)`; after correction `s2=105`, `s3=105`, `s4=105`, `s5=105` out of 420 traces (25.00% each).
+  - Trivial-risk diagnostics after correction: `majority_step=25.00%`, `always_s2=25.00%`, `majority_agent=17.86%` (`a8=75/420`).
+  - H6 distribution after correction remains balanced: propagation true/false = 210/210, irreversibility true/false = 210/210, recoverability true/false = 210/210; H6 semantic consistency reports PASS.
+  - Semantic spot-check outcome: sampled=19, accept=19, revise=0, reject=0; no semantic spot-check blocker.
+  - Scientific result: No empirical hypothesis tested; no metric implementation, baseline implementation, CCT scoring, calibration, or result table added.
+  - Caveat: The corrected corpus remains synthetic and controlled; future evaluation still requires a separate approved task under the protocol lock.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 10G manual semantic sanity check for corrected failure-step labels.
+  - Task executed: Manually inspected six complete records from the regenerated Journal-v1 corpus: one clean record each for `s2`, `s3`, `s4`, and `s5`, plus two perturbed records derived from clean parents.
+  - Manual outcome: accept=6, revise=0, reject=0; no semantic sanity blocker detected.
+  - Non-s2 grounding result: inspected `s3`, `s4`, and `s5` records align `step_id`, `gold_failure_step`, `gold_failure_agent`, evidence fields, label rationale, and phase-specific trace context.
+  - Perturbation result: inspected perturbed records preserve parent clean labels (`s3/a9` and `s5/a5`) without undocumented gold-label changes.
+  - Scientific result: No empirical hypothesis tested; no metric implementation, baseline implementation, CCT scoring, calibration, or result table added.
+  - Caveat: This is a small qualitative sanity sample, not a substitute for future full adjudication or evaluation-stage controls.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 10H final pre-evaluation corpus gate and shortcut audit consolidation.
+  - Task executed: Consolidated Task 10F/10G corrected corpus status into `final_pre_evaluation_gate_report.md`, confirming PR #13 supersedes PR #12 as the canonical corpus-correction provenance.
+  - Gate evidence: `gold_failure_step` distribution remains `s2=105`, `s3=105`, `s4=105`, `s5=105`; top `gold_failure_agent=a8` is 75/420 (17.86%).
+  - Shortcut diagnostics: `majority_step=25.00%`, `always_s2=25.00%`, `majority_agent=17.86%`; no scenario group or perturbation type collapses to one failure step.
+  - H6 and semantic evidence: H6 semantic consistency reports PASS; H6 labels are balanced 210/210 for propagation, irreversibility, and recoverability; semantic spot-check remains 19/0/0 accept/revise/reject; manual sanity check remains 6/0/0 accept/revise/reject.
+  - Gate result: final pre-evaluation corpus gate cleared for a future explicitly approved task to implement metric interfaces and trivial baselines.
+  - Scientific result: No CCT scoring, calibration, refinement, empirical evaluation, or paper result table added.
