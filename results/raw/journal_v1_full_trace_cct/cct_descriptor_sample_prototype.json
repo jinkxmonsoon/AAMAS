@@ -1,0 +1,3082 @@
+[
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: budget, comparable, concrete, intake, neutral, required, review, route",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": true,
+    "extraction_notes": "shared constraint cue with strong prior modality and weak/optional current output",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": true,
+    "extraction_notes": "visible tool/evidence cue absent from or weakened in step output",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: budget, handoff, neutral, route, timing",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: amount, budget, caveat, comparable, concrete, neutral, observations, only",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: budget, comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: budget, comparable, concrete, intake, neutral, required, review, route",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": true,
+    "extraction_notes": "shared constraint cue with strong prior modality and weak/optional current output",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": true,
+    "extraction_notes": "visible tool/evidence cue absent from or weakened in step output",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: budget, handoff, neutral, route, timing",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: amount, budget, caveat, comparable, concrete, neutral, observations, only",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: budget, comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, correction, handoff, neutral, ranking, review, source",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: confirmed, evidence, handoff, neutral, ranking, source, summary",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, handoff, neutral, source",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, correction, handoff, neutral, ranking, review, source",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: confirmed, evidence, handoff, neutral, ranking, source, summary",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, handoff, neutral, source",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, confidence, neutral, qualifier, review, source",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: neutral, source, value",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, neutral, source",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, delivery, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, confidence, neutral, qualifier, review, source",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: neutral, source, value",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, neutral, source",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, delivery, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, correction, draft, neutral, review, terms, time",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": true,
+    "extraction_notes": "visible tool/evidence cue absent from or weakened in step output",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: correction, draft, neutral, time, window",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, draft, neutral, window",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: caveat, comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, correction, draft, neutral, review, terms, time",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": true,
+    "extraction_notes": "visible tool/evidence cue absent from or weakened in step output",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: correction, draft, neutral, time, window",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, draft, neutral, window",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: caveat, comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: assumption, comparable, concrete, external, internal, neutral, portal, review",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: confirmation, external, extra, internal, neutral, portal, request",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: caveat, comparable, concrete, confirmation, external, neutral, portal, review",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: assumption, comparable, concrete, external, internal, neutral, portal, review",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: confirmation, external, extra, internal, neutral, portal, request",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: caveat, comparable, concrete, confirmation, external, neutral, portal, review",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: close, comparable, concrete, date, delivery, neutral, renewal, review",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: date, neutral, renewal, review",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: amount, caveat, comparable, concrete, neutral, observations, operational, retained",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: close, comparable, concrete, date, delivery, neutral, renewal, review",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: date, neutral, renewal, review",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: amount, caveat, comparable, concrete, neutral, observations, operational, retained",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, coverage, neutral, option, reading, review",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: broad, caveat, coverage, evidence, neutral, reading, stronger",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: amount, caveat, comparable, concrete, neutral, observations, operational, retained",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_clean",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, coverage, neutral, option, reading, review",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s1",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: broad, caveat, coverage, evidence, neutral, reading, stronger",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s2",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: amount, caveat, comparable, concrete, neutral, observations, operational, retained",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s3",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": true,
+    "extraction_notes": "downstream overlap tokens: comparable, concrete, neutral",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s4",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "handoff_constraint_shift_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "no deterministic strong-to-weak handoff modality shift detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "steps.input_message",
+      "steps.handoff_from",
+      "steps.handoff_to",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "evidence_ignored_indicator",
+    "descriptor_value": false,
+    "extraction_notes": "tool/evidence cues appear carried or no explicit cue detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.tool_output",
+      "steps.evidence_items",
+      "steps.evidence_used",
+      "steps.output_message",
+      "steps.visible_step_notes"
+    ]
+  },
+  {
+    "descriptor_name": "downstream_reference_to_prior_output",
+    "descriptor_value": false,
+    "extraction_notes": "insufficient downstream lexical carryover detected",
+    "extraction_version": "journal_v1_cct_descriptor_sample_v1",
+    "step_id": "s5",
+    "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01",
+    "visible_fields_used": [
+      "steps.output_message",
+      "later_steps.input_message",
+      "later_steps.output_message",
+      "later_steps.visible_step_notes"
+    ]
+  }
+]

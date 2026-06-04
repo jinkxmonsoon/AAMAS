@@ -166,3 +166,85 @@ Locked status after Task 15:
 - `FULL_TRACE_MAIN_CORPUS_READY_FOR_FUTURE_EVALUATION_TASK = yes` for a future explicitly approved evaluation task only.
 - The old failure-centered corpus remains blocked and must not be used for evaluation or paper evidence.
 - CCT graph construction, CCT scoring, calibration, refinement variants, ablations, empirical hypothesis tests, and paper-ready result tables remain blocked until explicitly authorized in a later task.
+
+## Task 16A CCT graph generated-artifact reviewability gate
+
+Task 16A freezes the artifact policy for full-trace CCT graph construction outputs. CCT graph construction and structural feature extraction are allowed only as reproducible preprocessing artifacts; this gate does not authorize scoring, ranking, calibration, refinement variants, ablations, empirical hypothesis tests, or paper-ready result tables.
+
+Locked status after Task 16A:
+
+- Full generated JSONL artifacts `data/interim/journal_v1_full_trace_cct/cct_graphs.jsonl` and `data/interim/journal_v1_full_trace_cct/cct_features.jsonl` are reproducible local outputs and are excluded from normal Git review.
+- Compact sample artifacts `data/interim/journal_v1_full_trace_cct/sample_cct_graphs.jsonl` and `data/interim/journal_v1_full_trace_cct/sample_cct_features.jsonl` are tracked for review and include one clean trace graph, one perturbed trace graph, and corresponding feature rows.
+- The manifest `docs/artifact_manifests/journal_v1_full_trace_cct_manifest.md` records commands, counts, hashes, and expected outputs for both full generated artifacts and tracked samples.
+- If full artifacts must later be versioned, use Git LFS or release artifacts rather than silently committing unreviewable normal-Git JSONL blobs.
+
+## Task 16B CCT structural feature variance audit gate
+
+Task 16B audits the structural feature layer before any future scoring task. The audit is descriptive only and may use `scenario_group` and `perturbation_type` from public corpus metadata solely as audit strata; these fields are not added to feature payloads and are not scoring inputs.
+
+Locked status after Task 16B:
+
+- Feature payloads must remain free of private labels, gold labels, label rationales, H6 evidence fields, and provenance fields.
+- Constant and position-determined structural features are documented as shortcut warnings, not performance evidence.
+- The current graph shape has constant node and edge counts across traces; future scoring must not treat graph size alone as diagnostic evidence.
+- Future CCT scoring remains blocked until a separately authorized task acknowledges these warnings and confirms that no unresolved feature-layer blocker remains.
+- No scoring, ranking, evaluation, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table is authorized by this gate.
+
+## Task 17 uncalibrated CCT scoring protocol freeze
+
+Task 17 freezes the first uncalibrated CCT scoring protocol before any CCT scoring or evaluation is run. This gate is protocol-only: it defines objectives, allowed features, restricted features, forbidden fields, variants, reporting obligations, and blocker rules without executing scoring.
+
+Locked status after Task 17:
+
+- Primary future scorer: `cct_primary_no_position`, a transparent weighted sum with weights fixed in `configs/cct_scoring.yaml` before execution.
+- Required diagnostic variants: `cct_flow_only` and `cct_context_only`; optional high-risk diagnostic variant: `cct_with_position_features`, never primary.
+- Primary scoring must exclude high-risk position/identity fields: `step_id`, `order_index`, `agent_id`, `agent_role`, `terminal_proximity`, and unnormalized pure position-derived degree features.
+- Forbidden scoring fields include gold labels, `private_labels`, label rationales, H6 private evidence, provenance fields, `scenario_group`, `perturbation_type`, `trace_id`, and `case_id`.
+- No learned parameters, LOSO tuning, grid search, calibration, refinement, ablation, or post-performance adjustment is authorized.
+- Future scoring remains blocked unless `python scripts/validate_cct_scoring_protocol.py` passes and the future task explicitly accepts the Task 16B shortcut warnings and Task 17 blocker rules.
+- No scoring, ranking execution, evaluation, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table is authorized by this gate.
+
+## Task 18 frozen uncalibrated CCT diagnostic execution gate
+
+Task 18 executes the Task 17 frozen uncalibrated CCT scoring protocol as a controlled diagnostic run only. The config hash before execution was `053f19066923d8d22d27b22727e75876f939f2a60480484c4028eabd07ad0855`, and `configs/cct_scoring.yaml` was not changed for execution.
+
+Locked status after Task 18:
+
+- Executed variants: `cct_primary_no_position`, `cct_flow_only`, `cct_context_only`, and high-risk diagnostic `cct_with_position_features`.
+- Diagnostic outputs are limited to `results/raw/journal_v1_full_trace_cct/cct_uncalibrated_diagnostics.json`, `results/reports/journal_v1_full_trace_cct/cct_uncalibrated_diagnostics_report.md`, and `results/reports/journal_v1_full_trace_cct/cct_uncalibrated_shortcut_interpretation.md`.
+- Gold labels may be accessed only in the diagnostic evaluation stage, after scoring/ranking has produced candidate outputs from visible CCT feature rows.
+- The diagnostic run does not authorize calibrated probability claims, causal certainty claims, robustness claims, final H1/H2 claims, H6 structural claims, or paper-ready evidence.
+- No calibration, LOSO, grid search, refinement, ablation, statistical test, learned parameter update, or paper-ready result table is authorized or produced by this gate.
+
+## Task 18A frozen CCT diagnostic error-analysis gate
+
+Task 18A analyzes the Task 18 frozen uncalibrated diagnostic errors without changing `configs/cct_scoring.yaml`, weights, features, scoring formula, tie-breaking, corpus records, gold labels, baselines, or protocol. The Task 18 config hash remains `053f19066923d8d22d27b22727e75876f939f2a60480484c4028eabd07ad0855`.
+
+Locked status after Task 18A:
+
+- Error-analysis outputs are descriptive only: `results/raw/journal_v1_full_trace_cct/cct_uncalibrated_error_analysis.json` and the four `cct_uncalibrated_*analysis/report.md` files under `results/reports/journal_v1_full_trace_cct/`.
+- H1 and H2 remain unsupported interpretively; this task does not retest hypotheses with tuned or altered scoring.
+- Primary underperformance is attributed to weak/non-discriminative fixed features, context/tool-output contribution dominance, non-tied wrong score separation, and shortcut-prone position/default diagnostics exceeding primary.
+- No calibration, grid search, LOSO, refinement, ablation, statistical test, protocol change, corpus/gold-label change, or paper-ready result table is authorized or produced by this gate.
+
+## Task 18B CCT feature semantic audit and descriptor-design gate
+
+Task 18B audits current CCT feature semantics and proposes prediction-view-safe causal-flow descriptors without implementing descriptors, changing the frozen scoring config, changing weights, changing features, changing scoring/ranking, changing corpus/gold labels, or rerunning tuned evaluation.
+
+Locked status after Task 18B:
+
+- Current CCT features are classified as schema/identifier, position/identity proxy, content-volume proxy, evidence cardinality, or coarse handoff/flow structure.
+- Proposed descriptors are design candidates only: `handoff_constraint_shift_indicator`, `evidence_conflict_indicator`, `evidence_ignored_indicator`, `downstream_reference_to_prior_output`, `tool_output_alignment_mismatch`, `recovery_opportunity_visible_indicator`, `correction_attempt_visible_indicator`, `unresolved_caveat_carryover`, `semantic_alternative_collision_indicator`, and `cross_agent_dependency_indicator`.
+- Any future descriptor implementation must use sanitized prediction-view fields only and must pass leakage, variance, shortcut, and reviewability audits before any scoring protocol revision.
+- No scoring, calibration, grid search, LOSO, refinement, ablation, statistical test, or paper-ready result table is authorized by this gate.
+
+## Task 18C sample-only causal-flow descriptor prototype gate
+
+Task 18C specifies and prototypes sample-only extraction for `handoff_constraint_shift_indicator`, `evidence_ignored_indicator`, and `downstream_reference_to_prior_output`. Extraction consumes sanitized full-trace prediction views and rejects raw/private payloads.
+
+Locked status after Task 18C:
+
+- Descriptor outputs are sample-only under `results/raw/journal_v1_full_trace_cct/cct_descriptor_sample_prototype.json`; they are not scoring inputs and are not compared to gold labels.
+- `DESCRIPTOR_PROTOTYPE_READY_FOR_FULL_AUDIT = yes` authorizes only a future full-corpus descriptor extraction and leakage/variance/shortcut audit task, not scoring.
+- `DESCRIPTOR_READY_FOR_SCORING = no` remains locked.
+- No scoring, ranking, config/weight change, calibration, grid search, LOSO, refinement, ablation, statistical test, or paper-ready result table is authorized by this gate.
