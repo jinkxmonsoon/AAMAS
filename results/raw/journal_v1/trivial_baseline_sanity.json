@@ -1,0 +1,550 @@
+{
+  "baseline_results": {
+    "always_s2": {
+      "agent_accuracy": null,
+      "irreversibility_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": 0.25,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "none": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": 0.25,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": 0.25,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": 0.25,
+            "n": 60
+          }
+        }
+      },
+      "propagation_accuracy": null,
+      "recoverability_accuracy": null,
+      "step_accuracy": 0.25,
+      "tuple_accuracy_step_agent": null
+    },
+    "first_active_agent": {
+      "agent_accuracy": 0.25,
+      "irreversibility_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": null,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": null,
+            "n": 84
+          },
+          "none": {
+            "accuracy": null,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": null,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": null,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": null,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": null,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": null,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": null,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": null,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": null,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": null,
+            "n": 60
+          }
+        }
+      },
+      "propagation_accuracy": null,
+      "recoverability_accuracy": null,
+      "step_accuracy": null,
+      "tuple_accuracy_step_agent": null
+    },
+    "last_active_agent": {
+      "agent_accuracy": 0.25,
+      "irreversibility_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": null,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": null,
+            "n": 84
+          },
+          "none": {
+            "accuracy": null,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": null,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": null,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": null,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": null,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": null,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": null,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": null,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": null,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": null,
+            "n": 60
+          }
+        }
+      },
+      "propagation_accuracy": null,
+      "recoverability_accuracy": null,
+      "step_accuracy": null,
+      "tuple_accuracy_step_agent": null
+    },
+    "majority_agent": {
+      "agent_accuracy": 0.17857142857142858,
+      "irreversibility_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": null,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": null,
+            "n": 84
+          },
+          "none": {
+            "accuracy": null,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": null,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": null,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": null,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": null,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": null,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": null,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": null,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": null,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": null,
+            "n": 60
+          }
+        }
+      },
+      "propagation_accuracy": null,
+      "recoverability_accuracy": null,
+      "step_accuracy": null,
+      "tuple_accuracy_step_agent": null
+    },
+    "majority_step": {
+      "agent_accuracy": null,
+      "irreversibility_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": 0.25,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "none": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": 0.25,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": 0.25,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": 0.25,
+            "n": 60
+          }
+        }
+      },
+      "propagation_accuracy": null,
+      "recoverability_accuracy": null,
+      "step_accuracy": 0.25,
+      "tuple_accuracy_step_agent": null
+    },
+    "random_agent_seeded": {
+      "agent_accuracy": 0.33095238095238094,
+      "irreversibility_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": null,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": null,
+            "n": 84
+          },
+          "none": {
+            "accuracy": null,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": null,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": null,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": null,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": null,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": null,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": null,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": null,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": null,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": null,
+            "n": 60
+          }
+        }
+      },
+      "propagation_accuracy": null,
+      "recoverability_accuracy": null,
+      "step_accuracy": null,
+      "tuple_accuracy_step_agent": null
+    },
+    "random_step_seeded": {
+      "agent_accuracy": null,
+      "irreversibility_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": 0.19761904761904764,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": 0.15476190476190477,
+            "n": 84
+          },
+          "none": {
+            "accuracy": 0.2619047619047619,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": 0.10714285714285714,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": 0.23809523809523808,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": 0.2261904761904762,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": 0.1976190476190476,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": 0.11666666666666667,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": 0.15,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": 0.16666666666666666,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": 0.23333333333333334,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": 0.16666666666666666,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": 0.31666666666666665,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": 0.23333333333333334,
+            "n": 60
+          }
+        }
+      },
+      "propagation_accuracy": null,
+      "recoverability_accuracy": null,
+      "step_accuracy": 0.1976190476190476,
+      "tuple_accuracy_step_agent": null
+    },
+    "same_as_parent_for_perturbations": {
+      "agent_accuracy": null,
+      "irreversibility_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": null,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": null,
+            "n": 84
+          },
+          "none": {
+            "accuracy": null,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": null,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": null,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": null,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": null,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": null,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": null,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": null,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": null,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": null,
+            "n": 60
+          }
+        }
+      },
+      "propagation_accuracy": null,
+      "recoverability_accuracy": null,
+      "step_accuracy": null,
+      "tuple_accuracy_step_agent": null
+    }
+  },
+  "n_records": 420,
+  "scope": {
+    "ablation_implemented": false,
+    "calibration_implemented": false,
+    "cct_scoring_implemented": false,
+    "corpus": "data/processed/journal_v1/main_all_traces.jsonl",
+    "diagnostic_sanity_check_only": true,
+    "not_cct_comparison": true,
+    "not_evidence_for_h1": true,
+    "not_paper_result_table": true,
+    "refinement_variant_implemented": false,
+    "shortcut_detection_only": true
+  },
+  "shortcut_risk_interpretation": {
+    "blockers": [],
+    "review_flags": [],
+    "status": "passed"
+  }
+}

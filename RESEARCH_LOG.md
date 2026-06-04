@@ -221,3 +221,18 @@ Chronological decisions, assumptions, caveats, and methodological notes.
   - H6 and semantic evidence: H6 semantic consistency reports PASS; H6 labels are balanced 210/210 for propagation, irreversibility, and recoverability; semantic spot-check remains 19/0/0 accept/revise/reject; manual sanity check remains 6/0/0 accept/revise/reject.
   - Gate result: final pre-evaluation corpus gate cleared for a future explicitly approved task to implement metric interfaces and trivial baselines.
   - Scientific result: No CCT scoring, calibration, refinement, empirical evaluation, or paper result table added.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 11 metric-interface and trivial-baseline sanity checks.
+  - Reasoning decision: implement only accuracy-style metric interfaces and allowed trivial baselines so future CCT evaluation can rely on tested metric plumbing without testing CCT itself.
+  - Diagnostic result: standalone trivial baselines did not exceed blocker thresholds on the corrected corpus; the gate is marked passed in the diagnostic report.
+  - Caveat: `same_as_parent_for_perturbations` is implemented as a prediction-propagation diagnostic that does not read parent gold labels; without external parent predictions it reports `NA`, avoiding gold-label leakage in the standalone sanity script.
+  - Scientific result: no CCT scoring, calibration, refinement variant, ablation, empirical hypothesis test, or paper-ready result table was implemented.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 12 non-CCT baseline diagnostics.
+  - Provenance confirmation: active branch at task start was `work`; active HEAD at task start was `12efebd8ede932c6c707feafec4841930c71430a` (`Implement metric interfaces and trivial baseline sanity checks`).
+  - PR #15 commit-hash discrepancy note: the user summary referenced `6153857`, while the local active history shows `12efebd`; the GitHub-reported `bde39fc` was not present as the local active HEAD in this workspace. The final active Task 12 commit is recorded in the final handoff/PR metadata because a commit cannot stably contain its own hash.
+  - Reasoning decision: implement transparent deterministic baselines that intentionally test whether flat log text and non-gold metadata already identify failure attribution without CCT structure.
+  - Diagnostic result: non-CCT diagnostics exceed the 85% blocker threshold, so the report marks evaluation blocked pending corpus/baseline investigation.
+  - Scientific result: no CCT graph construction, CCT scoring, calibration, refinement variant, ablation, empirical hypothesis test, or paper-ready result table was implemented.
