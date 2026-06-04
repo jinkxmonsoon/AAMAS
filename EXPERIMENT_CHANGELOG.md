@@ -168,3 +168,30 @@ All protocol, evaluation, and experiment-design changes must be recorded here.
 - Verified schema validation, prediction-view validation, diagnostic sufficiency, candidate plausibility, lexical leakage, label/H6 distributions, perturbation coverage, and shortcut-baseline thresholds.
 - Status: full-trace main corpus is ready only for a future explicitly approved evaluation task; the old failure-centered corpus remains blocked.
 - No CCT scoring, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table was produced.
+
+## 2026-06-04 — Task 16A CCT graph artifact reviewability policy
+
+- Change type: generated-artifact governance and reproducible preprocessing policy.
+- Added compact tracked CCT graph/feature samples and Markdown reports/manifests for full-trace CCT graph construction.
+- Excluded reproducible full generated JSONL artifacts from normal Git review: `data/interim/journal_v1_full_trace_cct/cct_graphs.jsonl` and `data/interim/journal_v1_full_trace_cct/cct_features.jsonl`.
+- Reproduction commands: `python scripts/build_cct_graphs_full_trace.py` and `python scripts/validate_cct_graphs_full_trace.py`.
+- Protocol impact: reviewability and artifact-handling policy only; no experimental protocol, labels, metrics, baselines, random seeds, dataset composition, evaluation output format, or performance/generalization claim was changed.
+- Explicit non-actions: no scoring, ranking, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table was produced.
+
+## 2026-06-04 — Task 16B CCT feature variance and shortcut-risk audit
+
+- Change type: descriptive structural feature audit and shortcut-risk documentation.
+- Added `scripts/audit_cct_feature_variance.py` and three compact reports for variance diagnostics, structural shortcut warnings, and feature readiness.
+- Refactored CCT graph construction into `src/cctdiag/cct/builder.py` and structural feature extraction into `src/cctdiag/cct/features.py`, with `src/cctdiag/cct/graph.py` retained as a compatibility export.
+- Audit metadata note: `scenario_group` and `perturbation_type` are joined from public corpus metadata for descriptive audit stratification only and are not added to feature payloads.
+- Protocol impact: feature-layer readiness governance only; no experimental protocol, gold labels, evaluation metrics, baseline definitions, random seeds, dataset composition, evaluation output format, or performance/generalization claim was changed.
+- Explicit non-actions: no scoring, ranking, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table was produced.
+
+## 2026-06-04 — Task 17 uncalibrated CCT scoring protocol freeze
+
+- Change type: protocol freeze and guardrail validation only.
+- Added `docs/14_cct_uncalibrated_scoring_protocol.md`, `configs/cct_scoring.yaml`, `scripts/validate_cct_scoring_protocol.py`, and `results/reports/journal_v1_full_trace_cct/cct_scoring_protocol_risk_report.md`.
+- Frozen variants: `cct_primary_no_position`, `cct_flow_only`, `cct_context_only`, and optional high-risk `cct_with_position_features`.
+- Primary formula is a fixed transparent weighted sum and excludes position/identity fields and forbidden private/gold/provenance/audit-metadata fields.
+- Protocol impact: scoring protocol is frozen before execution to prevent post-hoc tuning; no labels, metrics, baselines, random seeds, dataset composition, existing results, or evaluation output artifacts were changed.
+- Explicit non-actions: no scoring, ranking execution, evaluation, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table was produced.
