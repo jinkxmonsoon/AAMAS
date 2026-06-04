@@ -142,3 +142,13 @@ Protocol-freezing only. No data/label/metric/baseline/result generation.
 
 ## Validation implementation status
 Schema and label validators were added in Task 5 (`src/cctdiag/schema/*`, `scripts/validate_corpus_schema.py`, `scripts/validate_label_consistency.py`).
+
+## Task 12B full ordered trace schema migration freeze
+
+The previous clean diagnostic case schema is now classified as a **legacy failure-centered schema** and is not evaluation-ready. It may remain as historical diagnostic corpus material, but it must not be used for CCT evaluation, calibration, refinement, ablations, or paper-ready result tables.
+
+The future evaluation-ready schema must use one record per complete ordered trace with a top-level `steps` array. Each step must include `step_id`, `agent_id`, `agent_role`, `input_message`, `output_message`, `tool_call`, `tool_output`, `handoff_from`, `handoff_to`, `evidence_items`, `evidence_used`, and optional `visible_step_notes`.
+
+Private labels and adjudication/provenance fields remain outside model-visible `steps`. Prediction views must expose all candidate steps and agents through the ordered trace, not a single failure-centered top-level `step_id` or `agent_id`.
+
+All evaluation, CCT graph construction, CCT scoring, calibration, refinement, ablations, and paper-ready result tables are blocked until the full-trace schema migration is implemented and audited.

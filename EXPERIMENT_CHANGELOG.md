@@ -105,3 +105,66 @@ All protocol, evaluation, and experiment-design changes must be recorded here.
 - Justification: Consolidate corrected Journal-v1 corpus state after Tasks 10F/10G and verify no remaining obvious shortcut blocks the next approved evaluation-preparation task.
 - Authorization reference: Task 10H instruction
 - Expected validity impact: Clarifies PR #13 supersedes PR #12 and clears corpus-level shortcut gates while preserving prohibition on CCT scoring, calibration, refinement, empirical evaluation, and paper result tables.
+
+- 2026-06-04 (UTC):
+  - Task 11 implemented diagnostic metric interfaces in `src/cctdiag/metrics/` and allowed trivial-baseline sanity checks in `src/cctdiag/baselines/trivial.py`.
+  - Added `scripts/run_trivial_baseline_sanity.py` to write diagnostic-only outputs to `results/raw/journal_v1/trivial_baseline_sanity.json` and `results/reports/journal_v1/trivial_baseline_sanity_report.md`.
+  - Added unit tests for attribution metrics, H6 `NA` handling, macro grouping, trivial baseline predictions, seeded random baselines, and shortcut-risk interpretation.
+  - Protocol impact: metric interfaces and baseline definitions were added under the explicit Task 11 authorization; corpus JSONL files, gold labels, perturbation definitions, CCT scoring, calibration, refinement variants, ablations, and paper-ready result tables were not modified or implemented.
+
+- 2026-06-04 (UTC):
+  - Task 12 implemented deterministic flat-log and spectrum-inspired non-CCT diagnostic baselines in `src/cctdiag/baselines/flat_log.py` and `src/cctdiag/baselines/spectrum.py`.
+  - Added `scripts/run_non_cct_baseline_diagnostics.py` to write diagnostic-only outputs to `results/raw/journal_v1/non_cct_baseline_diagnostics.json` and `results/reports/journal_v1/non_cct_baseline_diagnostics_report.md`.
+  - Added unit tests for flat-log and spectrum-inspired baseline determinism.
+  - Protocol impact: baseline definitions and diagnostic threshold reporting were added under explicit Task 12 authorization; corpus JSONL files, gold labels, perturbation definitions, CCT modules, calibration, refinement variants, ablations, and paper-ready result tables were not modified or implemented.
+
+- 2026-06-04 (UTC):
+  - Task 12A audited target leakage in non-CCT diagnostics and added `src/cctdiag/io/views.py` for sanitized prediction/private label views.
+  - Updated flat-log and spectrum-inspired baselines plus `scripts/run_non_cct_baseline_diagnostics.py` so non-CCT diagnostics operate on prediction views only and reject raw records exposing forbidden fields.
+  - Added leakage diagnosis, evaluation input contract, and correction-plan reports under `results/reports/journal_v1/`; regenerated `results/raw/journal_v1/non_cct_baseline_diagnostics.json` and the non-CCT diagnostic report.
+  - Protocol impact: direct target-equivalent input leakage was corrected, but evaluation remains blocked because the corpus lacks full ordered multi-step trace representation; corpus JSONL files, gold labels, perturbation definitions, CCT modules, calibration, refinement variants, ablations, and paper-ready result tables were not modified or implemented.
+
+- 2026-06-04 (UTC):
+  - Task 12B froze the full ordered trace schema migration plan in `docs/13_full_trace_schema_migration_plan.md` and added the blocker report `results/reports/journal_v1/full_trace_schema_blocker_report.md`.
+  - Updated operational contracts, corpus/rubric notes, protocol/corpus/label configs, protocol lock, and research log to mark the current 420-record corpus as failure-centered and not evaluation-ready.
+  - Protocol impact: all evaluation, CCT graph construction/scoring, calibration, refinement, ablations, and paper-ready result tables remain blocked until a future approved full-trace schema migration and audit; no corpus JSONL files, gold labels, or perturbation definitions were modified.
+
+- 2026-06-04 (UTC):
+  - Task 13 implemented full ordered trace schema contracts, validators, prediction-view helpers, validation scripts, and non-experimental fixtures.
+  - Added tests for valid/invalid full-trace fixtures and full-trace prediction-view privacy/candidate preservation.
+  - Protocol impact: validator infrastructure clarifies the frozen full-trace schema but does not regenerate corpus files, change gold labels, modify perturbation definitions, implement CCT scoring, calibration, refinement, ablations, or produce paper-ready result tables.
+
+- 2026-06-04 (UTC):
+  - Task 14 built and audited a non-final 14-trace Journal-v1 full-trace pilot corpus under `data/interim/journal_v1_full_trace_pilot/`.
+  - Added `scripts/build_full_trace_pilot_corpus.py`, `scripts/audit_full_trace_pilot_corpus.py`, pilot reports, and tests for pilot builder/audit behavior.
+  - Protocol impact: this pilot validates full-trace schema/prediction-view infrastructure only; the old failure-centered corpus remains blocked, the full 420-trace corpus was not generated, and no CCT scoring, calibration, refinement, ablation, or paper-ready result table was produced.
+
+- 2026-06-04 (UTC):
+  - Task 14A added `scripts/run_full_trace_pilot_baseline_sanity.py` and generated full-trace pilot shortcut-baseline, semantic-diversity, and readiness-gate reports.
+  - The full-trace pilot readiness gate passed for the 14-trace non-final pilot; this authorizes only a future explicitly approved full-trace main-corpus builder task.
+  - Protocol impact: the old failure-centered corpus remains blocked, the full 420-trace corpus was not generated, and no CCT scoring, calibration, refinement, ablation, or paper-ready result table was produced.
+
+## Task 14B — Audit full-trace pilot diagnostic sufficiency
+
+- Added diagnostic sufficiency, candidate plausibility, and revision recommendation reports for the non-final Journal-v1 full-trace pilot.
+- Audited all 7 clean traces and all 7 perturbed traces for whether gold failure steps are inferable from sanitized prediction-view evidence, whether non-gold steps remain plausible, and whether perturbations preserve label semantics without adding shortcuts.
+- Found a protocol blocker for scaling: the pilot avoids obvious shortcut baselines but is too semantically flattened; all clean traces require revision because the controlled gold step is not supported by distinctive visible evidence.
+- Updated readiness to `FULL_TRACE_PILOT_DIAGNOSTICALLY_READY = no` and `FULL_TRACE_MAIN_CORPUS_GENERATION_ALLOWED = no`.
+- No full 420-trace corpus generation, CCT scoring, calibration, refinement, ablation, or paper-ready result table was produced.
+
+## Task 14C — Revise full-trace pilot for diagnostic sufficiency
+
+- Revised `scripts/build_full_trace_pilot_corpus.py` so each mandatory scenario group contains scenario-specific visible diagnostic evidence supporting the private gold failure step while preserving plausible non-gold alternatives.
+- Regenerated only the non-final full-trace pilot JSONL files under `data/interim/journal_v1_full_trace_pilot/`.
+- Re-ran pilot structural audit, shortcut-baseline sanity, semantic diversity, schema validation, prediction-view validation, and tests.
+- Updated diagnostic sufficiency, candidate plausibility, semantic spot-check, generation-risk, and readiness reports to record that Task 14B's pilot diagnostic-sufficiency blocker is cleared.
+- Status: `FULL_TRACE_PILOT_DIAGNOSTICALLY_READY = yes`; `FULL_TRACE_MAIN_CORPUS_GENERATION_ALLOWED = future_explicit_approval_required`.
+- No full 420-trace corpus generation, CCT scoring, calibration, refinement, ablation, or paper-ready result table was produced.
+
+## Task 15 — Generate and audit Journal-v1 full-trace main corpus
+
+- Generated the BRACIS-Journal-v1 full ordered multi-step main corpus under `data/processed/journal_v1_full_trace/` with 84 clean traces, 336 perturbed traces, and 420 total traces.
+- Added full-trace main corpus builder, audit, and baseline-sanity scripts plus raw audit/baseline outputs and reports under `results/reports/journal_v1_full_trace/` and `results/raw/journal_v1_full_trace/`.
+- Verified schema validation, prediction-view validation, diagnostic sufficiency, candidate plausibility, lexical leakage, label/H6 distributions, perturbation coverage, and shortcut-baseline thresholds.
+- Status: full-trace main corpus is ready only for a future explicitly approved evaluation task; the old failure-centered corpus remains blocked.
+- No CCT scoring, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table was produced.
