@@ -184,3 +184,12 @@ Chronological decisions, assumptions, caveats, and methodological notes.
   - Inconsistency summary: detected 660 pre-correction issues across irreversibility, recoverability, and propagation semantics; corrected via regeneration; post-correction unresolved contradictions = 0.
   - Scientific result: No metrics, baselines, CCT scoring, calibration, or result tables executed.
   - Next mandatory step: proceed only with protocol-approved evaluation tasks now that H6 semantic consistency gate passes.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 10E Journal-v1 label-position and trivial-baseline risk audit.
+  - Task executed: Added `scripts/audit_label_position_bias.py`, generated label-position and trivial-shortcut risk reports, added a correction plan, and expanded semantic spot-check sampling to force positive/negative H6 coverage when available.
+  - Technical result: `gold_failure_step=s2` occurs in 420/420 traces (100.00%); top `gold_failure_agent=a11` occurs in 55/420 traces (13.10%).
+  - Trivial-risk diagnostics: `always_s2=100.00%`, `majority_step=100.00%`, `majority_agent=13.10%`.
+  - Gate result: evaluation remains blocked because label-position concentration and trivial step shortcuts exceed the 50% threshold.
+  - Scientific result: No empirical hypothesis tested; no metric implementation, baseline implementation, CCT scoring, calibration, or result table added.
+  - Caveat: The corpus was not edited because gold labels and dataset composition are protected items; correction requires explicit authorization or a written scientific justification.

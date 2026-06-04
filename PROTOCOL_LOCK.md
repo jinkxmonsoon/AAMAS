@@ -71,3 +71,9 @@ Any change to these sections requires:
 ## Task 10D H6 semantic consistency gate
 - Main corpus evaluation remains blocked unless `scripts/audit_h6_semantic_consistency.py` reports FINAL: PASS.
 - Any future H6 contradiction requires corpus correction via approved builder and manifest regeneration before evaluation resumes.
+
+## Task 10E label-position and trivial-shortcut risk gate
+- Main corpus evaluation is blocked unless `scripts/audit_label_position_bias.py` reports shortcut risk below the pre-evaluation thresholds or an explicit written corpus justification/revision task is approved.
+- No single `gold_failure_step` may exceed 50% of the corpus without explicit justification.
+- If any trivial corpus-risk diagnostic (`majority_step`, `majority_agent`, `always_s2`, `first_active_agent` when computable, or `most_common_agent`) exceeds 50%, metric, baseline, CCT scoring, calibration, and result-table work remain blocked.
+- Current Task 10E status: blocked because `gold_failure_step=s2` appears in 420/420 traces (100.00%), so `majority_step` and `always_s2` diagnostic expected accuracy are both 100.00%.

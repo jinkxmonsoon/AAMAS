@@ -1,9 +1,13 @@
 # Main Semantic Spot-check Report
 
-- Procedure: 2 clean traces per scenario group + 1 perturbed trace per perturbation type.
-- Summary counts: sampled=18, accept=18, revise=0, reject=0.
+- Procedure: 2 clean traces per scenario group + 1 perturbed trace per perturbation type, plus H6 coverage additions if needed.
+- Summary counts: sampled=19, accept=19, revise=0, reject=0.
+- H6 spot-check coverage: {'propagation_true': True, 'propagation_false': True, 'irreversibility_true': True, 'irreversibility_false': True, 'recoverability_true': True, 'recoverability_false': True}.
+- Available gold_failure_step values in corpus: ['s2'].
+- Sampled gold_failure_step values: ['s2'].
+- Step-diversity caveat: fewer than 3 sampled step values because fewer than 3 are available in the corpus.
 - Templating risk level: low.
-- Evaluation blocked: no.
+- Evaluation blocked by semantic spot-check: no.
 
 | trace_id | scenario_group | perturbation_type | gold_failure_step | gold_failure_agent | gold_irreversibility | gold_propagation | gold_recoverability | rationale plausible | lexical leakage | non-trivial | overly templated | recommendation |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -25,3 +29,4 @@
 | JV1_clean_broken_handoff_C001_tool_output_truncation_P02 | clean_broken_handoff | tool_output_truncation | s2 | a5 | True | True | False | yes | no | yes | no | accept |
 | JV1_clean_broken_handoff_C001_partial_observability_P03 | clean_broken_handoff | partial_observability | s2 | a5 | True | True | False | yes | no | yes | no | accept |
 | JV1_clean_broken_handoff_C001_non_causal_textual_distraction_P04 | clean_broken_handoff | non_causal_textual_distraction | s2 | a5 | True | True | False | yes | no | yes | no | accept |
+| JV1_clean_broken_handoff_C003_clean | clean_broken_handoff | none | s2 | a2 | False | False | True | yes | no | yes | no | accept |
