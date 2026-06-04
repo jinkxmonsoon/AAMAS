@@ -35,3 +35,17 @@ id_conventions:
   clean_trace_id_pattern: JV1_<group_short>_C###_clean
   perturbed_trace_id_pattern: JV1_<group_short>_C###_<perturbation_type>_P##
   requires_clean_parent_trace_id: true
+
+# Task 12B full ordered trace migration requirement
+full_trace_schema_requirement:
+  status: required_for_future_evaluation_corpus
+  current_420_record_corpus_status: failure_centered_not_evaluation_ready
+  record_unit: one_complete_ordered_trace
+  required_top_level_steps_array: true
+  minimum_ordered_steps_per_trace: 4
+  minimum_agents_per_trace: 2
+  require_gold_failure_step_in_steps: true
+  require_gold_failure_agent_in_steps: true
+  require_non_gold_candidate_steps_per_trace: 2
+  require_non_gold_candidate_agents_per_trace: 1
+  default_migration_path: regenerate_from_builder_unless_lossless_conversion_is_proven

@@ -1,0 +1,236 @@
+# 13 — Full Ordered Trace Schema Migration Plan
+
+## Status and scope
+
+Task 12B freezes the migration plan from the current failure-centered single-record representation to a full ordered multi-step trace representation for **BRACIS-Journal-v1**.
+
+This is a protocol/schema correction task only:
+
+- no corpus regeneration is performed;
+- no gold labels are changed;
+- no perturbation definitions are changed;
+- no CCT graph construction or CCT scoring is implemented;
+- no calibration, refinement variants, ablations, or paper-ready result tables are implemented.
+
+## Diagnosis: why the current corpus is failure-centered
+
+The current `data/processed/journal_v1/main_all_traces.jsonl` representation stores one JSONL record per trace, but that record is centered on the failure event rather than on the full trace. The top-level fields describe the failure point directly:
+
+- `step_id` equals the failure step in the current records;
+- `agent_id` equals the failure agent in the current records;
+- `handoff_to` is target-equivalent for the failure agent in the current records;
+- `input_message`, `output_message`, `tool_call`, and `tool_output` describe the failure-point event rather than all candidate events;
+- phase and event strings in the failure-point text make step attribution trivial even after gold/private fields are removed;
+- private fields such as `label_rationale`, `propagation_evidence`, `irreversibility_evidence`, `recovery_opportunity`, `provenance_notes`, and `synthetic_control_rule` are present in raw records and must stay outside model-visible prediction inputs.
+
+Therefore, the current 420-record corpus is **not evaluation-ready**. It remains useful only as a diagnostic artifact and migration source candidate.
+
+## New required unit of evaluation
+
+The new unit of evaluation is:
+
+> **one record = one complete ordered multi-step trace**
+
+Each record must contain an ordered `steps` array. Each element of `steps` must represent a model-visible trace step and include:
+
+- `step_id`;
+- `agent_id`;
+- `agent_role`;
+- `input_message`;
+- `output_message`;
+- `tool_call`;
+- `tool_output`;
+- `handoff_from`;
+- `handoff_to`;
+- `evidence_items`;
+- `evidence_used`;
+- `visible_step_notes`, if needed.
+
+Top-level `step_id` and top-level `agent_id` are prohibited in the full-trace schema because they identify a single event and recreate the failure-centered view. Step and agent identifiers belong inside `steps` where they enumerate all candidate events.
+
+## Private label fields outside model-visible steps
+
+The following fields remain top-level private/evaluation-only fields outside the model-visible `steps` array:
+
+- `gold_failure_step`;
+- `gold_failure_agent`;
+- `gold_irreversibility`;
+- `gold_propagation`;
+- `gold_recoverability`;
+- `label_rationale`;
+- `label_confidence`;
+- `label_source`;
+- H6 evidence fields, including `propagation_evidence`, `irreversibility_evidence`, and `recovery_opportunity`;
+- adjudication/provenance fields, including `primary_labeler`, `secondary_labeler`, `adjudicator`, `disagreement_type`, `adjudication_decision`, `manual_audit_status`, `annotator_or_generator`, `provenance_notes`, `synthetic_control_rule`, and generation metadata.
+
+Private fields may be used by validators and metric evaluation after predictions are produced. They must not be passed to prediction code.
+
+## Full-trace prediction-view contract
+
+Prediction view may include:
+
+- `trace_id` as an identifier only;
+- ordered visible `steps`;
+- visible `agent_id` and `agent_role` per step;
+- visible `input_message`, `output_message`, `tool_call`, `tool_output`, handoff fields, and evidence fields per step;
+- all candidate step IDs and candidate agent IDs derived from the ordered `steps` array.
+
+Prediction view must not include:
+
+- any gold label;
+- label rationale;
+- private H6 evidence fields;
+- top-level failure-centered `step_id` or `agent_id`;
+- any field that directly identifies the failure step or failure agent;
+- provenance/control fields that encode generation rules or label provenance;
+- scenario or perturbation strings if they directly reveal labels or target construction.
+
+## Migration implications
+
+- The current 420-record corpus is not evaluation-ready.
+- Current trivial and non-CCT baseline outputs are diagnostic-only shortcut/leakage checks.
+- No result from the failure-centered corpus may be used in the paper.
+- Existing records may be converted into full traces only if enough non-failure step information exists to reconstruct realistic, ordered, model-visible candidate events without fabricating evidence.
+- If existing records do not contain enough information, the corpus must be regenerated from `scripts/build_main_corpus.py` or a successor builder under the full-trace schema.
+- Because the current JSONL records store only one failure-centered event, the default expected path is **regeneration from the builder under the full-trace schema**, not silent conversion.
+
+## Acceptance criteria for a future full-trace corpus
+
+A future full-trace Journal-v1 corpus is accepted for evaluation preparation only if all of the following hold:
+
+- each trace has at least 4 ordered steps;
+- each trace has at least 2 agents;
+- `gold_failure_step` appears among `steps[*].step_id`;
+- `gold_failure_agent` appears among `steps[*].agent_id`;
+- at least 2 plausible non-gold candidate steps exist per trace;
+- at least 1 plausible non-gold candidate agent exists per trace;
+- prediction view contains all candidate steps, not only the failing step;
+- prediction view contains all candidate agents, not only the failing agent;
+- private labels, rationales, H6 evidence, and provenance fields are excluded from prediction view;
+- non-CCT baselines are rerun after migration;
+- `spectrum_inspired_step` must no longer trivially reach 100% unless the run is explicitly justified and blocked for review;
+- schema, label consistency, leakage, integrity, and prediction-view audits all pass.
+
+## Validator updates required in a future task
+
+Future validator work must add or update:
+
+- schema validator checks for a top-level ordered `steps` array;
+- schema validator checks for the required per-step fields;
+- schema validator rejection of top-level failure-centered `step_id` and `agent_id` in evaluation-ready records;
+- label consistency checks that gold labels appear in the `steps` array;
+- label consistency checks that plausible non-gold candidate steps/agents exist;
+- leakage audit scans over visible `steps` only;
+- leakage audit rejection of private label/rationale/provenance/H6 fields in prediction view;
+- integrity audit validation of parent-child perturbed traces under the full-trace schema;
+- prediction-view tests that all candidate steps and agents are preserved.
+
+## Builder updates required in a future task
+
+Future builder work must update `scripts/build_main_corpus.py` or its successor so that:
+
+- it generates full ordered traces;
+- failure step varies across `s2`, `s3`, `s4`, and `s5`;
+- non-failure steps are realistic and plausible;
+- evidence structures span multiple steps;
+- handoff structures span multiple steps;
+- perturbed traces preserve parent trace structure unless the perturbation explicitly changes observability;
+- private labels/rationales/evidence/provenance are separated from model-visible step content;
+- full-trace manifests and audits are regenerated after approved corpus regeneration.
+
+## Explicit blocked status
+
+Until full-trace schema migration is implemented and audited:
+
+- evaluation is blocked;
+- CCT graph construction is blocked;
+- CCT scoring is blocked;
+- calibration is blocked;
+- V2 refinement is blocked;
+- ablations are blocked;
+- paper-ready result tables are blocked.
+
+## Task 13 validator and prediction-view infrastructure status
+
+Task 13 implements non-experimental infrastructure for the frozen full-trace schema before corpus regeneration:
+
+- `src/cctdiag/schema/full_trace_contracts.py` defines required top-level, per-step, private-label, and provenance fields.
+- `src/cctdiag/schema/full_trace_validators.py` validates full ordered trace records, including the `steps` array, candidate-step/agent constraints, private label references, and rejection of top-level failure-centered `step_id`/`agent_id` fields.
+- `src/cctdiag/io/full_trace_views.py` constructs prediction views with ordered visible steps and candidate step/agent IDs while excluding `private_labels`, provenance, gold labels, label rationale, and H6 evidence fields.
+- `tests/fixtures/full_trace/` contains one minimal valid full-trace fixture and invalid fixtures for missing steps, gold step outside steps, failure-centered top-level fields, and insufficient candidate agents.
+- `scripts/validate_full_trace_schema.py --fixtures-only` and `scripts/validate_full_trace_prediction_view.py --fixtures-only` validate fixture behavior.
+
+This infrastructure does not clear the current failure-centered corpus for evaluation and does not regenerate any corpus file.
+
+## Task 14 full-trace pilot status
+
+Task 14 adds a non-final, non-evidential 14-trace full-trace pilot under `data/interim/journal_v1_full_trace_pilot/` to exercise the Task 13 schema and prediction-view infrastructure before any main-corpus regeneration.
+
+Pilot constraints:
+
+- 7 clean full traces and 7 perturbed full traces;
+- one clean trace per mandatory scenario group;
+- one perturbation variant per clean trace;
+- gold labels are stored only in `private_labels`;
+- all records must pass full-trace schema validation and full-trace prediction-view validation;
+- the pilot is not paper evidence and does not clear the blocked current failure-centered corpus.
+
+The full 420-trace corpus remains ungenerated under the full-trace schema, and CCT scoring, calibration, refinement, ablations, and paper-ready result tables remain blocked.
+
+## Task 14A shortcut and semantic-diversity gate status
+
+Task 14A adds shortcut-baseline and semantic-diversity diagnostics for the 14-trace full-trace pilot. Baselines operate only on sanitized full-trace prediction views and remain below pilot review/block thresholds. The readiness gate is marked `FULL_TRACE_PILOT_READY_FOR_MAIN_CORPUS = yes` for a future explicitly approved full-trace main-corpus builder task only.
+
+This does not authorize CCT scoring, calibration, refinement, ablations, paper-ready result tables, or use of the old failure-centered corpus.
+
+## Task 14B diagnostic sufficiency status
+
+Task 14B adds a diagnostic sufficiency and candidate plausibility audit for the non-final 14-trace full-trace pilot. The audit distinguishes shortcut control from diagnostic sufficiency: the pilot's sanitized prediction views preserve candidate sets and avoid obvious label leakage, but the visible step content is too templated to support meaningful attribution.
+
+Current Task 14B readiness status:
+
+- clean pilot decisions: accept=0, revise=7, reject=0;
+- perturbed pilot decisions: accept=0, revise=7, reject=0;
+- gold failure step inferable from visible evidence in clean traces: 0 of 7;
+- gold failure step too obvious from shortcuts in clean traces: 0 of 7;
+- gold failure step not inferable from visible evidence in clean traces: 7 of 7;
+- `FULL_TRACE_PILOT_DIAGNOSTICALLY_READY = no`;
+- `FULL_TRACE_MAIN_CORPUS_GENERATION_ALLOWED = no`.
+
+The full-trace builder must be revised to add scenario-specific, model-visible causal evidence for the gold step while preserving plausible non-gold alternatives. The full 420-trace corpus must not be generated until this pilot diagnostic sufficiency gate is rerun and cleared.
+
+## Task 14C revised pilot diagnostic sufficiency status
+
+Task 14C revises the non-final full-trace pilot builder to address the Task 14B semantic-flattening blocker. The revised pilot adds scenario-specific visible evidence for the private gold step while preserving plausible non-gold candidate steps and agents.
+
+Current Task 14C pilot status:
+
+- clean pilot decisions after revision: accept=7, revise=0, reject=0;
+- perturbed pilot decisions after revision: accept=7, revise=0, reject=0;
+- gold failure step inferable from visible evidence in clean traces: 7 of 7;
+- gold failure step too obvious from shortcuts in clean traces: 0 of 7;
+- gold failure step not inferable from visible evidence in clean traces: 0 of 7;
+- shortcut baseline gate remains passed;
+- lexical leakage hits remain 0;
+- gold steps are not systematically more detailed than non-gold steps;
+- `FULL_TRACE_PILOT_DIAGNOSTICALLY_READY = yes`;
+- `FULL_TRACE_MAIN_CORPUS_GENERATION_ALLOWED = future_explicit_approval_required`.
+
+This clears the pilot diagnostic sufficiency blocker only. The full 420-trace corpus still requires a future explicitly approved generation task and fresh validation/audit evidence.
+
+## Task 15 full-trace main corpus status
+
+Task 15 generates the full ordered multi-step Journal-v1 main corpus under the full-trace schema. The corpus contains 84 clean traces, 336 perturbed traces, and 420 total traces under `data/processed/journal_v1_full_trace/`.
+
+Current Task 15 audit status:
+
+- all mandatory scenario groups are represented with 12 clean traces each;
+- each clean trace has paraphrase, tool-output truncation, partial-observability, and non-causal textual-distraction variants;
+- gold failure steps are balanced across s2, s3, s4, and s5;
+- schema validation and prediction-view validation pass;
+- diagnostic sufficiency and candidate plausibility pass without unresolved blockers;
+- shortcut-baseline gate passes without review/block threshold violations;
+- lexical leakage hits are zero;
+- the old failure-centered corpus remains blocked.
+
+This creates corpus artifacts only. CCT graph construction, CCT scoring, calibration, refinement variants, ablations, empirical hypothesis tests, and paper-ready result tables remain blocked until a future task explicitly authorizes evaluation.

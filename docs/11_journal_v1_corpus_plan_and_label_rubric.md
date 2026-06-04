@@ -162,3 +162,25 @@ No traces, labels, perturbations, metrics, baselines, or results are generated i
 - The selected failure step must be reflected in `step_id`, `gold_failure_step`, `gold_failure_agent`, handoff context, phase-specific trace text, H6 evidence fields, and `label_rationale`.
 - Perturbation variants preserve the clean parent case's `gold_failure_step` unless an explicitly documented degraded-observability change is approved.
 - Current corrected distribution is `s2/s3/s4/s5 = 105/105/105/105` traces (25.00% each), satisfying the <=40% majority-step and always-s2 constraints.
+
+## Task 11 diagnostic sanity-check note
+
+After the corrected corpus passed the Task 10H pre-evaluation gate, Task 11
+added metric interfaces and trivial-baseline sanity checks. This does not alter
+corpus composition, gold labels, perturbation definitions, or the label rubric.
+The generated trivial-baseline outputs are diagnostic-only shortcut checks and
+are not CCT comparisons, not evidence for H1, and not paper-ready result tables.
+
+## Task 12A evaluation-input leakage note
+
+Task 12A found that the current Journal-v1 JSONL records are failure-centered:
+top-level `step_id`, `agent_id`, and `handoff_to` are target-equivalent, and the
+visible text represents the failure point rather than an ordered full trace. A
+sanitized prediction view now removes direct private fields, but the corpus still
+requires a future full-trace schema correction before CCT evaluation.
+
+## Task 12B full-trace schema migration freeze
+
+The current 420-record Journal-v1 corpus is explicitly not evaluation-ready because it stores one failure-centered record per trace. The top-level `step_id`, `agent_id`, and `handoff_to` fields are target-equivalent in this representation, and the visible message/tool fields describe the failure event rather than all candidate steps.
+
+The next approved corpus correction must migrate to one record per complete ordered trace with a `steps` array and private labels outside model-visible content. Existing failure-centered records may be used only as diagnostic/migration input. No result from the current failure-centered corpus may be used in the paper.

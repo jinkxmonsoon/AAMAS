@@ -221,3 +221,95 @@ Chronological decisions, assumptions, caveats, and methodological notes.
   - H6 and semantic evidence: H6 semantic consistency reports PASS; H6 labels are balanced 210/210 for propagation, irreversibility, and recoverability; semantic spot-check remains 19/0/0 accept/revise/reject; manual sanity check remains 6/0/0 accept/revise/reject.
   - Gate result: final pre-evaluation corpus gate cleared for a future explicitly approved task to implement metric interfaces and trivial baselines.
   - Scientific result: No CCT scoring, calibration, refinement, empirical evaluation, or paper result table added.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 11 metric-interface and trivial-baseline sanity checks.
+  - Reasoning decision: implement only accuracy-style metric interfaces and allowed trivial baselines so future CCT evaluation can rely on tested metric plumbing without testing CCT itself.
+  - Diagnostic result: standalone trivial baselines did not exceed blocker thresholds on the corrected corpus; the gate is marked passed in the diagnostic report.
+  - Caveat: `same_as_parent_for_perturbations` is implemented as a prediction-propagation diagnostic that does not read parent gold labels; without external parent predictions it reports `NA`, avoiding gold-label leakage in the standalone sanity script.
+  - Scientific result: no CCT scoring, calibration, refinement variant, ablation, empirical hypothesis test, or paper-ready result table was implemented.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 12 non-CCT baseline diagnostics.
+  - Provenance confirmation: active branch at task start was `work`; active HEAD at task start was `12efebd8ede932c6c707feafec4841930c71430a` (`Implement metric interfaces and trivial baseline sanity checks`).
+  - PR #15 commit-hash discrepancy note: the user summary referenced `6153857`, while the local active history shows `12efebd`; the GitHub-reported `bde39fc` was not present as the local active HEAD in this workspace. The final active Task 12 commit is recorded in the final handoff/PR metadata because a commit cannot stably contain its own hash.
+  - Reasoning decision: implement transparent deterministic baselines that intentionally test whether flat log text and non-gold metadata already identify failure attribution without CCT structure.
+  - Diagnostic result: non-CCT diagnostics exceed the 85% blocker threshold, so the report marks evaluation blocked pending corpus/baseline investigation.
+  - Scientific result: no CCT graph construction, CCT scoring, calibration, refinement variant, ablation, empirical hypothesis test, or paper-ready result table was implemented.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 12A evaluation-input leakage audit and correction.
+  - Root-cause decision: Task 12 100% baselines were caused by raw-record baseline access to target-equivalent `step_id`, `agent_id`, and `handoff_to`, plus the deeper failure-centered single-record corpus representation.
+  - Correction: introduced sanitized prediction views that remove gold labels, private metadata, H6 evidence/rationale fields, provenance/control fields, and target-equivalent top-level failure pointers before baseline prediction.
+  - Corrected diagnostic result: agent leakage is reduced, but `spectrum_inspired_step` remains at 100% step accuracy and the gate remains blocked because visible content still represents the failure point rather than a full ordered trace.
+  - Required next step: approve a corpus-schema correction task for full ordered multi-step trace representation before any CCT implementation.
+  - Scientific result: no CCT graph construction, CCT scoring, calibration, refinement variant, ablation, empirical hypothesis test, or paper-ready result table was implemented.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 12B full ordered trace schema migration freeze.
+  - Diagnosis: the current corpus is failure-centered because top-level `step_id`, `agent_id`, and `handoff_to` identify the failure point/agent, while visible message/tool fields describe the failure event rather than all candidate steps.
+  - Migration decision: existing records are not evaluation-ready; the default future path is regeneration from an approved full-trace builder unless a future audit proves lossless conversion into full ordered traces is possible without fabricating non-failure steps.
+  - Frozen requirement: one record must equal one complete ordered multi-step trace with a model-visible `steps` array and private labels/rationales/H6 evidence/provenance outside prediction input.
+  - Blocked status: evaluation, CCT graph construction, CCT scoring, calibration, refinement, ablations, and paper-ready result tables remain blocked until full-trace migration is implemented and audited.
+  - Scientific result: no empirical hypothesis was tested; no corpus regeneration, CCT scoring, calibration, refinement, ablation, or paper-ready result table was produced.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 13 full ordered trace schema validators and fixtures.
+  - Implementation decision: add validation and prediction-view infrastructure before any corpus regeneration so future full-trace data can be audited against the frozen Task 12B migration plan.
+  - Fixture decision: use non-experimental fixtures only, including one minimal valid full trace and targeted invalid examples for missing steps, gold-step mismatch, failure-centered top-level fields, and insufficient candidate agents.
+  - Blocked status remains unchanged: the current failure-centered corpus is still not evaluation-ready, and CCT graph construction/scoring, calibration, refinement, ablations, and paper-ready result tables remain blocked.
+  - Scientific result: no empirical hypothesis was tested; no corpus regeneration, CCT scoring, calibration, refinement, ablation, or paper-ready result table was produced.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 13A full-trace schema infrastructure verification.
+  - Provenance confirmation: verification was run on branch `work` starting from HEAD `5e98706cb19e81f7a66726198a6d7d6298a93a82`.
+  - Validation evidence: `python scripts/validate_repo.py`, `python scripts/validate_full_trace_schema.py --fixtures-only`, `python scripts/validate_full_trace_prediction_view.py --fixtures-only`, and `python -m pytest` all passed.
+  - Fixture outcome: the valid full-trace fixture passed; invalid fixtures failed for expected missing-steps, gold-step-not-in-steps, failure-centered-top-level-fields, and insufficient-agent-candidate reasons.
+  - Blocked status remains unchanged: the current failure-centered corpus remains not evaluation-ready, and no corpus generation, CCT graph construction/scoring, calibration, refinement, ablation, or paper-ready result table was performed.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 14 full-trace pilot corpus build and audit.
+  - Pilot result: generated 7 clean and 7 perturbed non-final full traces covering all mandatory scenario groups and core perturbation types.
+  - Audit result: full-trace schema validation and prediction-view validation passed; semantic spot-check accept/revise/reject counts were 14/0/0.
+  - Distribution check: `gold_failure_step` coverage includes `s2`, `s3`, `s4`, and `s5`; H6 labels include at least two true and two false examples for propagation, irreversibility, and recoverability.
+  - Caveat: this pilot is non-evidential and must not be used for paper results; the previous failure-centered corpus remains blocked and the full 420-trace corpus was not generated.
+  - Scientific result: no empirical hypothesis was tested; no CCT scoring, calibration, refinement, ablation, or paper-ready result table was produced.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 14A full-trace pilot shortcut and semantic-diversity gate.
+  - Diagnostic baseline result: all pilot shortcut baselines remained below the 70% review threshold and 85% block threshold when run on sanitized full-trace prediction views.
+  - Semantic diversity result: no leakage term hits were detected; gold steps were not systematically more detailed than non-gold steps; gold steps were not the only steps with tool calls/evidence.
+  - Readiness decision: `FULL_TRACE_PILOT_READY_FOR_MAIN_CORPUS = yes`, permitting only a future explicitly approved full-trace main-corpus builder task.
+  - Caveat: this is pilot-only diagnostic evidence and not a paper result; the old failure-centered corpus remains blocked.
+  - Scientific result: no empirical hypothesis was tested; no full 420-trace corpus generation, CCT scoring, calibration, refinement, ablation, or paper-ready result table was produced.
+
+## Task 14B — Diagnostic sufficiency and candidate plausibility audit
+
+- Current stage: Task 14B full-trace pilot diagnostic sufficiency audit.
+- Clean-trace decisions: accept=0, revise=7, reject=0.
+- Perturbed-trace decisions: accept=0, revise=7, reject=0.
+- Gold-step inferability from visible prediction-view evidence: 0 of 7 clean traces; too-obvious shortcut cases: 0; not-inferable cases: 7.
+- Reasoning decision: the pilot should not be scaled even though Task 14A shortcut baselines stayed below threshold, because the visible step content is overly templated and does not provide distinctive causal evidence for the private gold attribution point.
+- Repeated-template caveat: input messages, output messages, tool outputs, evidence structures, role order, and handoff chains are too uniform for a diagnostically meaningful benchmark.
+- Readiness decision: `FULL_TRACE_PILOT_DIAGNOSTICALLY_READY = no`; `FULL_TRACE_MAIN_CORPUS_GENERATION_ALLOWED = no`.
+- Scientific result: no empirical hypothesis was tested; no full 420-trace corpus generation, CCT scoring, calibration, refinement, ablation, or paper-ready result table was produced.
+
+## Task 14C — Revised pilot diagnostic sufficiency
+
+- Current stage: Task 14C full-trace pilot builder revision for diagnostic sufficiency.
+- Before revision from Task 14B: clean accept=0/revise=7/reject=0; perturbed accept=0/revise=7/reject=0; gold-step inferability=0/7 clean traces.
+- After revision: clean accept=7/revise=0/reject=0; perturbed accept=7/revise=0/reject=0; gold-step inferability=7/7 clean traces; too-obvious=0/7; not-inferable=0/7.
+- Reasoning decision: the pilot now uses scenario-specific visible causal evidence, such as cap-transfer softening, evidence weighting, channel authorization, weak-estimate dependency, missed correction window, date-role mismatch, and source-ranking collapse.
+- Caveat: the pilot remains non-final and non-evidential; full main-corpus generation requires explicit future approval and broader structural diversity.
+- Scientific result: no empirical hypothesis was tested; no full 420-trace corpus generation, CCT scoring, calibration, refinement, ablation, or paper-ready result table was produced.
+
+## Task 15 — Full-trace main corpus generation and audit
+
+- Current stage: Task 15 full-trace main corpus generation and audit.
+- Provenance before generation: branch `work`; pre-generation HEAD `a23c14051411338d8929ae0971ec76e068ce0828`; Task 14C pilot files/reports existed and Task 14C validation commands passed.
+- Generated counts: clean=84, perturbed=336, total=420.
+- Distribution decision: gold failure steps and agents are balanced across s2/a2, s3/a3, s4/a4, and s5/a5 at 105 records each in the full all-traces file.
+- Audit outcome: diagnostic sufficiency accept=420/revise=0/reject=0; candidate plausibility accept=420/revise=0/reject=0; lexical leakage hits=0.
+- Shortcut-baseline outcome: all diagnostic baselines remained below the 70% review threshold and 85% block threshold.
+- Caveat: this is corpus-generation and audit evidence only; it is not an empirical hypothesis test and does not compare CCT or any method.
+- Scientific result: no CCT scoring, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table was produced; the old failure-centered corpus remains blocked.

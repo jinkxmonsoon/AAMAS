@@ -1,0 +1,2899 @@
+{
+  "interpretation": {
+    "blockers": [],
+    "review_flags": [],
+    "status": "passed"
+  },
+  "readiness": {
+    "blockers": [],
+    "ready": true
+  },
+  "results": {
+    "always_s2": {
+      "agent_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": 0.25,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "none": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": 0.25,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": 0.25,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": 0.25,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": 0.25,
+      "tuple_accuracy_step_agent": null
+    },
+    "first_agent": {
+      "agent_accuracy": 0.0,
+      "macro_by_perturbation": {
+        "macro_accuracy": null,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": null,
+            "n": 84
+          },
+          "none": {
+            "accuracy": null,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": null,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": null,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": null,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": null,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": null,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": null,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": null,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": null,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": null,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": null,
+      "tuple_accuracy_step_agent": null
+    },
+    "first_step": {
+      "agent_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": 0.0,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "none": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": 0.0,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": 0.0,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": 0.0,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": 0.0,
+      "tuple_accuracy_step_agent": null
+    },
+    "keyword_degradation_step": {
+      "agent_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": 0.0,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "none": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": 0.0,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": 0.0,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": 0.0,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": 0.0,
+      "tuple_accuracy_step_agent": null
+    },
+    "last_agent": {
+      "agent_accuracy": 0.25,
+      "macro_by_perturbation": {
+        "macro_accuracy": null,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": null,
+            "n": 84
+          },
+          "none": {
+            "accuracy": null,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": null,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": null,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": null,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": null,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": null,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": null,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": null,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": null,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": null,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": null,
+      "tuple_accuracy_step_agent": null
+    },
+    "last_step": {
+      "agent_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": 0.25,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "none": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": 0.25,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": 0.25,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": 0.25,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": 0.25,
+      "tuple_accuracy_step_agent": null
+    },
+    "majority_agent": {
+      "agent_accuracy": 0.25,
+      "macro_by_perturbation": {
+        "macro_accuracy": null,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": null,
+            "n": 84
+          },
+          "none": {
+            "accuracy": null,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": null,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": null,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": null,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": null,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": null,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": null,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": null,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": null,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": null,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": null,
+      "tuple_accuracy_step_agent": null
+    },
+    "majority_step": {
+      "agent_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": 0.25,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "none": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": 0.25,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": 0.25,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": 0.25,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": 0.25,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": 0.25,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": 0.25,
+      "tuple_accuracy_step_agent": null
+    },
+    "most_detailed_step": {
+      "agent_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": 0.03571428571428571,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": 0.10714285714285714,
+            "n": 84
+          },
+          "none": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": 0.07142857142857142,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": 0.0,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": 0.03571428571428571,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": 0.1,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": 0.05,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": 0.1,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": 0.0,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": 0.03571428571428571,
+      "tuple_accuracy_step_agent": null
+    },
+    "simple_spectrum_visible_agent": {
+      "agent_accuracy": 0.0,
+      "macro_by_perturbation": {
+        "macro_accuracy": null,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": null,
+            "n": 84
+          },
+          "none": {
+            "accuracy": null,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": null,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": null,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": null,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": null,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": null,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": null,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": null,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": null,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": null,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": null,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": null,
+      "tuple_accuracy_step_agent": null
+    },
+    "simple_spectrum_visible_step": {
+      "agent_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": 0.0,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "none": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": 0.0,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": 0.0,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": 0.0,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": 0.0,
+      "tuple_accuracy_step_agent": null
+    },
+    "tool_presence_step": {
+      "agent_accuracy": null,
+      "macro_by_perturbation": {
+        "macro_accuracy": 0.0,
+        "per_group": {
+          "non_causal_textual_distraction": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "none": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "paraphrase": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "partial_observability": {
+            "accuracy": 0.0,
+            "n": 84
+          },
+          "tool_output_truncation": {
+            "accuracy": 0.0,
+            "n": 84
+          }
+        }
+      },
+      "macro_by_scenario": {
+        "macro_accuracy": 0.0,
+        "per_group": {
+          "clean_broken_handoff": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "complex_collaboration": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "cross_agent_propagation": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "recoverable_irreversible_failure": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "same_agent_continuation": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "semantic_collision": {
+            "accuracy": 0.0,
+            "n": 60
+          },
+          "tool_evidence_usage": {
+            "accuracy": 0.0,
+            "n": 60
+          }
+        }
+      },
+      "step_accuracy": 0.0,
+      "tuple_accuracy_step_agent": null
+    }
+  },
+  "semantic_diversity": {
+    "agents_per_trace": {
+      "avg": 5.0,
+      "max": 5,
+      "min": 5
+    },
+    "evidence_distribution": {
+      "gold_steps_with_evidence": 420,
+      "non_gold_steps_with_evidence": 1680
+    },
+    "gold_only_tool_traces": [],
+    "gold_steps_systematically_more_detailed": false,
+    "leakage_hits": [],
+    "per_trace_lengths": [
+      {
+        "avg_non_gold_length": 521.5,
+        "gold_length": 442,
+        "trace_id": "JV1FTMAIN_CLEBRO_C01_clean"
+      },
+      {
+        "avg_non_gold_length": 523.25,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_CLEBRO_C02_clean"
+      },
+      {
+        "avg_non_gold_length": 522.75,
+        "gold_length": 445,
+        "trace_id": "JV1FTMAIN_CLEBRO_C03_clean"
+      },
+      {
+        "avg_non_gold_length": 559.25,
+        "gold_length": 417,
+        "trace_id": "JV1FTMAIN_CLEBRO_C04_clean"
+      },
+      {
+        "avg_non_gold_length": 524.0,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_CLEBRO_C05_clean"
+      },
+      {
+        "avg_non_gold_length": 524.5,
+        "gold_length": 451,
+        "trace_id": "JV1FTMAIN_CLEBRO_C06_clean"
+      },
+      {
+        "avg_non_gold_length": 521.5,
+        "gold_length": 442,
+        "trace_id": "JV1FTMAIN_CLEBRO_C07_clean"
+      },
+      {
+        "avg_non_gold_length": 560.5,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_CLEBRO_C08_clean"
+      },
+      {
+        "avg_non_gold_length": 522.75,
+        "gold_length": 445,
+        "trace_id": "JV1FTMAIN_CLEBRO_C09_clean"
+      },
+      {
+        "avg_non_gold_length": 524.0,
+        "gold_length": 446,
+        "trace_id": "JV1FTMAIN_CLEBRO_C10_clean"
+      },
+      {
+        "avg_non_gold_length": 526.0,
+        "gold_length": 449,
+        "trace_id": "JV1FTMAIN_CLEBRO_C11_clean"
+      },
+      {
+        "avg_non_gold_length": 563.75,
+        "gold_length": 424,
+        "trace_id": "JV1FTMAIN_CLEBRO_C12_clean"
+      },
+      {
+        "avg_non_gold_length": 490.75,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C01_clean"
+      },
+      {
+        "avg_non_gold_length": 478.5,
+        "gold_length": 422,
+        "trace_id": "JV1FTMAIN_TOOEVI_C02_clean"
+      },
+      {
+        "avg_non_gold_length": 477.25,
+        "gold_length": 418,
+        "trace_id": "JV1FTMAIN_TOOEVI_C03_clean"
+      },
+      {
+        "avg_non_gold_length": 481.25,
+        "gold_length": 423,
+        "trace_id": "JV1FTMAIN_TOOEVI_C04_clean"
+      },
+      {
+        "avg_non_gold_length": 490.75,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C05_clean"
+      },
+      {
+        "avg_non_gold_length": 472.5,
+        "gold_length": 410,
+        "trace_id": "JV1FTMAIN_TOOEVI_C06_clean"
+      },
+      {
+        "avg_non_gold_length": 478.25,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C07_clean"
+      },
+      {
+        "avg_non_gold_length": 485.0,
+        "gold_length": 433,
+        "trace_id": "JV1FTMAIN_TOOEVI_C08_clean"
+      },
+      {
+        "avg_non_gold_length": 490.25,
+        "gold_length": 418,
+        "trace_id": "JV1FTMAIN_TOOEVI_C09_clean"
+      },
+      {
+        "avg_non_gold_length": 475.5,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_TOOEVI_C10_clean"
+      },
+      {
+        "avg_non_gold_length": 480.25,
+        "gold_length": 421,
+        "trace_id": "JV1FTMAIN_TOOEVI_C11_clean"
+      },
+      {
+        "avg_non_gold_length": 482.5,
+        "gold_length": 422,
+        "trace_id": "JV1FTMAIN_TOOEVI_C12_clean"
+      },
+      {
+        "avg_non_gold_length": 473.75,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_SAMAGE_C01_clean"
+      },
+      {
+        "avg_non_gold_length": 466.0,
+        "gold_length": 451,
+        "trace_id": "JV1FTMAIN_SAMAGE_C02_clean"
+      },
+      {
+        "avg_non_gold_length": 452.75,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C03_clean"
+      },
+      {
+        "avg_non_gold_length": 470.0,
+        "gold_length": 440,
+        "trace_id": "JV1FTMAIN_SAMAGE_C04_clean"
+      },
+      {
+        "avg_non_gold_length": 473.0,
+        "gold_length": 454,
+        "trace_id": "JV1FTMAIN_SAMAGE_C05_clean"
+      },
+      {
+        "avg_non_gold_length": 465.0,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C06_clean"
+      },
+      {
+        "avg_non_gold_length": 456.5,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_SAMAGE_C07_clean"
+      },
+      {
+        "avg_non_gold_length": 467.0,
+        "gold_length": 431,
+        "trace_id": "JV1FTMAIN_SAMAGE_C08_clean"
+      },
+      {
+        "avg_non_gold_length": 471.5,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C09_clean"
+      },
+      {
+        "avg_non_gold_length": 471.0,
+        "gold_length": 461,
+        "trace_id": "JV1FTMAIN_SAMAGE_C10_clean"
+      },
+      {
+        "avg_non_gold_length": 457.25,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_SAMAGE_C11_clean"
+      },
+      {
+        "avg_non_gold_length": 468.0,
+        "gold_length": 429,
+        "trace_id": "JV1FTMAIN_SAMAGE_C12_clean"
+      },
+      {
+        "avg_non_gold_length": 462.25,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C01_clean"
+      },
+      {
+        "avg_non_gold_length": 459.25,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C02_clean"
+      },
+      {
+        "avg_non_gold_length": 459.75,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C03_clean"
+      },
+      {
+        "avg_non_gold_length": 440.75,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C04_clean"
+      },
+      {
+        "avg_non_gold_length": 464.5,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C05_clean"
+      },
+      {
+        "avg_non_gold_length": 460.75,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C06_clean"
+      },
+      {
+        "avg_non_gold_length": 452.75,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C07_clean"
+      },
+      {
+        "avg_non_gold_length": 446.5,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C08_clean"
+      },
+      {
+        "avg_non_gold_length": 465.75,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C09_clean"
+      },
+      {
+        "avg_non_gold_length": 456.0,
+        "gold_length": 402,
+        "trace_id": "JV1FTMAIN_CROAGE_C10_clean"
+      },
+      {
+        "avg_non_gold_length": 459.25,
+        "gold_length": 416,
+        "trace_id": "JV1FTMAIN_CROAGE_C11_clean"
+      },
+      {
+        "avg_non_gold_length": 450.75,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_CROAGE_C12_clean"
+      },
+      {
+        "avg_non_gold_length": 454.0,
+        "gold_length": 411,
+        "trace_id": "JV1FTMAIN_RECIRR_C01_clean"
+      },
+      {
+        "avg_non_gold_length": 461.5,
+        "gold_length": 411,
+        "trace_id": "JV1FTMAIN_RECIRR_C02_clean"
+      },
+      {
+        "avg_non_gold_length": 469.0,
+        "gold_length": 386,
+        "trace_id": "JV1FTMAIN_RECIRR_C03_clean"
+      },
+      {
+        "avg_non_gold_length": 472.25,
+        "gold_length": 380,
+        "trace_id": "JV1FTMAIN_RECIRR_C04_clean"
+      },
+      {
+        "avg_non_gold_length": 453.5,
+        "gold_length": 409,
+        "trace_id": "JV1FTMAIN_RECIRR_C05_clean"
+      },
+      {
+        "avg_non_gold_length": 461.75,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_RECIRR_C06_clean"
+      },
+      {
+        "avg_non_gold_length": 468.5,
+        "gold_length": 385,
+        "trace_id": "JV1FTMAIN_RECIRR_C07_clean"
+      },
+      {
+        "avg_non_gold_length": 471.25,
+        "gold_length": 378,
+        "trace_id": "JV1FTMAIN_RECIRR_C08_clean"
+      },
+      {
+        "avg_non_gold_length": 454.5,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_RECIRR_C09_clean"
+      },
+      {
+        "avg_non_gold_length": 464.0,
+        "gold_length": 416,
+        "trace_id": "JV1FTMAIN_RECIRR_C10_clean"
+      },
+      {
+        "avg_non_gold_length": 470.0,
+        "gold_length": 385,
+        "trace_id": "JV1FTMAIN_RECIRR_C11_clean"
+      },
+      {
+        "avg_non_gold_length": 473.75,
+        "gold_length": 380,
+        "trace_id": "JV1FTMAIN_RECIRR_C12_clean"
+      },
+      {
+        "avg_non_gold_length": 485.5,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C01_clean"
+      },
+      {
+        "avg_non_gold_length": 472.25,
+        "gold_length": 371,
+        "trace_id": "JV1FTMAIN_SEMCOL_C02_clean"
+      },
+      {
+        "avg_non_gold_length": 468.25,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C03_clean"
+      },
+      {
+        "avg_non_gold_length": 478.75,
+        "gold_length": 396,
+        "trace_id": "JV1FTMAIN_SEMCOL_C04_clean"
+      },
+      {
+        "avg_non_gold_length": 488.25,
+        "gold_length": 371,
+        "trace_id": "JV1FTMAIN_SEMCOL_C05_clean"
+      },
+      {
+        "avg_non_gold_length": 467.5,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C06_clean"
+      },
+      {
+        "avg_non_gold_length": 468.25,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C07_clean"
+      },
+      {
+        "avg_non_gold_length": 482.5,
+        "gold_length": 408,
+        "trace_id": "JV1FTMAIN_SEMCOL_C08_clean"
+      },
+      {
+        "avg_non_gold_length": 485.5,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C09_clean"
+      },
+      {
+        "avg_non_gold_length": 469.5,
+        "gold_length": 360,
+        "trace_id": "JV1FTMAIN_SEMCOL_C10_clean"
+      },
+      {
+        "avg_non_gold_length": 475.0,
+        "gold_length": 372,
+        "trace_id": "JV1FTMAIN_SEMCOL_C11_clean"
+      },
+      {
+        "avg_non_gold_length": 480.75,
+        "gold_length": 397,
+        "trace_id": "JV1FTMAIN_SEMCOL_C12_clean"
+      },
+      {
+        "avg_non_gold_length": 475.5,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_COMCOL_C01_clean"
+      },
+      {
+        "avg_non_gold_length": 476.25,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_COMCOL_C02_clean"
+      },
+      {
+        "avg_non_gold_length": 468.25,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C03_clean"
+      },
+      {
+        "avg_non_gold_length": 471.25,
+        "gold_length": 431,
+        "trace_id": "JV1FTMAIN_COMCOL_C04_clean"
+      },
+      {
+        "avg_non_gold_length": 478.5,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_COMCOL_C05_clean"
+      },
+      {
+        "avg_non_gold_length": 477.75,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C06_clean"
+      },
+      {
+        "avg_non_gold_length": 460.5,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_COMCOL_C07_clean"
+      },
+      {
+        "avg_non_gold_length": 477.25,
+        "gold_length": 438,
+        "trace_id": "JV1FTMAIN_COMCOL_C08_clean"
+      },
+      {
+        "avg_non_gold_length": 478.75,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C09_clean"
+      },
+      {
+        "avg_non_gold_length": 473.0,
+        "gold_length": 449,
+        "trace_id": "JV1FTMAIN_COMCOL_C10_clean"
+      },
+      {
+        "avg_non_gold_length": 469.0,
+        "gold_length": 456,
+        "trace_id": "JV1FTMAIN_COMCOL_C11_clean"
+      },
+      {
+        "avg_non_gold_length": 479.75,
+        "gold_length": 441,
+        "trace_id": "JV1FTMAIN_COMCOL_C12_clean"
+      },
+      {
+        "avg_non_gold_length": 537.75,
+        "gold_length": 442,
+        "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 523.5,
+        "gold_length": 442,
+        "trace_id": "JV1FTMAIN_CLEBRO_C01_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 534.0,
+        "gold_length": 442,
+        "trace_id": "JV1FTMAIN_CLEBRO_C01_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 521.5,
+        "gold_length": 520,
+        "trace_id": "JV1FTMAIN_CLEBRO_C01_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 539.5,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_CLEBRO_C02_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 524.75,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_CLEBRO_C02_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 535.75,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_CLEBRO_C02_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 542.75,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_CLEBRO_C02_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 539.0,
+        "gold_length": 445,
+        "trace_id": "JV1FTMAIN_CLEBRO_C03_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 524.5,
+        "gold_length": 445,
+        "trace_id": "JV1FTMAIN_CLEBRO_C03_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 522.75,
+        "gold_length": 495,
+        "trace_id": "JV1FTMAIN_CLEBRO_C03_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 542.25,
+        "gold_length": 445,
+        "trace_id": "JV1FTMAIN_CLEBRO_C03_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 575.5,
+        "gold_length": 417,
+        "trace_id": "JV1FTMAIN_CLEBRO_C04_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 561.0,
+        "gold_length": 417,
+        "trace_id": "JV1FTMAIN_CLEBRO_C04_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 571.75,
+        "gold_length": 417,
+        "trace_id": "JV1FTMAIN_CLEBRO_C04_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 578.75,
+        "gold_length": 417,
+        "trace_id": "JV1FTMAIN_CLEBRO_C04_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 540.25,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_CLEBRO_C05_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 525.5,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_CLEBRO_C05_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 536.5,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_CLEBRO_C05_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 524.0,
+        "gold_length": 526,
+        "trace_id": "JV1FTMAIN_CLEBRO_C05_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 540.75,
+        "gold_length": 451,
+        "trace_id": "JV1FTMAIN_CLEBRO_C06_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 525.75,
+        "gold_length": 451,
+        "trace_id": "JV1FTMAIN_CLEBRO_C06_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 537.0,
+        "gold_length": 451,
+        "trace_id": "JV1FTMAIN_CLEBRO_C06_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 544.0,
+        "gold_length": 451,
+        "trace_id": "JV1FTMAIN_CLEBRO_C06_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 537.75,
+        "gold_length": 442,
+        "trace_id": "JV1FTMAIN_CLEBRO_C07_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 523.5,
+        "gold_length": 442,
+        "trace_id": "JV1FTMAIN_CLEBRO_C07_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 521.5,
+        "gold_length": 492,
+        "trace_id": "JV1FTMAIN_CLEBRO_C07_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 541.0,
+        "gold_length": 442,
+        "trace_id": "JV1FTMAIN_CLEBRO_C07_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 576.75,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_CLEBRO_C08_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 562.0,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_CLEBRO_C08_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 573.0,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_CLEBRO_C08_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 580.0,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_CLEBRO_C08_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 539.0,
+        "gold_length": 445,
+        "trace_id": "JV1FTMAIN_CLEBRO_C09_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 524.5,
+        "gold_length": 445,
+        "trace_id": "JV1FTMAIN_CLEBRO_C09_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 535.25,
+        "gold_length": 445,
+        "trace_id": "JV1FTMAIN_CLEBRO_C09_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 522.75,
+        "gold_length": 523,
+        "trace_id": "JV1FTMAIN_CLEBRO_C09_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 540.25,
+        "gold_length": 446,
+        "trace_id": "JV1FTMAIN_CLEBRO_C10_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 525.75,
+        "gold_length": 446,
+        "trace_id": "JV1FTMAIN_CLEBRO_C10_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 536.5,
+        "gold_length": 446,
+        "trace_id": "JV1FTMAIN_CLEBRO_C10_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 543.5,
+        "gold_length": 446,
+        "trace_id": "JV1FTMAIN_CLEBRO_C10_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 542.25,
+        "gold_length": 449,
+        "trace_id": "JV1FTMAIN_CLEBRO_C11_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 527.5,
+        "gold_length": 449,
+        "trace_id": "JV1FTMAIN_CLEBRO_C11_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 526.0,
+        "gold_length": 499,
+        "trace_id": "JV1FTMAIN_CLEBRO_C11_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 545.5,
+        "gold_length": 449,
+        "trace_id": "JV1FTMAIN_CLEBRO_C11_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 580.0,
+        "gold_length": 424,
+        "trace_id": "JV1FTMAIN_CLEBRO_C12_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 565.0,
+        "gold_length": 424,
+        "trace_id": "JV1FTMAIN_CLEBRO_C12_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 576.25,
+        "gold_length": 424,
+        "trace_id": "JV1FTMAIN_CLEBRO_C12_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 583.25,
+        "gold_length": 424,
+        "trace_id": "JV1FTMAIN_CLEBRO_C12_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 507.0,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 488.75,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C01_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 503.25,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C01_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 490.75,
+        "gold_length": 498,
+        "trace_id": "JV1FTMAIN_TOOEVI_C01_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 494.75,
+        "gold_length": 422,
+        "trace_id": "JV1FTMAIN_TOOEVI_C02_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 476.5,
+        "gold_length": 422,
+        "trace_id": "JV1FTMAIN_TOOEVI_C02_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 491.0,
+        "gold_length": 422,
+        "trace_id": "JV1FTMAIN_TOOEVI_C02_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 498.0,
+        "gold_length": 422,
+        "trace_id": "JV1FTMAIN_TOOEVI_C02_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 493.5,
+        "gold_length": 418,
+        "trace_id": "JV1FTMAIN_TOOEVI_C03_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 475.25,
+        "gold_length": 418,
+        "trace_id": "JV1FTMAIN_TOOEVI_C03_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 477.25,
+        "gold_length": 468,
+        "trace_id": "JV1FTMAIN_TOOEVI_C03_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 496.75,
+        "gold_length": 418,
+        "trace_id": "JV1FTMAIN_TOOEVI_C03_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 497.5,
+        "gold_length": 423,
+        "trace_id": "JV1FTMAIN_TOOEVI_C04_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 479.25,
+        "gold_length": 423,
+        "trace_id": "JV1FTMAIN_TOOEVI_C04_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 493.75,
+        "gold_length": 423,
+        "trace_id": "JV1FTMAIN_TOOEVI_C04_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 500.75,
+        "gold_length": 423,
+        "trace_id": "JV1FTMAIN_TOOEVI_C04_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 507.0,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C05_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 488.75,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C05_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 503.25,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C05_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 490.75,
+        "gold_length": 498,
+        "trace_id": "JV1FTMAIN_TOOEVI_C05_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 488.75,
+        "gold_length": 410,
+        "trace_id": "JV1FTMAIN_TOOEVI_C06_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 470.5,
+        "gold_length": 410,
+        "trace_id": "JV1FTMAIN_TOOEVI_C06_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 485.0,
+        "gold_length": 410,
+        "trace_id": "JV1FTMAIN_TOOEVI_C06_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 492.0,
+        "gold_length": 410,
+        "trace_id": "JV1FTMAIN_TOOEVI_C06_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 494.5,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C07_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 476.25,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C07_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 478.25,
+        "gold_length": 470,
+        "trace_id": "JV1FTMAIN_TOOEVI_C07_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 497.75,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_TOOEVI_C07_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 501.25,
+        "gold_length": 433,
+        "trace_id": "JV1FTMAIN_TOOEVI_C08_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 483.0,
+        "gold_length": 433,
+        "trace_id": "JV1FTMAIN_TOOEVI_C08_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 497.5,
+        "gold_length": 433,
+        "trace_id": "JV1FTMAIN_TOOEVI_C08_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 504.5,
+        "gold_length": 433,
+        "trace_id": "JV1FTMAIN_TOOEVI_C08_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 506.5,
+        "gold_length": 418,
+        "trace_id": "JV1FTMAIN_TOOEVI_C09_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 488.25,
+        "gold_length": 418,
+        "trace_id": "JV1FTMAIN_TOOEVI_C09_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 502.75,
+        "gold_length": 418,
+        "trace_id": "JV1FTMAIN_TOOEVI_C09_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 490.25,
+        "gold_length": 496,
+        "trace_id": "JV1FTMAIN_TOOEVI_C09_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 491.75,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_TOOEVI_C10_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 473.5,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_TOOEVI_C10_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 488.0,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_TOOEVI_C10_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 495.0,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_TOOEVI_C10_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 496.5,
+        "gold_length": 421,
+        "trace_id": "JV1FTMAIN_TOOEVI_C11_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 478.25,
+        "gold_length": 421,
+        "trace_id": "JV1FTMAIN_TOOEVI_C11_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 480.25,
+        "gold_length": 471,
+        "trace_id": "JV1FTMAIN_TOOEVI_C11_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 499.75,
+        "gold_length": 421,
+        "trace_id": "JV1FTMAIN_TOOEVI_C11_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 498.75,
+        "gold_length": 422,
+        "trace_id": "JV1FTMAIN_TOOEVI_C12_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 480.5,
+        "gold_length": 422,
+        "trace_id": "JV1FTMAIN_TOOEVI_C12_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 495.0,
+        "gold_length": 422,
+        "trace_id": "JV1FTMAIN_TOOEVI_C12_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 502.0,
+        "gold_length": 422,
+        "trace_id": "JV1FTMAIN_TOOEVI_C12_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 490.0,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 471.75,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_SAMAGE_C01_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 486.25,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_SAMAGE_C01_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 473.75,
+        "gold_length": 535,
+        "trace_id": "JV1FTMAIN_SAMAGE_C01_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 482.25,
+        "gold_length": 451,
+        "trace_id": "JV1FTMAIN_SAMAGE_C02_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 464.0,
+        "gold_length": 451,
+        "trace_id": "JV1FTMAIN_SAMAGE_C02_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 478.5,
+        "gold_length": 451,
+        "trace_id": "JV1FTMAIN_SAMAGE_C02_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 485.5,
+        "gold_length": 451,
+        "trace_id": "JV1FTMAIN_SAMAGE_C02_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 469.0,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C03_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 450.75,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C03_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 452.75,
+        "gold_length": 498,
+        "trace_id": "JV1FTMAIN_SAMAGE_C03_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 472.25,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C03_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 486.25,
+        "gold_length": 440,
+        "trace_id": "JV1FTMAIN_SAMAGE_C04_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 468.0,
+        "gold_length": 440,
+        "trace_id": "JV1FTMAIN_SAMAGE_C04_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 482.5,
+        "gold_length": 440,
+        "trace_id": "JV1FTMAIN_SAMAGE_C04_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 489.5,
+        "gold_length": 440,
+        "trace_id": "JV1FTMAIN_SAMAGE_C04_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 489.25,
+        "gold_length": 454,
+        "trace_id": "JV1FTMAIN_SAMAGE_C05_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 471.0,
+        "gold_length": 454,
+        "trace_id": "JV1FTMAIN_SAMAGE_C05_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 485.5,
+        "gold_length": 454,
+        "trace_id": "JV1FTMAIN_SAMAGE_C05_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 473.0,
+        "gold_length": 532,
+        "trace_id": "JV1FTMAIN_SAMAGE_C05_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 481.25,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C06_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 463.0,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C06_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 477.5,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C06_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 484.5,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C06_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 472.75,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_SAMAGE_C07_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 454.5,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_SAMAGE_C07_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 456.5,
+        "gold_length": 507,
+        "trace_id": "JV1FTMAIN_SAMAGE_C07_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 476.0,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_SAMAGE_C07_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 483.25,
+        "gold_length": 431,
+        "trace_id": "JV1FTMAIN_SAMAGE_C08_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 465.0,
+        "gold_length": 431,
+        "trace_id": "JV1FTMAIN_SAMAGE_C08_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 479.5,
+        "gold_length": 431,
+        "trace_id": "JV1FTMAIN_SAMAGE_C08_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 486.5,
+        "gold_length": 431,
+        "trace_id": "JV1FTMAIN_SAMAGE_C08_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 487.75,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C09_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 469.5,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C09_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 484.0,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_SAMAGE_C09_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 471.5,
+        "gold_length": 526,
+        "trace_id": "JV1FTMAIN_SAMAGE_C09_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 487.25,
+        "gold_length": 461,
+        "trace_id": "JV1FTMAIN_SAMAGE_C10_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 469.0,
+        "gold_length": 461,
+        "trace_id": "JV1FTMAIN_SAMAGE_C10_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 483.5,
+        "gold_length": 461,
+        "trace_id": "JV1FTMAIN_SAMAGE_C10_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 490.5,
+        "gold_length": 461,
+        "trace_id": "JV1FTMAIN_SAMAGE_C10_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 473.5,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_SAMAGE_C11_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 455.25,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_SAMAGE_C11_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 457.25,
+        "gold_length": 505,
+        "trace_id": "JV1FTMAIN_SAMAGE_C11_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 476.75,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_SAMAGE_C11_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 484.25,
+        "gold_length": 429,
+        "trace_id": "JV1FTMAIN_SAMAGE_C12_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 466.0,
+        "gold_length": 429,
+        "trace_id": "JV1FTMAIN_SAMAGE_C12_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 480.5,
+        "gold_length": 429,
+        "trace_id": "JV1FTMAIN_SAMAGE_C12_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 487.5,
+        "gold_length": 429,
+        "trace_id": "JV1FTMAIN_SAMAGE_C12_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 478.5,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 460.25,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C01_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 474.75,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C01_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 462.25,
+        "gold_length": 479,
+        "trace_id": "JV1FTMAIN_CROAGE_C01_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 475.5,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C02_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 457.25,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C02_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 471.75,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C02_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 478.75,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C02_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 476.0,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C03_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 457.75,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C03_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 459.75,
+        "gold_length": 469,
+        "trace_id": "JV1FTMAIN_CROAGE_C03_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 479.25,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C03_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 457.0,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C04_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 438.75,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C04_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 453.25,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C04_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 460.25,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C04_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 480.75,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C05_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 462.5,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C05_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 477.0,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C05_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 464.5,
+        "gold_length": 493,
+        "trace_id": "JV1FTMAIN_CROAGE_C05_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 477.0,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C06_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 458.75,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C06_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 473.25,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C06_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 480.25,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C06_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 469.0,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C07_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 450.75,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C07_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 452.75,
+        "gold_length": 451,
+        "trace_id": "JV1FTMAIN_CROAGE_C07_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 472.25,
+        "gold_length": 401,
+        "trace_id": "JV1FTMAIN_CROAGE_C07_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 462.75,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C08_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 444.5,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C08_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 459.0,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C08_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 466.0,
+        "gold_length": 415,
+        "trace_id": "JV1FTMAIN_CROAGE_C08_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 482.0,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C09_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 463.75,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C09_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 478.25,
+        "gold_length": 419,
+        "trace_id": "JV1FTMAIN_CROAGE_C09_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 465.75,
+        "gold_length": 497,
+        "trace_id": "JV1FTMAIN_CROAGE_C09_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 472.25,
+        "gold_length": 402,
+        "trace_id": "JV1FTMAIN_CROAGE_C10_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 454.0,
+        "gold_length": 402,
+        "trace_id": "JV1FTMAIN_CROAGE_C10_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 468.5,
+        "gold_length": 402,
+        "trace_id": "JV1FTMAIN_CROAGE_C10_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 475.5,
+        "gold_length": 402,
+        "trace_id": "JV1FTMAIN_CROAGE_C10_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 475.5,
+        "gold_length": 416,
+        "trace_id": "JV1FTMAIN_CROAGE_C11_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 457.25,
+        "gold_length": 416,
+        "trace_id": "JV1FTMAIN_CROAGE_C11_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 459.25,
+        "gold_length": 466,
+        "trace_id": "JV1FTMAIN_CROAGE_C11_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 478.75,
+        "gold_length": 416,
+        "trace_id": "JV1FTMAIN_CROAGE_C11_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 467.0,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_CROAGE_C12_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 448.75,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_CROAGE_C12_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 463.25,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_CROAGE_C12_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 470.25,
+        "gold_length": 420,
+        "trace_id": "JV1FTMAIN_CROAGE_C12_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 470.25,
+        "gold_length": 411,
+        "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 452.0,
+        "gold_length": 411,
+        "trace_id": "JV1FTMAIN_RECIRR_C01_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 466.5,
+        "gold_length": 411,
+        "trace_id": "JV1FTMAIN_RECIRR_C01_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 454.0,
+        "gold_length": 489,
+        "trace_id": "JV1FTMAIN_RECIRR_C01_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 477.75,
+        "gold_length": 411,
+        "trace_id": "JV1FTMAIN_RECIRR_C02_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 459.5,
+        "gold_length": 411,
+        "trace_id": "JV1FTMAIN_RECIRR_C02_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 474.0,
+        "gold_length": 411,
+        "trace_id": "JV1FTMAIN_RECIRR_C02_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 481.0,
+        "gold_length": 411,
+        "trace_id": "JV1FTMAIN_RECIRR_C02_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 485.25,
+        "gold_length": 386,
+        "trace_id": "JV1FTMAIN_RECIRR_C03_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 467.0,
+        "gold_length": 386,
+        "trace_id": "JV1FTMAIN_RECIRR_C03_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 469.0,
+        "gold_length": 436,
+        "trace_id": "JV1FTMAIN_RECIRR_C03_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 488.5,
+        "gold_length": 386,
+        "trace_id": "JV1FTMAIN_RECIRR_C03_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 488.5,
+        "gold_length": 380,
+        "trace_id": "JV1FTMAIN_RECIRR_C04_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 470.25,
+        "gold_length": 380,
+        "trace_id": "JV1FTMAIN_RECIRR_C04_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 484.75,
+        "gold_length": 380,
+        "trace_id": "JV1FTMAIN_RECIRR_C04_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 491.75,
+        "gold_length": 380,
+        "trace_id": "JV1FTMAIN_RECIRR_C04_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 469.75,
+        "gold_length": 409,
+        "trace_id": "JV1FTMAIN_RECIRR_C05_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 451.5,
+        "gold_length": 409,
+        "trace_id": "JV1FTMAIN_RECIRR_C05_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 466.0,
+        "gold_length": 409,
+        "trace_id": "JV1FTMAIN_RECIRR_C05_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 453.5,
+        "gold_length": 487,
+        "trace_id": "JV1FTMAIN_RECIRR_C05_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 478.0,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_RECIRR_C06_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 459.75,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_RECIRR_C06_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 474.25,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_RECIRR_C06_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 481.25,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_RECIRR_C06_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 484.75,
+        "gold_length": 385,
+        "trace_id": "JV1FTMAIN_RECIRR_C07_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 466.5,
+        "gold_length": 385,
+        "trace_id": "JV1FTMAIN_RECIRR_C07_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 468.5,
+        "gold_length": 435,
+        "trace_id": "JV1FTMAIN_RECIRR_C07_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 488.0,
+        "gold_length": 385,
+        "trace_id": "JV1FTMAIN_RECIRR_C07_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 487.5,
+        "gold_length": 378,
+        "trace_id": "JV1FTMAIN_RECIRR_C08_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 469.25,
+        "gold_length": 378,
+        "trace_id": "JV1FTMAIN_RECIRR_C08_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 483.75,
+        "gold_length": 378,
+        "trace_id": "JV1FTMAIN_RECIRR_C08_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 490.75,
+        "gold_length": 378,
+        "trace_id": "JV1FTMAIN_RECIRR_C08_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 470.75,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_RECIRR_C09_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 452.5,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_RECIRR_C09_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 467.0,
+        "gold_length": 413,
+        "trace_id": "JV1FTMAIN_RECIRR_C09_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 454.5,
+        "gold_length": 491,
+        "trace_id": "JV1FTMAIN_RECIRR_C09_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 480.25,
+        "gold_length": 416,
+        "trace_id": "JV1FTMAIN_RECIRR_C10_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 462.0,
+        "gold_length": 416,
+        "trace_id": "JV1FTMAIN_RECIRR_C10_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 476.5,
+        "gold_length": 416,
+        "trace_id": "JV1FTMAIN_RECIRR_C10_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 483.5,
+        "gold_length": 416,
+        "trace_id": "JV1FTMAIN_RECIRR_C10_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 486.25,
+        "gold_length": 385,
+        "trace_id": "JV1FTMAIN_RECIRR_C11_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 468.0,
+        "gold_length": 385,
+        "trace_id": "JV1FTMAIN_RECIRR_C11_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 470.0,
+        "gold_length": 435,
+        "trace_id": "JV1FTMAIN_RECIRR_C11_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 489.5,
+        "gold_length": 385,
+        "trace_id": "JV1FTMAIN_RECIRR_C11_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 490.0,
+        "gold_length": 380,
+        "trace_id": "JV1FTMAIN_RECIRR_C12_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 471.75,
+        "gold_length": 380,
+        "trace_id": "JV1FTMAIN_RECIRR_C12_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 486.25,
+        "gold_length": 380,
+        "trace_id": "JV1FTMAIN_RECIRR_C12_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 493.25,
+        "gold_length": 380,
+        "trace_id": "JV1FTMAIN_RECIRR_C12_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 501.75,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 483.5,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C01_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 498.0,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C01_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 485.5,
+        "gold_length": 437,
+        "trace_id": "JV1FTMAIN_SEMCOL_C01_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 488.5,
+        "gold_length": 371,
+        "trace_id": "JV1FTMAIN_SEMCOL_C02_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 470.25,
+        "gold_length": 371,
+        "trace_id": "JV1FTMAIN_SEMCOL_C02_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 484.75,
+        "gold_length": 371,
+        "trace_id": "JV1FTMAIN_SEMCOL_C02_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 491.75,
+        "gold_length": 371,
+        "trace_id": "JV1FTMAIN_SEMCOL_C02_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 484.5,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C03_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 466.25,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C03_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 468.25,
+        "gold_length": 409,
+        "trace_id": "JV1FTMAIN_SEMCOL_C03_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 487.75,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C03_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 495.0,
+        "gold_length": 396,
+        "trace_id": "JV1FTMAIN_SEMCOL_C04_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 476.75,
+        "gold_length": 396,
+        "trace_id": "JV1FTMAIN_SEMCOL_C04_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 491.25,
+        "gold_length": 396,
+        "trace_id": "JV1FTMAIN_SEMCOL_C04_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 498.25,
+        "gold_length": 396,
+        "trace_id": "JV1FTMAIN_SEMCOL_C04_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 504.5,
+        "gold_length": 371,
+        "trace_id": "JV1FTMAIN_SEMCOL_C05_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 486.25,
+        "gold_length": 371,
+        "trace_id": "JV1FTMAIN_SEMCOL_C05_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 500.75,
+        "gold_length": 371,
+        "trace_id": "JV1FTMAIN_SEMCOL_C05_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 488.25,
+        "gold_length": 449,
+        "trace_id": "JV1FTMAIN_SEMCOL_C05_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 483.75,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C06_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 465.5,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C06_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 480.0,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C06_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 487.0,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C06_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 484.5,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C07_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 466.25,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C07_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 468.25,
+        "gold_length": 409,
+        "trace_id": "JV1FTMAIN_SEMCOL_C07_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 487.75,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C07_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 498.75,
+        "gold_length": 408,
+        "trace_id": "JV1FTMAIN_SEMCOL_C08_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 480.5,
+        "gold_length": 408,
+        "trace_id": "JV1FTMAIN_SEMCOL_C08_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 495.0,
+        "gold_length": 408,
+        "trace_id": "JV1FTMAIN_SEMCOL_C08_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 502.0,
+        "gold_length": 408,
+        "trace_id": "JV1FTMAIN_SEMCOL_C08_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 501.75,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C09_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 483.5,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C09_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 498.0,
+        "gold_length": 359,
+        "trace_id": "JV1FTMAIN_SEMCOL_C09_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 485.5,
+        "gold_length": 437,
+        "trace_id": "JV1FTMAIN_SEMCOL_C09_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 485.75,
+        "gold_length": 360,
+        "trace_id": "JV1FTMAIN_SEMCOL_C10_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 467.5,
+        "gold_length": 360,
+        "trace_id": "JV1FTMAIN_SEMCOL_C10_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 482.0,
+        "gold_length": 360,
+        "trace_id": "JV1FTMAIN_SEMCOL_C10_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 489.0,
+        "gold_length": 360,
+        "trace_id": "JV1FTMAIN_SEMCOL_C10_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 491.25,
+        "gold_length": 372,
+        "trace_id": "JV1FTMAIN_SEMCOL_C11_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 473.0,
+        "gold_length": 372,
+        "trace_id": "JV1FTMAIN_SEMCOL_C11_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 475.0,
+        "gold_length": 422,
+        "trace_id": "JV1FTMAIN_SEMCOL_C11_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 494.5,
+        "gold_length": 372,
+        "trace_id": "JV1FTMAIN_SEMCOL_C11_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 497.0,
+        "gold_length": 397,
+        "trace_id": "JV1FTMAIN_SEMCOL_C12_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 478.75,
+        "gold_length": 397,
+        "trace_id": "JV1FTMAIN_SEMCOL_C12_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 493.25,
+        "gold_length": 397,
+        "trace_id": "JV1FTMAIN_SEMCOL_C12_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 500.25,
+        "gold_length": 397,
+        "trace_id": "JV1FTMAIN_SEMCOL_C12_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 491.75,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 473.5,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_COMCOL_C01_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 488.0,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_COMCOL_C01_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 475.5,
+        "gold_length": 526,
+        "trace_id": "JV1FTMAIN_COMCOL_C01_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 492.5,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_COMCOL_C02_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 474.25,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_COMCOL_C02_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 488.75,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_COMCOL_C02_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 495.75,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_COMCOL_C02_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 484.5,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C03_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 466.25,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C03_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 468.25,
+        "gold_length": 507,
+        "trace_id": "JV1FTMAIN_COMCOL_C03_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 487.75,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C03_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 487.5,
+        "gold_length": 431,
+        "trace_id": "JV1FTMAIN_COMCOL_C04_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 469.25,
+        "gold_length": 431,
+        "trace_id": "JV1FTMAIN_COMCOL_C04_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 483.75,
+        "gold_length": 431,
+        "trace_id": "JV1FTMAIN_COMCOL_C04_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 490.75,
+        "gold_length": 431,
+        "trace_id": "JV1FTMAIN_COMCOL_C04_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 494.75,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_COMCOL_C05_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 476.5,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_COMCOL_C05_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 491.0,
+        "gold_length": 455,
+        "trace_id": "JV1FTMAIN_COMCOL_C05_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 478.5,
+        "gold_length": 533,
+        "trace_id": "JV1FTMAIN_COMCOL_C05_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 494.0,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C06_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 475.75,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C06_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 490.25,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C06_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 497.25,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C06_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 476.75,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_COMCOL_C07_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 458.5,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_COMCOL_C07_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 460.5,
+        "gold_length": 498,
+        "trace_id": "JV1FTMAIN_COMCOL_C07_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 480.0,
+        "gold_length": 448,
+        "trace_id": "JV1FTMAIN_COMCOL_C07_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 493.5,
+        "gold_length": 438,
+        "trace_id": "JV1FTMAIN_COMCOL_C08_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 475.25,
+        "gold_length": 438,
+        "trace_id": "JV1FTMAIN_COMCOL_C08_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 489.75,
+        "gold_length": 438,
+        "trace_id": "JV1FTMAIN_COMCOL_C08_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 496.75,
+        "gold_length": 438,
+        "trace_id": "JV1FTMAIN_COMCOL_C08_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 495.0,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C09_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 476.75,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C09_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 491.25,
+        "gold_length": 457,
+        "trace_id": "JV1FTMAIN_COMCOL_C09_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 478.75,
+        "gold_length": 535,
+        "trace_id": "JV1FTMAIN_COMCOL_C09_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 489.25,
+        "gold_length": 449,
+        "trace_id": "JV1FTMAIN_COMCOL_C10_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 471.0,
+        "gold_length": 449,
+        "trace_id": "JV1FTMAIN_COMCOL_C10_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 485.5,
+        "gold_length": 449,
+        "trace_id": "JV1FTMAIN_COMCOL_C10_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 492.5,
+        "gold_length": 449,
+        "trace_id": "JV1FTMAIN_COMCOL_C10_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 485.25,
+        "gold_length": 456,
+        "trace_id": "JV1FTMAIN_COMCOL_C11_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 467.0,
+        "gold_length": 456,
+        "trace_id": "JV1FTMAIN_COMCOL_C11_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 469.0,
+        "gold_length": 506,
+        "trace_id": "JV1FTMAIN_COMCOL_C11_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 488.5,
+        "gold_length": 456,
+        "trace_id": "JV1FTMAIN_COMCOL_C11_non_causal_textual_distraction_P01"
+      },
+      {
+        "avg_non_gold_length": 496.0,
+        "gold_length": 441,
+        "trace_id": "JV1FTMAIN_COMCOL_C12_paraphrase_P01"
+      },
+      {
+        "avg_non_gold_length": 477.75,
+        "gold_length": 441,
+        "trace_id": "JV1FTMAIN_COMCOL_C12_tool_output_truncation_P01"
+      },
+      {
+        "avg_non_gold_length": 492.25,
+        "gold_length": 441,
+        "trace_id": "JV1FTMAIN_COMCOL_C12_partial_observability_P01"
+      },
+      {
+        "avg_non_gold_length": 499.25,
+        "gold_length": 441,
+        "trace_id": "JV1FTMAIN_COMCOL_C12_non_causal_textual_distraction_P01"
+      }
+    ],
+    "steps_per_trace": {
+      "avg": 5.0,
+      "max": 5,
+      "min": 5
+    },
+    "tool_call_distribution": {
+      "gold_steps_with_tool": 420,
+      "non_gold_steps_with_tool": 1680
+    },
+    "visible_text_length": {
+      "avg_gold_step": 426.25714285714287,
+      "avg_non_gold_step": 486.6613095238095,
+      "gold_to_non_gold_ratio": 0.8758804830288005
+    }
+  }
+}

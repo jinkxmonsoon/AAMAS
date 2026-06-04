@@ -1,0 +1,111 @@
+{
+  "case_id": "SG_CLE_C001",
+  "case_variant": "clean",
+  "dataset_version": "BRACIS-Journal-v1",
+  "perturbation_intensity": null,
+  "perturbation_type": "none",
+  "private_labels": {
+    "adjudication_decision": "auto_fixture",
+    "adjudicator": "not_required",
+    "disagreement_type": "none",
+    "gold_failure_agent": "a2",
+    "gold_failure_step": "s9",
+    "gold_irreversibility": true,
+    "gold_propagation": true,
+    "gold_recoverability": false,
+    "irreversibility_evidence": "Review does not repair the omitted constraint.",
+    "label_confidence": 0.91,
+    "label_rationale": "Private rationale: s2/a2 omits safety constraint and downstream steps reuse it.",
+    "label_source": "fixture_controlled",
+    "manual_audit_status": "fixture_only",
+    "primary_labeler": "fixture_author",
+    "propagation_evidence": "Downstream steps reuse the incomplete handoff from s2.",
+    "recovery_opportunity": "available_but_missed",
+    "secondary_labeler": "fixture_reviewer"
+  },
+  "provenance": {
+    "annotator_or_generator": "task13_fixture",
+    "provenance_notes": "non-experimental full-trace validator fixture",
+    "synthetic_control_rule": "task13_full_trace_fixture"
+  },
+  "scenario_group": "clean_broken_handoff",
+  "steps": [
+    {
+      "agent_id": "a1",
+      "agent_role": "planner",
+      "evidence_items": [
+        "ev1"
+      ],
+      "evidence_used": [
+        "ev1"
+      ],
+      "handoff_from": null,
+      "handoff_to": "a2",
+      "input_message": "Receive task and enumerate constraints.",
+      "output_message": "Plan includes safety and consistency checks.",
+      "step_id": "s1",
+      "tool_call": null,
+      "tool_output": null,
+      "visible_step_notes": "initial planning step; no known failure marker"
+    },
+    {
+      "agent_id": "a2",
+      "agent_role": "analyst",
+      "evidence_items": [
+        "ev2",
+        "ev3"
+      ],
+      "evidence_used": [
+        "ev2"
+      ],
+      "handoff_from": "a1",
+      "handoff_to": "a3",
+      "input_message": "Review handoff packet with constraints.",
+      "output_message": "Handoff summary omits a safety constraint.",
+      "step_id": "s2",
+      "tool_call": "query_incident_log",
+      "tool_output": "incident log lists safety constraint ev2",
+      "visible_step_notes": "candidate handoff analysis step"
+    },
+    {
+      "agent_id": "a3",
+      "agent_role": "executor",
+      "evidence_items": [
+        "ev3",
+        "ev4"
+      ],
+      "evidence_used": [
+        "ev3"
+      ],
+      "handoff_from": "a2",
+      "handoff_to": "a4",
+      "input_message": "Execute using received handoff summary.",
+      "output_message": "Execution uses incomplete safety constraint context.",
+      "step_id": "s3",
+      "tool_call": "run_check",
+      "tool_output": "check warns that one constraint is absent",
+      "visible_step_notes": "downstream execution step"
+    },
+    {
+      "agent_id": "a4",
+      "agent_role": "reviewer",
+      "evidence_items": [
+        "ev4",
+        "ev5"
+      ],
+      "evidence_used": [
+        "ev4"
+      ],
+      "handoff_from": "a3",
+      "handoff_to": null,
+      "input_message": "Review final execution package.",
+      "output_message": "Review notes degraded output but does not repair constraint omission.",
+      "step_id": "s4",
+      "tool_call": "review_package",
+      "tool_output": "review package records unresolved degradation",
+      "visible_step_notes": "terminal review step"
+    }
+  ],
+  "terminal_outcome": "degraded_execution",
+  "trace_id": "JV1_full_trace_fixture_valid"
+}
