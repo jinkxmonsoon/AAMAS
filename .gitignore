@@ -24,3 +24,7 @@ results/**/*.pdf
 .DS_Store
 .vscode/
 .idea/
+
+# Reproducible full-trace CCT graph artifacts (tracked via compact samples + manifest)
+data/interim/journal_v1_full_trace_cct/cct_graphs.jsonl
+data/interim/journal_v1_full_trace_cct/cct_features.jsonl

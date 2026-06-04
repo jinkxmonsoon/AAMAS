@@ -166,3 +166,26 @@ Locked status after Task 15:
 - `FULL_TRACE_MAIN_CORPUS_READY_FOR_FUTURE_EVALUATION_TASK = yes` for a future explicitly approved evaluation task only.
 - The old failure-centered corpus remains blocked and must not be used for evaluation or paper evidence.
 - CCT graph construction, CCT scoring, calibration, refinement variants, ablations, empirical hypothesis tests, and paper-ready result tables remain blocked until explicitly authorized in a later task.
+
+## Task 16A CCT graph generated-artifact reviewability gate
+
+Task 16A freezes the artifact policy for full-trace CCT graph construction outputs. CCT graph construction and structural feature extraction are allowed only as reproducible preprocessing artifacts; this gate does not authorize scoring, ranking, calibration, refinement variants, ablations, empirical hypothesis tests, or paper-ready result tables.
+
+Locked status after Task 16A:
+
+- Full generated JSONL artifacts `data/interim/journal_v1_full_trace_cct/cct_graphs.jsonl` and `data/interim/journal_v1_full_trace_cct/cct_features.jsonl` are reproducible local outputs and are excluded from normal Git review.
+- Compact sample artifacts `data/interim/journal_v1_full_trace_cct/sample_cct_graphs.jsonl` and `data/interim/journal_v1_full_trace_cct/sample_cct_features.jsonl` are tracked for review and include one clean trace graph, one perturbed trace graph, and corresponding feature rows.
+- The manifest `docs/artifact_manifests/journal_v1_full_trace_cct_manifest.md` records commands, counts, hashes, and expected outputs for both full generated artifacts and tracked samples.
+- If full artifacts must later be versioned, use Git LFS or release artifacts rather than silently committing unreviewable normal-Git JSONL blobs.
+
+## Task 16B CCT structural feature variance audit gate
+
+Task 16B audits the structural feature layer before any future scoring task. The audit is descriptive only and may use `scenario_group` and `perturbation_type` from public corpus metadata solely as audit strata; these fields are not added to feature payloads and are not scoring inputs.
+
+Locked status after Task 16B:
+
+- Feature payloads must remain free of private labels, gold labels, label rationales, H6 evidence fields, and provenance fields.
+- Constant and position-determined structural features are documented as shortcut warnings, not performance evidence.
+- The current graph shape has constant node and edge counts across traces; future scoring must not treat graph size alone as diagnostic evidence.
+- Future CCT scoring remains blocked until a separately authorized task acknowledges these warnings and confirms that no unresolved feature-layer blocker remains.
+- No scoring, ranking, evaluation, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table is authorized by this gate.
