@@ -221,3 +221,10 @@ Chronological decisions, assumptions, caveats, and methodological notes.
   - H6 and semantic evidence: H6 semantic consistency reports PASS; H6 labels are balanced 210/210 for propagation, irreversibility, and recoverability; semantic spot-check remains 19/0/0 accept/revise/reject; manual sanity check remains 6/0/0 accept/revise/reject.
   - Gate result: final pre-evaluation corpus gate cleared for a future explicitly approved task to implement metric interfaces and trivial baselines.
   - Scientific result: No CCT scoring, calibration, refinement, empirical evaluation, or paper result table added.
+
+- 2026-06-04 (UTC):
+  - Current stage: Task 11 metric-interface and trivial-baseline sanity checks.
+  - Reasoning decision: implement only accuracy-style metric interfaces and allowed trivial baselines so future CCT evaluation can rely on tested metric plumbing without testing CCT itself.
+  - Diagnostic result: standalone trivial baselines did not exceed blocker thresholds on the corrected corpus; the gate is marked passed in the diagnostic report.
+  - Caveat: `same_as_parent_for_perturbations` is implemented as a prediction-propagation diagnostic that does not read parent gold labels; without external parent predictions it reports `NA`, avoiding gold-label leakage in the standalone sanity script.
+  - Scientific result: no CCT scoring, calibration, refinement variant, ablation, empirical hypothesis test, or paper-ready result table was implemented.
