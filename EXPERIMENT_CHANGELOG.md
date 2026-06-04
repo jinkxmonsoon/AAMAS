@@ -73,3 +73,35 @@ All protocol, evaluation, and experiment-design changes must be recorded here.
 - Justification: Resolve detected contradictions between H6 labels and evidence fields before any evaluation-stage implementation.
 - Authorization reference: Task 10D instruction
 - Expected validity impact: Removes label-evidence semantic contradictions and strengthens H6 proxy validity for downstream evaluation.
+
+- Date (UTC): 2026-06-04
+- Author: Codex TL
+- Change type: Pre-evaluation label-position and trivial-shortcut risk gate
+- Affected artifact(s): scripts/audit_label_position_bias.py, results/reports/journal_v1/main_label_position_bias_report.md, results/reports/journal_v1/main_trivial_baseline_risk_report.md, results/reports/journal_v1/main_label_position_bias_correction_plan.md, results/reports/journal_v1/main_semantic_spotcheck_report.md, PROTOCOL_LOCK.md, RESEARCH_LOG.md, docs/11_journal_v1_corpus_plan_and_label_rubric.md
+- Justification: Audit Journal-v1 main corpus for positional shortcuts and trivial corpus-risk diagnostics before any evaluation-stage implementation.
+- Authorization reference: Task 10E instruction
+- Expected validity impact: Blocks evaluation until label-position shortcut risk is corrected or explicitly justified; protects future H1–H4/H6 tests from trivial step-position solutions.
+
+- Date (UTC): 2026-06-04
+- Author: Codex TL
+- Change type: Main-corpus gold-failure-step positional-bias correction and re-freeze
+- Affected artifact(s): scripts/build_main_corpus.py, data/processed/journal_v1/*.jsonl, results/reports/journal_v1/*, docs/artifact_manifests/journal_v1_main_corpus_manifest.md, PROTOCOL_LOCK.md, RESEARCH_LOG.md, docs/11_journal_v1_corpus_plan_and_label_rubric.md
+- Justification: Resolve Task 10E blocking positional shortcut where all traces had `gold_failure_step=s2`, while preserving protocol counts and avoiding any evaluation-stage implementation.
+- Authorization reference: Task 10F instruction
+- Expected validity impact: Restores viability of future structural step-attribution evaluation by reducing majority/always-s2 shortcut risk to 25.00%; no performance claims introduced.
+
+- Date (UTC): 2026-06-04
+- Author: Codex TL
+- Change type: Manual semantic sanity gate for corrected failure-step labels
+- Affected artifact(s): results/reports/journal_v1/main_failure_step_semantic_sanity_check.md, docs/artifact_manifests/journal_v1_main_corpus_manifest.md, PROTOCOL_LOCK.md, RESEARCH_LOG.md, scripts/validate_repo.py
+- Justification: Verify that Task 10F's non-s2 failure-step labels are semantically grounded before any evaluation-stage implementation.
+- Authorization reference: Task 10G instruction
+- Expected validity impact: Adds qualitative assurance that corrected step labels are not merely positionally rebalanced; no performance claims introduced.
+
+- Date (UTC): 2026-06-04
+- Author: Codex TL
+- Change type: Final pre-evaluation corpus gate consolidation
+- Affected artifact(s): results/reports/journal_v1/final_pre_evaluation_gate_report.md, docs/artifact_manifests/journal_v1_main_corpus_manifest.md, PROTOCOL_LOCK.md, RESEARCH_LOG.md, scripts/validate_repo.py
+- Justification: Consolidate corrected Journal-v1 corpus state after Tasks 10F/10G and verify no remaining obvious shortcut blocks the next approved evaluation-preparation task.
+- Authorization reference: Task 10H instruction
+- Expected validity impact: Clarifies PR #13 supersedes PR #12 and clears corpus-level shortcut gates while preserving prohibition on CCT scoring, calibration, refinement, empirical evaluation, and paper result tables.
