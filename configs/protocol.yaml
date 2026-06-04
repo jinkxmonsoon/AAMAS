@@ -40,3 +40,20 @@ case_schema_required_keys:
   - annotator_or_generator
   - provenance_notes
 acceptance_gate: frozen_before_execution
+
+# Task 12B full ordered trace migration gate
+full_trace_schema_migration:
+  status: frozen_plan_only_evaluation_blocked
+  plan_ref: docs/13_full_trace_schema_migration_plan.md
+  blocker_report_ref: results/reports/journal_v1/full_trace_schema_blocker_report.md
+  current_failure_centered_corpus_evaluation_ready: false
+  required_unit_of_evaluation: complete_ordered_multistep_trace
+  required_steps_array: true
+  blocked_until_full_trace_migration_audited:
+    evaluation: true
+    cct_graph_construction: true
+    cct_scoring: true
+    calibration: true
+    refinement: true
+    ablations: true
+    paper_result_tables: true
