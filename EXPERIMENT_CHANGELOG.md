@@ -64,3 +64,12 @@ All protocol, evaluation, and experiment-design changes must be recorded here.
 - Justification: Resolve Task 10A semantic blocker by diversifying generation patterns while preserving frozen protocol counts/semantics.
 - Authorization reference: Task 10B instruction
 - Expected validity impact: Reduces construction-bias risk and clears pre-evaluation templating blocker without introducing performance claims.
+
+
+- Date (UTC): 2026-05-13
+- Author: Codex TL
+- Change type: H6 semantic consistency correction and re-audit
+- Affected artifact(s): scripts/audit_h6_semantic_consistency.py, scripts/build_main_corpus.py, data/processed/journal_v1/*.jsonl, results/reports/journal_v1/main_h6_* reports, docs/artifact_manifests/journal_v1_main_corpus_manifest.md
+- Justification: Resolve detected contradictions between H6 labels and evidence fields before any evaluation-stage implementation.
+- Authorization reference: Task 10D instruction
+- Expected validity impact: Removes label-evidence semantic contradictions and strengthens H6 proxy validity for downstream evaluation.

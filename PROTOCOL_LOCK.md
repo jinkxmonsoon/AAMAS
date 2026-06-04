@@ -66,3 +66,8 @@ Any change to these sections requires:
 - Main corpus was regenerated via approved builder to reduce templating artifacts while preserving frozen counts/taxonomy/label semantics.
 - Task 10A semantic blocker is cleared only when spot-check reports `accept` majority with no rejects and explicit summary counts.
 - If future spot-checks detect systemic templating, evaluation is re-blocked pending approved correction task.
+
+
+## Task 10D H6 semantic consistency gate
+- Main corpus evaluation remains blocked unless `scripts/audit_h6_semantic_consistency.py` reports FINAL: PASS.
+- Any future H6 contradiction requires corpus correction via approved builder and manifest regeneration before evaluation resumes.

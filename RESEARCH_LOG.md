@@ -175,3 +175,12 @@ Chronological decisions, assumptions, caveats, and methodological notes.
   - Scientific result: No metrics/baselines/CCT scoring/calibration/results; corpus governance only.
   - Remaining risks: synthetic generation bias can recur if template pools are narrowed in future edits.
   - Next mandatory step: begin only protocol-approved evaluation tasks under lock constraints.
+
+
+- 2026-05-13 (UTC):
+  - Current stage: Task 10D H6 semantic consistency resolution.
+  - Task executed: Audited full main corpus for H6 label-evidence contradictions, implemented builder-level conditional evidence generation, regenerated corpus, and reran full audit suite.
+  - Technical result: Added `audit_h6_semantic_consistency.py`, diagnosis/correction-plan reports, and PASS H6 consistency audit output.
+  - Inconsistency summary: detected 660 pre-correction issues across irreversibility, recoverability, and propagation semantics; corrected via regeneration; post-correction unresolved contradictions = 0.
+  - Scientific result: No metrics, baselines, CCT scoring, calibration, or result tables executed.
+  - Next mandatory step: proceed only with protocol-approved evaluation tasks now that H6 semantic consistency gate passes.

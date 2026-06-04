@@ -113,18 +113,39 @@ def main():
                 "disagreement_type": "none",
                 "adjudication_decision": "auto_rule",
                 "generation_seed": seed,
-                "recovery_opportunity": rnd.choice(["available_and_used", "available_but_missed", "not_applicable_or_unavailable"]),
-                "propagation_evidence": rnd.choice([
-                    f"downstream {steps[min(2, len(steps)-1)]} consumed faulty artifact from {fail_step}",
-                    f"decision branch reused unresolved output generated at {fail_step}",
-                    f"handoff recipient integrated incorrect evidence from {fail_step}",
-                ]),
-                "irreversibility_evidence": rnd.choice([
-                    f"no successful correction after {fail_step} before terminal outcome",
-                    f"later step attempted mitigation but failure effect persisted",
-                    f"available correction channel remained insufficient to neutralize error",
-                ]),
             }
+            # Enforce H6 semantic consistency constraints
+            if base["gold_irreversibility"]:
+                base["irreversibility_evidence"] = rnd.choice([
+                    f"no successful correction after {fail_step} before terminal outcome",
+                    f"failure consequence persisted to terminal state without neutralization",
+                    f"available mitigation attempt did not recover terminal failure",
+                ])
+            else:
+                base["irreversibility_evidence"] = rnd.choice([
+                    f"downstream correction at {steps[-1]} neutralized prior failure effect",
+                    f"later repair successfully corrected the error trajectory",
+                    f"terminal impact was recovered before completion",
+                ])
+
+            if base["gold_recoverability"]:
+                base["recovery_opportunity"] = rnd.choice(["available_and_used", "available_but_missed"])
+            else:
+                base["recovery_opportunity"] = "not_applicable_or_unavailable"
+
+            if base["gold_propagation"]:
+                base["propagation_evidence"] = rnd.choice([
+                    f"downstream {steps[min(2, len(steps)-1)]} consumed faulty artifact from {fail_step}",
+                    f"dependent agent reused unresolved output from {fail_step}",
+                    f"handoff recipient integrated incorrect evidence originating at {fail_step}",
+                ])
+            else:
+                base["propagation_evidence"] = rnd.choice([
+                    f"error remained local to {fail_step} with isolated impact",
+                    f"later steps used independent evidence channels and isolated the fault",
+                    f"fault impact stayed confined to originating step context",
+                ])
+
             clean_rows.append(base)
             for p_idx, pert in enumerate(PERTURBATIONS[:per_clean_pert], start=1):
                 pr = dict(base)
