@@ -48,3 +48,26 @@ Any change to these sections requires:
 - Full corpus generation remains blocked until pilot semantic audit and lessons report are complete.
 - Full corpus generation remains blocked until Task 9 readiness check passes.
 - If Task 9 passes, generation is allowed only through a future approved main-corpus builder task.
+
+
+## Task 10 main-corpus generation and audit gate
+- Main controlled corpus generation is permitted only through `scripts/build_main_corpus.py` and must write only to `data/processed/journal_v1/`.
+- Main corpus acceptance requires PASS on schema, label, leakage, integrity, split-safety-interface, and H6 distribution audits via `scripts/audit_main_corpus.py`.
+- This gate does not permit metrics, baselines, CCT scoring, calibration, or result-table generation.
+
+
+## Task 10A main-corpus freeze and semantic spot-check gate
+- Main corpus is frozen after `docs/artifact_manifests/journal_v1_main_corpus_manifest.md` generation.
+- No file under `data/processed/journal_v1/` may be edited after freeze except via explicit approved correction task.
+- No metric, baseline, CCT scoring, calibration, or result-table work may run until Task 10A semantic spot-check passes or blockers are explicitly waived.
+
+
+## Task 10B templating-risk resolution note
+- Main corpus was regenerated via approved builder to reduce templating artifacts while preserving frozen counts/taxonomy/label semantics.
+- Task 10A semantic blocker is cleared only when spot-check reports `accept` majority with no rejects and explicit summary counts.
+- If future spot-checks detect systemic templating, evaluation is re-blocked pending approved correction task.
+
+
+## Task 10D H6 semantic consistency gate
+- Main corpus evaluation remains blocked unless `scripts/audit_h6_semantic_consistency.py` reports FINAL: PASS.
+- Any future H6 contradiction requires corpus correction via approved builder and manifest regeneration before evaluation resumes.

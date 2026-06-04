@@ -146,3 +146,41 @@ Chronological decisions, assumptions, caveats, and methodological notes.
   - Scientific result: No hypothesis test; no full corpus generation; no metric/baseline/CCT scoring/result table work.
   - Remaining risks: H6 semantics still require richer adjudication exemplars before broad generation confidence.
   - Next mandatory step: approve/waive all listed deltas, then implement the future approved main-corpus builder task under lock rules.
+
+
+- 2026-05-13 (UTC):
+  - Current stage: Task 10 main controlled corpus generation and audit.
+  - Task executed: Generated Journal-v1 main controlled corpus (84 clean + 336 perturbed = 420 total) and ran schema/label/leakage/integrity/split-safety-interface/H6 audits.
+  - Technical result: Added main corpus builder/auditor scripts, generated processed corpus JSONL files, and emitted inventory/audit/H6/leakage/integrity reports.
+  - Scientific result: No hypothesis test, no metric/baseline/CCT scoring/calibration/result table execution; corpus creation only.
+  - Remaining risks: semantic correctness remains dependent on future adjudication quality controls despite gate passes.
+  - Next mandatory step: proceed to protocol-approved downstream evaluation phases without modifying frozen protected items.
+
+
+- 2026-05-13 (UTC):
+  - Current stage: Task 10A main corpus artifact freeze and semantic spot-check.
+  - Task executed: Generated SHA256 manifest for main corpus + report artifacts and produced descriptive semantic diagnostics/spot-check reports.
+  - Technical result: Added `scripts/make_journal_v1_manifest.py`, `scripts/audit_main_corpus_semantics.py`, artifact manifest, label distribution report, semantic spot-check report, and generation risk report.
+  - Corpus freeze status: Main corpus marked frozen under Task 10A lock; edits require explicit correction task.
+  - Semantic spot-check outcome: revise recommendations present due to templating risk; evaluation remains blocked.
+  - Remaining risks: synthetic templating may reduce semantic diversity and over-regularize label cues.
+  - Next mandatory step: approve explicit correction task to address revise findings, then rerun Task 10A checks before any evaluation work.
+
+
+- 2026-05-13 (UTC):
+  - Current stage: Task 10B templating-risk blocker resolution.
+  - Task executed: Diagnosed repetitive generation artifacts, implemented deterministic diversification in builder, regenerated main corpus, and reran freeze/audit pipeline.
+  - Technical result: Added diagnosis + revision-plan reports and updated semantic audit to report sampled/accept/revise/reject counts with blocker status.
+  - Semantic spot-check outcome: sampled=18, accept=18, revise=0, reject=0; blocker cleared.
+  - Scientific result: No metrics/baselines/CCT scoring/calibration/results; corpus governance only.
+  - Remaining risks: synthetic generation bias can recur if template pools are narrowed in future edits.
+  - Next mandatory step: begin only protocol-approved evaluation tasks under lock constraints.
+
+
+- 2026-05-13 (UTC):
+  - Current stage: Task 10D H6 semantic consistency resolution.
+  - Task executed: Audited full main corpus for H6 label-evidence contradictions, implemented builder-level conditional evidence generation, regenerated corpus, and reran full audit suite.
+  - Technical result: Added `audit_h6_semantic_consistency.py`, diagnosis/correction-plan reports, and PASS H6 consistency audit output.
+  - Inconsistency summary: detected 660 pre-correction issues across irreversibility, recoverability, and propagation semantics; corrected via regeneration; post-correction unresolved contradictions = 0.
+  - Scientific result: No metrics, baselines, CCT scoring, calibration, or result tables executed.
+  - Next mandatory step: proceed only with protocol-approved evaluation tasks now that H6 semantic consistency gate passes.
