@@ -1,0 +1,140 @@
+{
+  "protocol_version": "journal_v1_cct_uncalibrated_scoring_v1",
+  "status": "frozen_protocol_only",
+  "execution_enabled": false,
+  "objective": {
+    "future_output": "diagnostic_candidate_scores",
+    "rank_candidate_steps_within_trace": true,
+    "rank_candidate_agents_only_via_associated_steps": true,
+    "calibrated_probability_claim": false,
+    "causal_certainty_claim": false
+  },
+  "formula": {
+    "type": "transparent_weighted_sum",
+    "weights_fixed_before_execution": true,
+    "learned_parameters": false,
+    "loso": false,
+    "grid_search": false,
+    "calibration": false,
+    "post_performance_adjustment": false
+  },
+  "allowed_feature_groups": {
+    "evidence_tool_support": [
+      "evidence_used_count",
+      "evidence_item_count",
+      "has_tool_call",
+      "tool_output_token_count",
+      "output_token_count"
+    ],
+    "handoff_flow_support": [
+      "has_handoff_from",
+      "has_handoff_to",
+      "in_degree",
+      "out_degree",
+      "downstream_dependency_count",
+      "propagation_candidate_count"
+    ],
+    "context_density": [
+      "input_token_count",
+      "output_token_count",
+      "local_context_density"
+    ]
+  },
+  "restricted_high_risk_features": [
+    "step_id",
+    "order_index",
+    "agent_id",
+    "agent_role",
+    "terminal_proximity",
+    "pure_position_derived_degree_features"
+  ],
+  "forbidden_score_fields": [
+    "gold_failure_step",
+    "gold_failure_agent",
+    "gold_irreversibility",
+    "gold_propagation",
+    "gold_recoverability",
+    "private_labels",
+    "label_rationale",
+    "propagation_evidence",
+    "irreversibility_evidence",
+    "recovery_opportunity",
+    "provenance",
+    "annotator_or_generator",
+    "provenance_notes",
+    "synthetic_control_rule",
+    "scenario_group",
+    "perturbation_type",
+    "trace_id",
+    "case_id"
+  ],
+  "variants": {
+    "cct_primary_no_position": {
+      "status": "primary_frozen",
+      "diagnostic_only": true,
+      "uses_position_or_identity_features": false,
+      "features": {
+        "evidence_used_count": 0.20,
+        "evidence_item_count": 0.10,
+        "has_tool_call": 0.10,
+        "tool_output_token_count": 0.15,
+        "output_token_count": 0.10,
+        "has_handoff_from": 0.10,
+        "has_handoff_to": 0.10,
+        "in_degree": 0.05,
+        "out_degree": 0.05,
+        "input_token_count": 0.05
+      }
+    },
+    "cct_flow_only": {
+      "status": "predefined_diagnostic",
+      "diagnostic_only": true,
+      "uses_position_or_identity_features": false,
+      "features": {
+        "has_handoff_from": 0.25,
+        "has_handoff_to": 0.25,
+        "in_degree": 0.25,
+        "out_degree": 0.25
+      }
+    },
+    "cct_context_only": {
+      "status": "predefined_diagnostic",
+      "diagnostic_only": true,
+      "uses_position_or_identity_features": false,
+      "features": {
+        "input_token_count": 0.45,
+        "output_token_count": 0.35,
+        "tool_output_token_count": 0.20
+      }
+    },
+    "cct_with_position_features": {
+      "status": "optional_high_risk_diagnostic_not_primary",
+      "diagnostic_only": true,
+      "uses_position_or_identity_features": true,
+      "features": {
+        "order_index": 0.40,
+        "has_handoff_from": 0.15,
+        "has_handoff_to": 0.15,
+        "in_degree": 0.15,
+        "out_degree": 0.15
+      }
+    }
+  },
+  "mandatory_future_reporting": [
+    "step_accuracy",
+    "agent_accuracy",
+    "tuple_step_agent_accuracy",
+    "macro_by_scenario",
+    "macro_by_perturbation",
+    "comparison_to_trivial_baselines",
+    "comparison_to_non_cct_baselines",
+    "shortcut_risk_interpretation"
+  ],
+  "blocker_rules": [
+    "if primary CCT performs similarly to position-only diagnostic, claims must be weakened",
+    "if cct_with_position_features dominates cct_primary_no_position, structural claim is at risk",
+    "if cct_flow_only performs near random, handoff/propagation claims are weakened",
+    "if non-CCT baselines exceed CCT, H1/H2 cannot be claimed",
+    "if results are high only on clean but fail under perturbation, robustness claims are blocked"
+  ]
+}
