@@ -105,3 +105,9 @@ All protocol, evaluation, and experiment-design changes must be recorded here.
 - Justification: Consolidate corrected Journal-v1 corpus state after Tasks 10F/10G and verify no remaining obvious shortcut blocks the next approved evaluation-preparation task.
 - Authorization reference: Task 10H instruction
 - Expected validity impact: Clarifies PR #13 supersedes PR #12 and clears corpus-level shortcut gates while preserving prohibition on CCT scoring, calibration, refinement, empirical evaluation, and paper result tables.
+
+- 2026-06-04 (UTC):
+  - Task 11 implemented diagnostic metric interfaces in `src/cctdiag/metrics/` and allowed trivial-baseline sanity checks in `src/cctdiag/baselines/trivial.py`.
+  - Added `scripts/run_trivial_baseline_sanity.py` to write diagnostic-only outputs to `results/raw/journal_v1/trivial_baseline_sanity.json` and `results/reports/journal_v1/trivial_baseline_sanity_report.md`.
+  - Added unit tests for attribution metrics, H6 `NA` handling, macro grouping, trivial baseline predictions, seeded random baselines, and shortcut-risk interpretation.
+  - Protocol impact: metric interfaces and baseline definitions were added under the explicit Task 11 authorization; corpus JSONL files, gold labels, perturbation definitions, CCT scoring, calibration, refinement variants, ablations, and paper-ready result tables were not modified or implemented.

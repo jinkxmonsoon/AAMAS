@@ -162,3 +162,11 @@ No traces, labels, perturbations, metrics, baselines, or results are generated i
 - The selected failure step must be reflected in `step_id`, `gold_failure_step`, `gold_failure_agent`, handoff context, phase-specific trace text, H6 evidence fields, and `label_rationale`.
 - Perturbation variants preserve the clean parent case's `gold_failure_step` unless an explicitly documented degraded-observability change is approved.
 - Current corrected distribution is `s2/s3/s4/s5 = 105/105/105/105` traces (25.00% each), satisfying the <=40% majority-step and always-s2 constraints.
+
+## Task 11 diagnostic sanity-check note
+
+After the corrected corpus passed the Task 10H pre-evaluation gate, Task 11
+added metric interfaces and trivial-baseline sanity checks. This does not alter
+corpus composition, gold labels, perturbation definitions, or the label rubric.
+The generated trivial-baseline outputs are diagnostic-only shortcut checks and
+are not CCT comparisons, not evidence for H1, and not paper-ready result tables.

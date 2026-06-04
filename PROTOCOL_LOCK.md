@@ -93,3 +93,10 @@ Any change to these sections requires:
 - Current final corpus gate status: cleared; `gold_failure_step` distribution is `s2/s3/s4/s5 = 105/105/105/105`, H6 semantic consistency passes, semantic spot-check passes, and the manual sanity-check sample passes.
 - Shortcut gates pass: no failure step exceeds 40%, no failure agent exceeds 50%, no scenario group or perturbation type collapses to one failure step, `always_s2=25.00%`, and `majority_step=25.00%`.
 - A future explicitly approved task may implement metric interfaces and trivial baselines; this gate still does not authorize CCT scoring, calibration, refinement, empirical evaluation, or paper result tables.
+
+## Task 11 metric-interface and trivial-baseline sanity gate
+- Basic metric interfaces and allowed trivial baselines are authorized only for diagnostic shortcut-risk checks on the corrected BRACIS-Journal-v1 corpus.
+- Task 11 diagnostic outputs must not be treated as paper-ready result tables, CCT comparisons, CCT evidence, calibration evidence, refinement evidence, ablation evidence, or evidence for H1.
+- H6 diagnostic accuracies must be `NA` when a baseline does not produce the relevant H6 prediction.
+- The standalone trivial-baseline gate blocks future evaluation if any standalone trivial step baseline exceeds 50% step accuracy or if `majority_agent` exceeds 50% agent accuracy; random and first/last active agent diagnostics above 50% require review.
+- Current Task 11 status: diagnostic trivial-baseline gate passed on `data/processed/journal_v1/main_all_traces.jsonl`; no CCT scoring, calibration, refinement variant, ablation, or paper-ready result table was implemented.
