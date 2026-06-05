@@ -313,3 +313,34 @@ Chronological decisions, assumptions, caveats, and methodological notes.
 - Shortcut-baseline outcome: all diagnostic baselines remained below the 70% review threshold and 85% block threshold.
 - Caveat: this is corpus-generation and audit evidence only; it is not an empirical hypothesis test and does not compare CCT or any method.
 - Scientific result: no CCT scoring, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table was produced; the old failure-centered corpus remains blocked.
+
+## 2026-06-05 — Task 18F descriptor-augmented artifact reviewability
+- Reasoning decision: the full descriptor-augmented feature JSON is a generated artifact with 2,100 row objects, so it should be regenerated locally and excluded from normal Git when it makes review diffs oversized.
+- Reviewability policy: retain scripts, tests, compact reports, readiness gate, manifest, and a representative sample artifact in Git; use Git LFS or release artifact handling if full generated artifacts require future versioning.
+- Reproducibility evidence to preserve: `python scripts/build_cct_descriptor_augmented_features.py` regenerates the full local artifact, sample artifact, reports, and manifest from the frozen full-trace corpus.
+- Scientific caveat: descriptor-layer readiness remains conservative (`AUGMENTED_FEATURE_LAYER_READY_FOR_PROTOCOL_REVISION = no`; `AUGMENTED_FEATURE_LAYER_READY_FOR_SCORING = no`) because this task addresses artifact reviewability rather than empirical adequacy.
+- Non-action confirmation: no scoring, ranking, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical test, empirical hypothesis test, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 19 CCT diagnostic evidence consolidation and revision-path gate
+- Reasoning decision: negative Tasks 18–18F evidence is best interpreted as a representation/feature-validity failure rather than a tie-breaking or calibration-only failure.
+- Primary path selected: Option C, a future redesign of CCT graph/feature extraction around richer non-position causal-flow edges before any scoring or calibration.
+- Rejected path: immediate calibration, because calibrating proxy-heavy weak features risks overfitting and does not address construct validity.
+- Rejected path: immediate descriptor scoring, because descriptor augmentation remains useful for audit/review but not ready for protocol revision or scoring.
+- Claim caveat: H1/H2 remain unsupported under current frozen uncalibrated scoring/features; H6 remains open but unsupported by scoring evidence; no superiority claim is allowed.
+- Non-action confirmation: no scoring, ranking, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 20 CCT causal-flow edge redesign specification
+- Reasoning decision: because Task 19 diagnosed a representation/feature-validity failure, the next safe step is to specify richer non-position causal-flow edges before any scoring or calibration.
+- Candidate edge families selected: constraint shift, evidence conflict/omission, downstream dependency, correction opportunity/attempt, unresolved caveat, semantic collision, tool alignment, and cross-agent dependency.
+- Risk caveat: omission, unresolved-caveat, conflict, and semantic-collision edges are especially sensitive to lexical templates and require conservative sample-prototype audits before any scoring use.
+- Readiness decision: `CCT_CAUSAL_FLOW_EDGE_SPEC_READY_FOR_SAMPLE_PROTOTYPE = yes`; `CCT_CAUSAL_FLOW_EDGES_READY_FOR_SCORING = no`.
+- Next recommended task: sample-only edge prototype producing compact review artifacts and leakage/shortcut audits without gold-label comparison.
+- Non-action confirmation: no graph-builder change, feature extraction, descriptor extraction, scoring, ranking, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 20A sample-only CCT causal-flow edge prototype
+- Reasoning decision: implement only a compact sample prototype to test feasibility and reviewability while keeping full-corpus extraction and scoring blocked.
+- Implemented sample edge types: constraint shift, downstream dependency, tool alignment, cross-agent dependency, and conservative semantic collision.
+- Risk caveat: edge counts show sample extraction is feasible but template-sensitive; the readiness gate remains `CCT_CAUSAL_FLOW_EDGE_SAMPLE_PROTOTYPE_READY_FOR_FULL_AUDIT = no` pending stronger audit-rule refinement.
+- Leakage decision: extraction consumes only full-trace prediction views and rejects raw records with private/provenance fields.
+- Next recommended task: refine deterministic rules and sample audit criteria before considering any full-audit expansion; scoring remains blocked.
+- Non-action confirmation: no full-corpus extraction, graph-builder change, feature extraction, descriptor extraction, scoring, ranking, gold-label comparison, H6-label comparison, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
