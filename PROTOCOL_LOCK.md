@@ -166,3 +166,63 @@ Locked status after Task 15:
 - `FULL_TRACE_MAIN_CORPUS_READY_FOR_FUTURE_EVALUATION_TASK = yes` for a future explicitly approved evaluation task only.
 - The old failure-centered corpus remains blocked and must not be used for evaluation or paper evidence.
 - CCT graph construction, CCT scoring, calibration, refinement variants, ablations, empirical hypothesis tests, and paper-ready result tables remain blocked until explicitly authorized in a later task.
+
+## Task 18F descriptor-augmented artifact reviewability gate
+- Descriptor-augmented feature artifacts are governed as generated audit/review artifacts, not as evaluation outputs.
+- Normal Git tracking keeps source code, tests, compact reports, readiness gates, manifests, and a compact sample artifact only.
+- The full descriptor-augmented feature JSON is reproducible with `python scripts/build_cct_descriptor_augmented_features.py` and is excluded from normal Git review to avoid oversized diffs.
+- If full generated artifacts must later be versioned, use Git LFS or release artifact handling rather than unreviewable normal Git JSON diffs.
+- Current readiness remains conservative: `AUGMENTED_FEATURE_LAYER_READY_FOR_PROTOCOL_REVISION = no` and `AUGMENTED_FEATURE_LAYER_READY_FOR_SCORING = no`.
+- Task 18F does not authorize scoring, ranking, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical testing, empirical hypothesis testing, or paper-ready result tables.
+
+## Task 19 CCT negative diagnostic evidence and revision-path gate
+- Current hypothesis status is locked as: H1 unsupported under current frozen uncalibrated scoring/features; H2 unsupported under current frozen uncalibrated scoring/features; H3 blocked because calibration before feature validity is premature; H4 blocked; H6 open but unsupported by scoring evidence.
+- Immediate calibration of current features is blocked.
+- Immediate descriptor-augmented scoring is blocked because descriptor readiness remains `AUGMENTED_FEATURE_LAYER_READY_FOR_PROTOCOL_REVISION = no` and `AUGMENTED_FEATURE_LAYER_READY_FOR_SCORING = no`.
+- Selected next methodological direction is Option C: a future explicitly scoped redesign of CCT graph/feature extraction around richer non-position causal-flow edges before scoring.
+- Claim boundaries are restricted to methodology, protocol, benchmark construction, leakage correction, full-trace representation, artifact governance, and diagnostic findings; no superiority claim is currently allowed.
+- Task 19 does not authorize scoring, ranking, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical testing, corpus changes, gold-label changes, or paper-ready result tables.
+
+## Task 20 CCT causal-flow edge redesign specification gate
+- Task 20 defines a specification-only richer non-position causal-flow edge redesign; no graph-builder behavior, descriptor extraction, feature extraction, scoring, ranking, calibration, grid search, LOSO, refinement, ablation, statistical testing, corpus content, or gold labels are changed.
+- Candidate edge types are `constraint_shift_edge`, `evidence_conflict_edge`, `evidence_omission_edge`, `downstream_dependency_edge`, `correction_opportunity_edge`, `correction_attempt_edge`, `unresolved_caveat_edge`, `semantic_collision_edge`, `tool_alignment_edge`, and `cross_agent_dependency_edge`.
+- Anti-leakage constraints forbid private labels, gold fields, H6 private evidence, label rationales, provenance, correctness fields, ranks/scores, and scenario/perturbation fields as extraction inputs.
+- Anti-shortcut constraints forbid extraction based on step position, agent identity, fixed scenario names, perturbation labels, builder-specific phrases alone, or content volume alone.
+- Readiness is locked as `CCT_CAUSAL_FLOW_EDGE_SPEC_READY_FOR_SAMPLE_PROTOTYPE = yes` and `CCT_CAUSAL_FLOW_EDGES_READY_FOR_SCORING = no`.
+- The next recommended task is a sample-only edge prototype with leakage/shortcut audits and no gold-label comparison or scoring.
+
+## Task 20A sample-only CCT causal-flow edge prototype gate
+- Task 20A permits a compact sample-only prototype for `constraint_shift_edge`, `downstream_dependency_edge`, `tool_alignment_edge`, `cross_agent_dependency_edge`, and conservative `semantic_collision_edge` extraction from prediction views only.
+- Edge extraction must consume `make_full_trace_prediction_view(record)` output; raw records containing private labels/provenance are rejected by the extraction module.
+- The sample is capped below full-corpus scope and selected deterministically without gold labels; full-corpus edge extraction remains blocked.
+- Readiness is locked as `CCT_CAUSAL_FLOW_EDGE_SAMPLE_PROTOTYPE_READY_FOR_FULL_AUDIT = no` and `CCT_CAUSAL_FLOW_EDGES_READY_FOR_SCORING = no`.
+- No graph-builder behavior, existing feature extraction, descriptor extraction, scoring configuration, corpus content, gold labels, scoring, ranking, calibration, grid search, LOSO, refinement, ablation, statistical testing, or paper-ready result tables are authorized by this task.
+
+## Task 20B sample causal-edge refinement and provenance gate
+- Task 20B refines only the sample causal-edge prototype to reduce template-pattern repetition; extraction remains capped to the deterministic sample and prediction-view-only inputs.
+- `configs/cct_scoring.yaml` is absent in the current branch checkout, untracked, not ignored by current `.gitignore`, and has no history in current Git history; this is recorded as a protocol provenance anomaly, not silently repaired.
+- Recreating or modifying `configs/cct_scoring.yaml` remains blocked pending a separate explicitly authorized protocol-recovery task with authoritative provenance.
+- Readiness remains `CCT_CAUSAL_FLOW_EDGE_SAMPLE_PROTOTYPE_READY_FOR_FULL_AUDIT = no` and `CCT_CAUSAL_FLOW_EDGES_READY_FOR_SCORING = no`.
+- No full-corpus extraction, graph-builder behavior change, feature extraction, descriptor extraction, scoring, ranking, gold/H6 comparison, calibration, grid search, LOSO, scoring refinement, ablation, statistical testing, corpus change, gold-label change, or paper-ready result table is authorized by this task.
+
+## Task 20C frozen CCT scoring config provenance recovery gate
+- Task 20C confirms that `configs/cct_scoring.yaml` is absent from the current branch checkout, untracked by `git ls-files`, not ignored by current ignore rules, and unavailable in current local Git history for the inspected path.
+- Known Task 17/18 commit-path lookups for `configs/cct_scoring.yaml` did not locate an authoritative local source.
+- Because no authoritative local source was found, recovery is blocked and the file must not be recreated from memory or inferred from reports.
+- A separate explicitly authorized protocol-recovery task must obtain the authoritative frozen file from PR #22, an archived patch, previous branch, saved artifact, or signed protocol record, then verify SHA256 `053f19066923d8d22d27b22727e75876f939f2a60480484c4028eabd07ad0855`.
+- No scoring, ranking, full-corpus edge extraction, gold/H6 comparison, calibration, grid search, LOSO, scoring refinement, ablation, statistical testing, corpus change, gold-label change, or paper-ready result table is authorized by this task.
+
+## Task 20D external CCT scoring config recovery gate
+- Task 20D attempted external recovery using the repository URL recorded in `.git/FETCH_HEAD` (`https://github.com/jinkxmonsoon/AAMAS`), including PR #22 and remote branch fetches, but access failed with HTTP CONNECT 403 in this environment.
+- No local archived patch, saved bundle, signed protocol record, exported artifact, or known Task 17/18 commit-path source contained `configs/cct_scoring.yaml`.
+- Recovery status is locked as `PERMANENT_RECOVERY_BLOCKED_IN_CURRENT_ENVIRONMENT`; `configs/cct_scoring.yaml` was not recreated or modified.
+- Until an authoritative external source is provided, Task 18 frozen-config diagnostics are not reproducible from the current repository checkout.
+- No scoring, ranking, full-corpus extraction, gold/H6 comparison, calibration, grid search, LOSO, scoring refinement, ablation, statistical testing, corpus change, gold-label change, or paper-ready result table is authorized by this task.
+
+## Task 20F frozen CCT scoring config hash mismatch adjudication gate
+- Task 20F adjudicates the mismatch between the expected frozen `configs/cct_scoring.yaml` SHA256 and PR #22 candidate contents; it is provenance adjudication only.
+- Expected frozen SHA256 remains `053f19066923d8d22d27b22727e75876f939f2a60480484c4028eabd07ad0855` and was not modified.
+- PR #22 raw candidate SHA256 `435c4703a90171c8bf246a4fa9e188e70800c66c5e9446d19f74de94b32bb` and PR-visible candidate SHA256 `1fe4362714cf79a69bd81d0ffe8b82403cc2c2e99abc9f6c7579ed0253278a4a` are classified as non-matching candidate configs.
+- No non-matching config is restored as authoritative; `configs/cct_scoring.yaml` remains absent until an exact byte source matching the expected frozen hash is provided.
+- Task 18 diagnostics are locked as recorded diagnostic evidence that is not reproducible from the current checkout and not paper-ready empirical evidence.
+- Scoring, ranking, gold/H6 comparison, full-corpus edge extraction, calibration, grid search, LOSO, scoring refinement, ablation, statistical testing, and paper-ready result tables remain blocked.
