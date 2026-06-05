@@ -1,0 +1,2579 @@
+{
+  "artifact_type": "cct_redesigned_graph_inventory",
+  "summary": {
+    "base_duplicate_graph_signature_count": 419,
+    "base_edge_count_distribution": {
+      "8": 420
+    },
+    "base_graph_signature_unique_count": 1,
+    "causal_flow_edge_count_distribution": {
+      "4": 60,
+      "5": 15,
+      "6": 345
+    },
+    "clean_redesigned_signature_unique_count": 6,
+    "edge_counts_by_type": {
+      "cross_agent_dependency_edge": 840,
+      "downstream_dependency_edge": 705,
+      "sequence_edge": 1680,
+      "tool_alignment_edge": 840,
+      "visible_handoff_edge": 1680
+    },
+    "node_count_distribution": {
+      "5": 420
+    },
+    "perturbation_type_distribution": {
+      "non_causal_textual_distraction": 84,
+      "none": 84,
+      "paraphrase": 84,
+      "partial_observability": 84,
+      "tool_output_truncation": 84
+    },
+    "perturbed_redesigned_signature_unique_count": 6,
+    "redesigned_duplicate_graph_signature_count": 414,
+    "redesigned_graph_signature_unique_count": 6,
+    "scenario_group_distribution": {
+      "clean_broken_handoff": 60,
+      "complex_collaboration": 60,
+      "cross_agent_propagation": 60,
+      "recoverable_irreversible_failure": 60,
+      "same_agent_continuation": 60,
+      "semantic_collision": 60,
+      "tool_evidence_usage": 60
+    },
+    "template_sensitivity_carryover": {
+      "carryover_status": "present_audit_condition",
+      "from_task23_repeated_relation_note_patterns": 74,
+      "from_task23_repeated_source_target_patterns": 3
+    },
+    "total_edge_count_distribution": {
+      "12": 60,
+      "13": 15,
+      "14": 345
+    },
+    "total_redesigned_graphs": 420,
+    "total_traces_processed": 420
+  },
+  "trace_audit_metadata": [
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C01_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C02_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C03_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C04_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C05_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C06_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C07_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C08_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C09_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C10_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C11_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C12_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C01_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C02_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C03_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C04_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C05_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C06_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C07_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C08_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C09_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C10_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C11_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C12_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C01_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C02_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C03_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C04_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C05_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C06_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C07_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C08_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C09_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C10_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C11_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C12_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C01_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C02_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C03_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C04_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C05_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C06_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C07_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C08_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C09_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C10_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C11_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C12_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C01_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C02_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C03_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C04_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C05_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C06_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C07_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C08_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C09_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C10_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C11_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C12_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C01_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C02_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C03_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C04_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C05_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C06_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C07_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C08_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C09_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C10_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C11_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C12_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C01_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C02_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C03_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C04_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C05_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C06_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C07_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C08_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C09_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C10_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C11_clean"
+    },
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C12_clean"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C01_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C01_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C01_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C02_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C02_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C02_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C02_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C03_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C03_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C03_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C03_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C04_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C04_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C04_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C04_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C05_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C05_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C05_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C05_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C06_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C06_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C06_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C06_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C07_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C07_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C07_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C07_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C08_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C08_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C08_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C08_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C09_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C09_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C09_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C09_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C10_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C10_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C10_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C10_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C11_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C11_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C11_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C11_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C12_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C12_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C12_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C12_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C01_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C01_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C01_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C01_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C02_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C02_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C02_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C02_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C03_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C03_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C03_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C03_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C04_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C04_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C04_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C04_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C05_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C05_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C05_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C05_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C06_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C06_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C06_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C06_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C07_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C07_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C07_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C07_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C08_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C08_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C08_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C08_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C09_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C09_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C09_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C09_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C10_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C10_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C10_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C10_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C11_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C11_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C11_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C11_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C12_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C12_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C12_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "tool_evidence_usage",
+      "trace_id": "JV1FTMAIN_TOOEVI_C12_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C01_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C01_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C01_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C01_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C02_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C02_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C02_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C02_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C03_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C03_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C03_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C03_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C04_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C04_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C04_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C04_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C05_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C05_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C05_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C05_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C06_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C06_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C06_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C06_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C07_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C07_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C07_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C07_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C08_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C08_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C08_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C08_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C09_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C09_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C09_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C09_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C10_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C10_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C10_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C10_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C11_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C11_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C11_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C11_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C12_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C12_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C12_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "same_agent_continuation",
+      "trace_id": "JV1FTMAIN_SAMAGE_C12_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C01_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C01_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C01_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C01_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C02_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C02_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C02_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C02_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C03_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C03_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C03_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C03_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C04_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C04_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C04_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C04_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C05_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C05_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C05_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C05_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C06_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C06_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C06_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C06_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C07_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C07_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C07_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C07_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C08_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C08_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C08_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C08_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C09_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C09_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C09_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C09_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C10_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C10_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C10_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C10_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C11_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C11_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C11_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C11_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C12_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C12_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C12_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "cross_agent_propagation",
+      "trace_id": "JV1FTMAIN_CROAGE_C12_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C01_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C01_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C01_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C01_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C02_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C02_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C02_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C02_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C03_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C03_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C03_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C03_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C04_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C04_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C04_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C04_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C05_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C05_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C05_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C05_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C06_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C06_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C06_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C06_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C07_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C07_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C07_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C07_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C08_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C08_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C08_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C08_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C09_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C09_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C09_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C09_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C10_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C10_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C10_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C10_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C11_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C11_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C11_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C11_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C12_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C12_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C12_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "recoverable_irreversible_failure",
+      "trace_id": "JV1FTMAIN_RECIRR_C12_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C01_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C01_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C01_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C01_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C02_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C02_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C02_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C02_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C03_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C03_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C03_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C03_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C04_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C04_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C04_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C04_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C05_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C05_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C05_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C05_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C06_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C06_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C06_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C06_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C07_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C07_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C07_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C07_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C08_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C08_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C08_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C08_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C09_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C09_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C09_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C09_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C10_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C10_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C10_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C10_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C11_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C11_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C11_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C11_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C12_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C12_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C12_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "semantic_collision",
+      "trace_id": "JV1FTMAIN_SEMCOL_C12_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C01_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C01_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C01_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C01_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C02_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C02_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C02_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C02_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C03_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C03_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C03_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C03_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C04_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C04_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C04_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C04_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C05_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C05_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C05_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C05_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C06_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C06_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C06_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C06_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C07_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C07_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C07_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C07_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C08_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C08_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C08_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C08_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C09_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C09_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C09_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C09_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C10_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C10_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C10_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C10_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C11_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C11_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C11_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C11_non_causal_textual_distraction_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C12_paraphrase_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "tool_output_truncation",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C12_tool_output_truncation_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "partial_observability",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C12_partial_observability_P01"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "non_causal_textual_distraction",
+      "scenario_group_audit_metadata": "complex_collaboration",
+      "trace_id": "JV1FTMAIN_COMCOL_C12_non_causal_textual_distraction_P01"
+    }
+  ]
+}
