@@ -168,3 +168,55 @@ All protocol, evaluation, and experiment-design changes must be recorded here.
 - Verified schema validation, prediction-view validation, diagnostic sufficiency, candidate plausibility, lexical leakage, label/H6 distributions, perturbation coverage, and shortcut-baseline thresholds.
 - Status: full-trace main corpus is ready only for a future explicitly approved evaluation task; the old failure-centered corpus remains blocked.
 - No CCT scoring, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table was produced.
+
+## 2026-06-05 — Task 18F descriptor-augmented artifact reviewability
+- Change type: artifact governance and reproducibility documentation only; no experimental protocol, labels, metrics, baselines, seeds, dataset composition, or claims were changed.
+- Added a reproducible builder for descriptor-augmented feature rows and compact reports/manifests documenting the generated artifact policy.
+- Excluded the full generated descriptor-augmented JSON from normal Git review and kept a compact tracked sample artifact for code review.
+- Recorded expected row count 2,100, join completeness 2,100/2,100, leakage status PASS, and conservative readiness decisions in reports/manifests.
+- No scoring, ranking, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical test, empirical hypothesis test, or paper-ready result table was produced.
+
+## 2026-06-05 — Task 19 CCT diagnostic evidence consolidation and revision-path gate
+- Change type: evidence synthesis and claim-boundary documentation only; no experimental protocol, labels, metrics, baselines, seeds, dataset composition, scoring outputs, or performance claims were changed.
+- Added negative diagnostic evidence synthesis, revision-path decision gate, claim-boundary update, and next-experiment recommendation reports under `results/reports/journal_v1_full_trace_cct/`.
+- Preserved H1/H2 as unsupported under current frozen uncalibrated scoring/features and recorded H3 as blocked until feature validity improves.
+- Selected Option C as the recommended future path: redesign CCT graph/feature extraction around richer non-position causal-flow edges before calibration or scoring.
+- Explicitly rejected immediate calibration and descriptor-augmented scoring as premature.
+- No scoring, ranking, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was produced.
+
+## 2026-06-05 — Task 20 CCT causal-flow edge redesign specification
+- Change type: representation specification and governance documentation only; no experimental protocol, labels, metrics, baselines, seeds, dataset composition, graph-builder behavior, feature extraction, scoring outputs, or performance claims were changed.
+- Added `docs/16_cct_causal_flow_edge_redesign_spec.md` defining candidate richer non-position causal-flow edge types and strict representation/descriptor/scoring separation.
+- Added risk, readiness, and claim-boundary reports under `results/reports/journal_v1_full_trace_cct/`.
+- Locked readiness as `CCT_CAUSAL_FLOW_EDGE_SPEC_READY_FOR_SAMPLE_PROTOTYPE = yes` and `CCT_CAUSAL_FLOW_EDGES_READY_FOR_SCORING = no`.
+- Recommended a future sample-only edge prototype; no implementation, scoring, ranking, gold-label comparison, calibration, grid search, LOSO, refinement, ablation, statistical test, corpus change, gold-label change, or paper-ready result table was produced.
+
+## 2026-06-05 — Task 20A sample-only CCT causal-flow edge prototype
+- Change type: sample-only representation prototype and audit documentation; no experimental protocol, labels, metrics, baselines, seeds, dataset composition, scoring configuration, graph-builder behavior, scoring outputs, or performance claims were changed.
+- Added a prediction-view-only causal-edge module and sample prototype script for selected Task 20 edge types.
+- Generated compact sample raw edge output, optional sample graph preview, inventory, leakage audit, template-sensitivity report, and readiness gate.
+- Locked readiness as `CCT_CAUSAL_FLOW_EDGE_SAMPLE_PROTOTYPE_READY_FOR_FULL_AUDIT = no` and `CCT_CAUSAL_FLOW_EDGES_READY_FOR_SCORING = no`.
+- No full-corpus extraction, scoring, ranking, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, refinement, ablation, statistical test, corpus change, gold-label change, or paper-ready result table was produced.
+
+## 2026-06-05 — Task 20B sample causal-edge refinement and provenance check
+- Change type: sample-only prototype refinement and protocol provenance documentation; no experimental protocol, labels, metrics, baselines, seeds, dataset composition, scoring configuration, graph-builder behavior, scoring outputs, or performance claims were changed.
+- Refined sample edge identifiers and extraction notes to reduce repeated extraction-note and repeated source-target patterns while preserving prediction-view-only extraction.
+- Added provenance, template-sensitivity refinement, refined inventory, and refined readiness reports under `results/reports/journal_v1_full_trace_cct/`.
+- Recorded that `configs/cct_scoring.yaml` is absent from this checkout, untracked, not ignored, and absent from current Git history; no recovery or recreation was performed.
+- Readiness remains `CCT_CAUSAL_FLOW_EDGE_SAMPLE_PROTOTYPE_READY_FOR_FULL_AUDIT = no` and `CCT_CAUSAL_FLOW_EDGES_READY_FOR_SCORING = no`.
+- No full-corpus extraction, scoring, ranking, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, scoring refinement, ablation, statistical test, corpus change, gold-label change, or paper-ready result table was produced.
+
+## 2026-06-05 — Task 20C frozen CCT scoring config provenance recovery
+- Change type: protocol provenance recovery documentation only; no experimental protocol, labels, metrics, baselines, seeds, dataset composition, scoring configuration, scoring outputs, or performance claims were changed.
+- Confirmed `configs/cct_scoring.yaml` is absent from the current checkout and not available from local path history or known Task 17/18 commit-path lookups.
+- Added provenance recovery report, blocked-state validation script, and tests documenting that the file was not recreated from memory.
+- Recovery status: `RECOVERY_BLOCKED_NO_AUTHORITATIVE_LOCAL_SOURCE`; expected frozen SHA256 remains `053f19066923d8d22d27b22727e75876f939f2a60480484c4028eabd07ad0855`.
+- No scoring, ranking, full-corpus extraction, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, scoring refinement, ablation, statistical test, corpus change, gold-label change, or paper-ready result table was produced.
+
+## 2026-06-05 — Task 20D external frozen CCT scoring config recovery attempt
+- Change type: external protocol provenance recovery documentation only; no experimental protocol, labels, metrics, baselines, seeds, dataset composition, scoring configuration, scoring outputs, or performance claims were changed.
+- Attempted external recovery from GitHub PR #22 and remote heads using the repository URL recorded in `.git/FETCH_HEAD`; fetch access failed with HTTP CONNECT 403 in this environment.
+- No local archived patch, saved bundle, signed protocol record, exported artifact, or known commit-path source contained `configs/cct_scoring.yaml`.
+- Recovery status: `PERMANENT_RECOVERY_BLOCKED_IN_CURRENT_ENVIRONMENT`; `configs/cct_scoring.yaml` was not recreated from memory or inferred reports.
+- Task 18 frozen-config diagnostics must be treated as not reproducible from the current repository checkout until an authoritative external source is provided.
+- No scoring, ranking, full-corpus extraction, gold/H6 comparison, calibration, grid search, LOSO, scoring refinement, ablation, statistical test, corpus change, gold-label change, or paper-ready result table was produced.
