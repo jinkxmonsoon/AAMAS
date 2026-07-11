@@ -308,3 +308,9 @@ All protocol, evaluation, and experiment-design changes must be recorded here.
 - Locked H1-R and H2-R as unsupported under the current candidate-step feature representation and recorded that the rescue path stops.
 - Clarified Path B article claims and forbidden claims: the work may claim protocol-first benchmark/diagnostic governance and negative findings, but not CCT performance superiority, robustness, calibration readiness, or H1/H2 validation.
 - This was a documentation and evidence-consolidation task only: no new scoring, new CCT variants, tuning, calibration, grid search, LOSO, ablation, statistical testing, corpus/gold-label changes, or scoring-config restoration was performed.
+
+## 2026-06-06 — Task 32 final manuscript evidence package freeze
+- Added final manuscript-package freeze artifacts under `results/reports/journal_v1_rescue/`: artifact index, numbers crosscheck, claims-to-evidence crosswalk, and do-not-claim list.
+- Verified the frozen evidence package around the existing Task 30/31 state without running new experiments: best CCT rescue variant remains 0.00% step accuracy, strongest baseline remains 25.00%, H1-R/H2-R remain unsupported, and Path B remains the manuscript framing.
+- Clarified which reports, raw outputs, manifests, and claim-boundary documents are stable inputs for manuscript writing.
+- This was a verification/documentation-only task: no scoring, new CCT variants, tuning, calibration, ablation, statistical tests, corpus/gold-label changes, hypothesis revisions, or new experimental claims were introduced.

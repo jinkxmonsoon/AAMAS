@@ -309,3 +309,10 @@ Locked status after Task 15:
 - Path B remains locked as the article backbone: protocol-first benchmark construction, diagnostic representation governance, leakage/shortcut/provenance controls, and negative findings about naive structural and current causal-flow features.
 - Forbidden claims remain blocked: automatic attribution improvement, CCT baseline outperformance, perturbation robustness, calibration readiness, H1/H2 validation, production readiness, external generalization, and paper-ready performance superiority.
 - Non-action confirmation: no new scoring, ranking, gold/H6 comparison, tuning, calibration, grid search, LOSO, ablation, statistical test, corpus/gold-label change, scoring-config restoration, or new performance table was performed.
+
+## Task 32 final manuscript evidence package freeze
+- Task 32 freezes the final experimental evidence package for manuscript writing; it verifies report/raw-output/manifest/claim-boundary presence and internal consistency only.
+- Frozen package documents: `final_artifact_index_for_manuscript.md`, `final_numbers_crosscheck.md`, `final_claims_to_evidence_crosswalk.md`, and `final_do_not_claim_list.md` under `results/reports/journal_v1_rescue/`.
+- The frozen scientific state remains unchanged: H1/H2 and H1-R/H2-R are unsupported; H3/H4 remain blocked; H6/H6-R remain open but unsupported; Path B remains the article backbone.
+- The package may support manuscript claims about protocol-first benchmarking, diagnostic representation, leakage/shortcut/provenance governance, and negative findings under current features.
+- The package does not authorize new scoring, new CCT variants, tuning, calibration, ablation, statistical testing, corpus/gold-label edits, hypothesis revisions, or new experimental claims.

@@ -478,3 +478,9 @@ Chronological decisions, assumptions, caveats, and methodological notes.
 - Path B remains the appropriate scientific backbone: full-trace benchmark/protocol construction, leakage/shortcut/provenance governance, and representation-degeneracy diagnostics.
 - Caveat: leakage safety and within-trace distinguishability were necessary but not sufficient; the final rescue demonstrates that fixed current CCT feature formulas can still behave like a position shortcut.
 - Non-actions: no additional scoring, tuning, calibration, grid search, LOSO, ablation, statistical tests, CCT variants, corpus/gold-label edits, or scoring-config restoration were introduced.
+
+## 2026-06-06 — Task 32 frozen evidence package for manuscript writing
+- Created the final manuscript evidence package index and crosswalk so writers can locate stable artifacts without reopening the experiment loop.
+- Crosschecked frozen numbers for manuscript use: 420 final rescue traces, 2,100 candidate-step rows, 17 candidate-step global feature vectors, 99.19% duplicate candidate-step vectors, 6 redesigned trace-level vectors, best CCT rescue accuracy 0.00%, strongest baseline 25.00%, H1-R/H2-R unsupported.
+- Preserved the interpretation boundary: numbers are diagnostic/negative evidence only and must not be framed as optimized performance tables or CCT superiority evidence.
+- Non-actions: no experiments, scoring, variants, tuning, calibration, ablation, statistical tests, corpus/gold-label edits, hypothesis revisions, or new experimental claims were introduced.
