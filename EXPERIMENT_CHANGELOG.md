@@ -301,3 +301,10 @@ All protocol, evaluation, and experiment-design changes must be recorded here.
 - Baselines included majority_step, always_s2, random_step_seeded, first_step, last_step, flat_log_lexical_baseline, and non_cct_visible_heuristic_baseline; CCT variants used fixed deterministic formulas.
 - Final result: best CCT variant did not exceed the strongest baseline; H1-R and H2-R are unsupported and the rescue path stops under the current feature representation.
 - Non-action confirmation: no calibration, tuning, grid search, LOSO, ablation, statistical test, corpus change, gold-label change, scoring-config restoration, or paper-ready result table was performed.
+
+## 2026-06-06 — Task 31 final experimental evidence consolidation after failed rescue
+- Added final evidence-summary reports under `results/reports/journal_v1_rescue/` to consolidate the post-rescue experimental state for article drafting.
+- Recorded Task 30 baseline-vs-CCT outcome as diagnostic negative evidence: strongest baseline `majority_step` = 25.00% step accuracy; best CCT variant `cct_candidate_step_structural_sum` = 0.00% step accuracy; all CCT rescue variants collapsed to `s1`.
+- Locked H1-R and H2-R as unsupported under the current candidate-step feature representation and recorded that the rescue path stops.
+- Clarified Path B article claims and forbidden claims: the work may claim protocol-first benchmark/diagnostic governance and negative findings, but not CCT performance superiority, robustness, calibration readiness, or H1/H2 validation.
+- This was a documentation and evidence-consolidation task only: no new scoring, new CCT variants, tuning, calibration, grid search, LOSO, ablation, statistical testing, corpus/gold-label changes, or scoring-config restoration was performed.

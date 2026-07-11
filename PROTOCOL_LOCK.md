@@ -301,3 +301,11 @@ Locked status after Task 15:
 - Baselines included majority_step, always_s2, random_step_seeded, first_step, last_step, flat_log_lexical_baseline, and non_cct_visible_heuristic_baseline; flat_log_text_similarity_baseline was omitted because the prediction view does not expose terminal-outcome text.
 - Final decision: H1-R = unsupported; H2-R = unsupported; the CCT rescue path stops under the current feature representation and the project returns to Path B negative-evidence framing.
 - No immediate paper performance claim, calibration, robustness/statistical validation, or scoring continuation is authorized.
+
+## Task 31 final experimental evidence consolidation gate
+- Task 31 consolidates evidence after the failed Task 30 rescue evaluation; it is an article-evidence summary task only and introduces no new CCT variant or experimental run.
+- Final rescue state: best CCT variant `cct_candidate_step_structural_sum` had 0.00% step accuracy, while the strongest baseline `majority_step` had 25.00% step accuracy; all evaluated CCT variants collapsed to `s1`.
+- Final hypothesis state: H1-R = unsupported, H2-R = unsupported, H6-R = not tested/unsupported; the rescue path is closed under the current feature representation.
+- Path B remains locked as the article backbone: protocol-first benchmark construction, diagnostic representation governance, leakage/shortcut/provenance controls, and negative findings about naive structural and current causal-flow features.
+- Forbidden claims remain blocked: automatic attribution improvement, CCT baseline outperformance, perturbation robustness, calibration readiness, H1/H2 validation, production readiness, external generalization, and paper-ready performance superiority.
+- Non-action confirmation: no new scoring, ranking, gold/H6 comparison, tuning, calibration, grid search, LOSO, ablation, statistical test, corpus/gold-label change, scoring-config restoration, or new performance table was performed.

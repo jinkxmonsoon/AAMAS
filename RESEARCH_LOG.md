@@ -471,3 +471,10 @@ Chronological decisions, assumptions, caveats, and methodological notes.
 - Outcome: best CCT variant had 0.00% step accuracy; strongest baseline had 25.00% step accuracy. H1-R = unsupported and H2-R = unsupported.
 - Decision: rescue path stops under the current feature representation; return to Path B negative-evidence framing.
 - Non-action confirmation: no tuning, calibration, grid search, LOSO, ablation, statistical test, corpus change, gold-label change, scoring-config restoration, or paper-ready performance claim was performed.
+
+## 2026-06-06 — Task 31 final evidence synthesis after rescue stop
+- Consolidated the final experimental state after Task 30 closed the rescue path: H1-R and H2-R remain unsupported because the best fixed-formula CCT rescue variant scored 0.00% against a 25.00% strongest baseline and collapsed to `s1` on all 420 traces.
+- Article-use interpretation: the final rescue results are suitable only as negative/diagnostic evidence that the current causal-flow candidate-step featureization does not support attribution; they are not paper-ready performance-superiority evidence.
+- Path B remains the appropriate scientific backbone: full-trace benchmark/protocol construction, leakage/shortcut/provenance governance, and representation-degeneracy diagnostics.
+- Caveat: leakage safety and within-trace distinguishability were necessary but not sufficient; the final rescue demonstrates that fixed current CCT feature formulas can still behave like a position shortcut.
+- Non-actions: no additional scoring, tuning, calibration, grid search, LOSO, ablation, statistical tests, CCT variants, corpus/gold-label edits, or scoring-config restoration were introduced.
