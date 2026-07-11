@@ -24,3 +24,21 @@ results/**/*.pdf
 .DS_Store
 .vscode/
 .idea/
+
+# Descriptor-augmented CCT feature artifact policy (Task 18F)
+# Full generated artifact is reproducible and excluded from normal Git review.
+results/raw/journal_v1_full_trace_cct/cct_descriptor_augmented_features.json
+!results/raw/journal_v1_full_trace_cct/sample_cct_descriptor_augmented_features.json
+!results/raw/journal_v1_full_trace_cct/cct_causal_edge_sample_prototype.json
+
+# Task 23 generated strong-edge full-corpus artifact (reproducible; tracked sample only)
+results/raw/journal_v1_full_trace_cct/cct_strong_edges_full_corpus.json
+!results/raw/journal_v1_full_trace_cct/sample_cct_strong_edges_full_corpus.json
+
+# Task 24 generated redesigned graph artifact (reproducible; tracked sample only)
+data/interim/journal_v1_full_trace_cct_redesigned/cct_redesigned_graphs.jsonl
+!data/interim/journal_v1_full_trace_cct_redesigned/sample_cct_redesigned_graphs.jsonl
+!data/interim/journal_v1_full_trace_cct_redesigned/cct_redesigned_graph_inventory.json
+
+# Task 24A redesigned feature audit artifact (reviewable tracked JSON)
+!results/raw/journal_v1_full_trace_cct_redesigned/cct_redesigned_features.json
