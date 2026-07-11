@@ -313,3 +313,174 @@ Chronological decisions, assumptions, caveats, and methodological notes.
 - Shortcut-baseline outcome: all diagnostic baselines remained below the 70% review threshold and 85% block threshold.
 - Caveat: this is corpus-generation and audit evidence only; it is not an empirical hypothesis test and does not compare CCT or any method.
 - Scientific result: no CCT scoring, calibration, refinement, ablation, empirical hypothesis test, or paper-ready result table was produced; the old failure-centered corpus remains blocked.
+
+## 2026-06-05 — Task 18F descriptor-augmented artifact reviewability
+- Reasoning decision: the full descriptor-augmented feature JSON is a generated artifact with 2,100 row objects, so it should be regenerated locally and excluded from normal Git when it makes review diffs oversized.
+- Reviewability policy: retain scripts, tests, compact reports, readiness gate, manifest, and a representative sample artifact in Git; use Git LFS or release artifact handling if full generated artifacts require future versioning.
+- Reproducibility evidence to preserve: `python scripts/build_cct_descriptor_augmented_features.py` regenerates the full local artifact, sample artifact, reports, and manifest from the frozen full-trace corpus.
+- Scientific caveat: descriptor-layer readiness remains conservative (`AUGMENTED_FEATURE_LAYER_READY_FOR_PROTOCOL_REVISION = no`; `AUGMENTED_FEATURE_LAYER_READY_FOR_SCORING = no`) because this task addresses artifact reviewability rather than empirical adequacy.
+- Non-action confirmation: no scoring, ranking, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical test, empirical hypothesis test, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 19 CCT diagnostic evidence consolidation and revision-path gate
+- Reasoning decision: negative Tasks 18–18F evidence is best interpreted as a representation/feature-validity failure rather than a tie-breaking or calibration-only failure.
+- Primary path selected: Option C, a future redesign of CCT graph/feature extraction around richer non-position causal-flow edges before any scoring or calibration.
+- Rejected path: immediate calibration, because calibrating proxy-heavy weak features risks overfitting and does not address construct validity.
+- Rejected path: immediate descriptor scoring, because descriptor augmentation remains useful for audit/review but not ready for protocol revision or scoring.
+- Claim caveat: H1/H2 remain unsupported under current frozen uncalibrated scoring/features; H6 remains open but unsupported by scoring evidence; no superiority claim is allowed.
+- Non-action confirmation: no scoring, ranking, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 20 CCT causal-flow edge redesign specification
+- Reasoning decision: because Task 19 diagnosed a representation/feature-validity failure, the next safe step is to specify richer non-position causal-flow edges before any scoring or calibration.
+- Candidate edge families selected: constraint shift, evidence conflict/omission, downstream dependency, correction opportunity/attempt, unresolved caveat, semantic collision, tool alignment, and cross-agent dependency.
+- Risk caveat: omission, unresolved-caveat, conflict, and semantic-collision edges are especially sensitive to lexical templates and require conservative sample-prototype audits before any scoring use.
+- Readiness decision: `CCT_CAUSAL_FLOW_EDGE_SPEC_READY_FOR_SAMPLE_PROTOTYPE = yes`; `CCT_CAUSAL_FLOW_EDGES_READY_FOR_SCORING = no`.
+- Next recommended task: sample-only edge prototype producing compact review artifacts and leakage/shortcut audits without gold-label comparison.
+- Non-action confirmation: no graph-builder change, feature extraction, descriptor extraction, scoring, ranking, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 20A sample-only CCT causal-flow edge prototype
+- Reasoning decision: implement only a compact sample prototype to test feasibility and reviewability while keeping full-corpus extraction and scoring blocked.
+- Implemented sample edge types: constraint shift, downstream dependency, tool alignment, cross-agent dependency, and conservative semantic collision.
+- Risk caveat: edge counts show sample extraction is feasible but template-sensitive; the readiness gate remains `CCT_CAUSAL_FLOW_EDGE_SAMPLE_PROTOTYPE_READY_FOR_FULL_AUDIT = no` pending stronger audit-rule refinement.
+- Leakage decision: extraction consumes only full-trace prediction views and rejects raw records with private/provenance fields.
+- Next recommended task: refine deterministic rules and sample audit criteria before considering any full-audit expansion; scoring remains blocked.
+- Non-action confirmation: no full-corpus extraction, graph-builder change, feature extraction, descriptor extraction, scoring, ranking, gold-label comparison, H6-label comparison, protocol revision, calibration, grid search, LOSO, refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 20B sample causal-edge refinement and provenance check
+- Provenance finding: on branch `work` at pre-commit HEAD `ee0da26d34d442b95a1a9e2a5e36c9d4de7204cb`, `configs/cct_scoring.yaml` was absent from `configs/`, untracked in the current index, not ignored by current `.gitignore`, and absent from current Git history.
+- Reasoning decision: treat the missing scoring config as a protocol provenance anomaly requiring a separate recovery task; do not recreate or modify it inside Task 20B.
+- Refinement decision: make edge node IDs trace-scoped and extraction notes relation-specific with forbidden-term filtering to reduce review-artifact template repetition without adding new extraction inputs.
+- Template sensitivity result: repeated extraction-note patterns changed from 6 to 0 and repeated source-target patterns changed from 13 to 0, while edge counts by type stayed unchanged.
+- Readiness decision: `CCT_CAUSAL_FLOW_EDGE_SAMPLE_PROTOTYPE_READY_FOR_FULL_AUDIT = no`; `CCT_CAUSAL_FLOW_EDGES_READY_FOR_SCORING = no`, because sample scope, fixed modality lexicon, perturbation robustness, and scoring-config provenance remain blockers.
+- Non-action confirmation: no full-corpus extraction, graph-builder change, feature extraction, descriptor extraction, scoring, ranking, gold-label comparison, H6-label comparison, protocol revision, calibration, grid search, LOSO, scoring refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 20C frozen CCT scoring config provenance recovery
+- Provenance finding: `configs/cct_scoring.yaml` is absent from branch `work` at pre-change HEAD `ad176d14750b47cdf654f3fa9a56645b76c060b6`; it is not tracked under `configs`, not ignored by current rules, and has no current local Git history at that path.
+- Local recovery attempts: repository search, expected-hash search, variant-name search, and known Task 17/18 commit-path `git show` checks did not locate an authoritative frozen config.
+- Reasoning decision: recovery is blocked because no authoritative local source was found; recreating the file from memory or inferred report fragments would violate protocol provenance.
+- Required external action: open a separate protocol-recovery task to retrieve the authoritative file from PR #22, archived patch, previous branch, saved artifact, or signed protocol record, then verify SHA256 `053f19066923d8d22d27b22727e75876f939f2a60480484c4028eabd07ad0855`.
+- Non-action confirmation: no scoring, ranking, full-corpus extraction, gold-label comparison, H6-label comparison, protocol revision, calibration, grid search, LOSO, scoring refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 20D external frozen CCT scoring config recovery attempt
+- External recovery attempt: `.git/FETCH_HEAD` identified `https://github.com/jinkxmonsoon/AAMAS`; attempts to fetch PR #22 and all remote heads from that URL failed with HTTP CONNECT 403 in this environment.
+- Local external-artifact search found no archived patch, saved bundle, signed protocol record, exported artifact, or `*cct_scoring*` source containing the expected frozen config.
+- Reasoning decision: mark recovery as `PERMANENT_RECOVERY_BLOCKED_IN_CURRENT_ENVIRONMENT` rather than recreating a protocol file from memory or inferred fragments.
+- Scientific caveat: Task 18 diagnostics that depended on the frozen scoring config are not reproducible from the current repository checkout until an authoritative external config is supplied and verified against SHA256 `053f19066923d8d22d27b22727e75876f939f2a60480484c4028eabd07ad0855`.
+- Non-action confirmation: no scoring, ranking, full-corpus extraction, gold-label comparison, H6-label comparison, protocol revision, calibration, grid search, LOSO, scoring refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 20F scoring-config hash adjudication
+- Provenance finding: branch `work` at pre-change HEAD `76de0a20afe8b99d27007d184fc7fc292bc163e0` still lacks `configs/cct_scoring.yaml`.
+- Adjudication finding: the expected frozen SHA256 `053f19066923d8d22d27b22727e75876f939f2a60480484c4028eabd07ad0855` did not match the PR #22 raw candidate hash `435c4703a90171c8bf246a4fa9e188e70800c66c5e9446d19f74de94b32bb` or the PR-visible candidate hash `1fe4362714cf79a69bd81d0ffe8b82403cc2c2e99abc9f6c7579ed0253278a4a`.
+- Normalization caveat: LF, CRLF, final-newline, UTF-8 BOM, and safe JSON/YAML canonicalization checks recorded in the adjudication report did not yield the expected frozen hash.
+- Reasoning decision: do not restore any non-matching candidate and do not alter the expected hash; instead classify PR #22 as a non-matching candidate source.
+- Scientific boundary: Task 18 remains internal diagnostic evidence with recorded outputs, not reproducible from the current checkout and not paper-ready empirical evidence unless the exact frozen config is later recovered.
+- Required external action: provide the exact raw file, archive, patch, bundle, or signed artifact whose byte content hashes to the expected frozen SHA256, or explicitly authorize a future new-protocol freeze using a candidate config without claiming Task 18 reproduction.
+- Non-action confirmation: no scoring, ranking, full-corpus extraction, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, scoring refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 21 representation-only edge robustness audit
+- Provenance boundary: the Task 20F scoring-config mismatch remains unresolved; `configs/cct_scoring.yaml` is absent and scoring remains blocked.
+- Sample audit finding: the 14-trace sample contains 7 clean and 7 perturbed traces, with matched clean/perturbed edge counts for all implemented edge types.
+- Robustness finding: `downstream_dependency_edge`, `tool_alignment_edge`, and `cross_agent_dependency_edge` are the strongest candidates for a future representation-only audit, provided content-relation requirements remain mandatory.
+- Limitation finding: `constraint_shift_edge` remains sparse and fixed-modality-lexicon dependent; `semantic_collision_edge` remains highly lexical/template-dependent.
+- Readiness decision: keep `REPRESENTATION_ONLY_EDGE_ROBUSTNESS_READY_FOR_FULL_CORPUS_AUDIT = no` and `CCT_CAUSAL_FLOW_EDGES_READY_FOR_SCORING = no`; recommend further sample refinement or a separately scoped narrowed representation-only audit.
+- Non-action confirmation: no config restoration/recreation, scoring, ranking, full-corpus extraction, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, scoring refinement, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 22 strong-edge stress-test decision
+- Scoring provenance remains blocked: `configs/cct_scoring.yaml` is absent and Task 18 remains not reproducible from the current checkout.
+- Stress-test subset: 14 sample traces and 78 in-scope edges across `downstream_dependency_edge`, `tool_alignment_edge`, and `cross_agent_dependency_edge`.
+- Clean/perturbed descriptive stability: downstream dependency 11/11, tool alignment 14/14, and cross-agent dependency 14/14.
+- Relation-validity finding: downstream dependency spans non-adjacent deltas as well as adjacent ones; tool alignment requires visible tool-output/output-message relation; cross-agent dependency includes both adjacent and two-step content relations.
+- Limitation: normalized phrase-pattern repetition persists, so a future full-corpus audit must report phrase-template concentration and remain representation-only.
+- Readiness decision: authorize only a future narrowed representation-only full-corpus audit for the three strongest edge types; keep all scoring readiness locked to no.
+- Non-action confirmation: no config restoration/recreation, scoring, ranking, full-corpus extraction, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 23 full-corpus strong-edge audit
+- Provenance boundary: `configs/cct_scoring.yaml` remains absent/blocked and Task 18 remains not reproducible from the current checkout; Task 23 does not depend on scoring configuration.
+- Full-corpus representation audit processed 420 traces and generated 2,385 in-scope edges: 705 `downstream_dependency_edge`, 840 `tool_alignment_edge`, and 840 `cross_agent_dependency_edge`.
+- Distribution audit: 84 clean traces and 336 perturbed traces; clean edges were 141 downstream, 168 tool-alignment, and 168 cross-agent; perturbed edges were 564 downstream, 672 tool-alignment, and 672 cross-agent.
+- Relation audit: 525 adjacent edges, 1,860 non-adjacent edges, 840 same-agent relations, and 1,545 cross-agent relations.
+- Template-sensitivity caveat: repeated relation-note patterns remain substantial, especially tool align/ignore and repeated alternate/caveat content patterns, so graph-redesign integration remains representation-only and must not be treated as scoring evidence.
+- Artifact policy: full JSON is reproducible locally and ignored by normal Git; compact sample and manifest are tracked for review.
+- Readiness decision: full-corpus strong-edge audit ready and graph-redesign integration ready under representation-only constraints; causal-flow edges remain not ready for scoring.
+- Non-action confirmation: no config restoration/recreation, scoring, ranking, full-corpus scoring extraction, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 24 redesigned graph representation audit
+- Provenance boundary: `configs/cct_scoring.yaml` remains absent/blocked and Task 18 remains not reproducible from the current checkout; redesigned graph integration does not depend on scoring configuration.
+- Graph integration scope: only `downstream_dependency_edge`, `tool_alignment_edge`, and `cross_agent_dependency_edge` are integrated with prediction-view-safe base sequence/handoff edges.
+- Full-corpus graph audit processed 420 traces into 420 redesigned graphs with causal-flow edge counts 705 downstream, 840 tool-alignment, and 840 cross-agent.
+- Degeneracy audit: base graph signature uniqueness was 1 and redesigned uniqueness was 6; duplicate signatures decreased from 419 to 414, indicating reduced graph degeneracy but not scoring validity.
+- Template-sensitivity carryover from Task 23 remains an audit condition: repeated relation-note and source-target patterns are documented, so any future feature audit must remain representation-only.
+- Artifact policy: full redesigned graph JSONL is reproducible locally and ignored by normal Git; compact sample, inventory JSON, reports, and manifest are tracked.
+- Readiness decision: `CCT_REDESIGNED_GRAPHS_READY_FOR_FEATURE_AUDIT = yes`; `CCT_REDESIGNED_GRAPHS_READY_FOR_SCORING = no`.
+- Non-action confirmation: no config restoration/recreation, scoring, ranking, full-corpus scoring extraction, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 24A redesigned feature audit
+- Provenance boundary: `configs/cct_scoring.yaml` remains absent/blocked and Task 18 remains not reproducible from the current checkout; feature extraction is independent from scoring configuration.
+- Feature extraction output: 420 trace-level rows and 13 representation-only causal-flow structural features derived from redesigned graph artifacts.
+- Diversity finding: redesigned feature vectors have 6 unique signatures and 414 duplicate vectors, improving over the previous base graph duplicate-signature count of 419 but still leaving substantial degeneracy.
+- Variance finding: several features remain constant across the corpus (`tool_alignment_edge_count`, `cross_agent_dependency_edge_count`, `cross_agent_dependency_count`, `tool_alignment_relation_count`).
+- Readiness decision: `CCT_REDESIGNED_FEATURES_READY_FOR_PROTOCOL_REVIEW = no` and `CCT_REDESIGNED_FEATURES_READY_FOR_SCORING = no`; recommend additional representation refinement before protocol review.
+- Non-action confirmation: no config restoration/recreation, scoring, ranking, full-corpus scoring extraction, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 25 backbone decision
+- Decision: select Path B and pivot the article to protocol-first benchmark construction, full-trace representation, leakage/shortcut audits, causal-flow representation diagnostics, and negative findings.
+- Evidence basis: Task 18 scoring did not support H1/H2 and is not reproducible from the current checkout; Tasks 20–24A improved representation auditability but left redesigned features highly degenerate.
+- Rejected Path A because 6 unique redesigned feature vectors across 420 traces and 414 duplicate vectors do not justify a new scoring protocol v2.
+- Rejected Path C as the default because the work remains viable as a bounded protocol/benchmark/diagnostic-representation paper.
+- Claim boundary: allowed claims concern representation, protocol governance, leakage/shortcut control, benchmark foundation, and negative findings; forbidden claims include performance superiority, robustness, calibration readiness, and H1/H2 validation.
+- Recommended next task: article outline and artifact-curation pass, not new experiments.
+- Non-action confirmation: no scoring, ranking, full-corpus scoring extraction, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 26 article backbone and evidence map
+- Decision carried forward: Path B remains the scientific backbone; the manuscript should be written as a protocol-first benchmark and diagnostic-representation paper, not a performance-superiority CCT method paper.
+- Added article backbone documents covering tentative titles, abstract skeleton, section-level claims, evidence mapping, contribution candidates, results organization, limitations/threats, and journal positioning.
+- Evidence emphasis: full-trace representation, schema migration away from failure-centered leakage risk, leakage/shortcut/provenance controls, Task 18 negative diagnostics with reproducibility boundary, descriptor/causal-flow audits, and Task 24A feature degeneracy.
+- Claim boundary: allowed claims concern representation, protocol governance, benchmark construction, artifact reproducibility, and negative findings; forbidden claims include automatic attribution improvement, baseline outperformance, robustness, calibration readiness, H1/H2 validation, and paper-ready performance evidence.
+- Recommended next task: draft the manuscript introduction and contribution/limitations sections from the new backbone documents.
+- Non-action confirmation: no code implementation, scoring, ranking, full-corpus scoring extraction, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, scoring-config restoration, or paper-ready performance table was performed.
+
+## 2026-06-05 — Task 27 front matter and introduction draft
+- Drafted first article-facing text after the Path B pivot: title options, preferred title, abstract v1, introduction v1, contribution block, keyword options, and editorial positioning note.
+- Maintained framing as protocol-first benchmark construction and diagnostic representation auditing, with full-trace schema, leakage/shortcut/provenance governance, and negative diagnostic findings as the article backbone.
+- Preserved claim boundary: no CCT attribution improvement, baseline outperformance, robust performance, calibration readiness, H1/H2 validation, production readiness, or paper-ready performance evidence is claimed.
+- Recommended next writing task: draft methods/protocol section and reproducibility/artifact-governance section from the Task 26 evidence map and the Task 27 front matter.
+- Non-action confirmation: no code implementation, scoring, ranking, gold-label comparison, H6-label comparison, calibration, grid search, LOSO, ablation, statistical test, empirical hypothesis test, corpus change, gold-label change, scoring-config restoration, or paper-ready performance table was performed.
+
+## 2026-06-05 — Task 28 decisive hypothesis-rescue protocol
+- Designed a short rescue protocol to test whether CCT can still be supported after negative Task 18 diagnostics and Task 24A feature degeneracy.
+- Rationale: Task 24A trace-level redesigned features are too degenerate, but this does not falsify CCT if candidate step-level causal-flow features can add signal under prediction-view constraints.
+- Hypotheses: H1-R tests CCT step-level causal-flow attribution over trivial/flat-log baselines; H2-R tests added causal-flow signal beyond flat baselines; H6-R is optional and leakage-bounded for propagation/irreversibility/recoverability.
+- Key blockers before scoring: leakage failure, >50% duplicate candidate-step feature vectors, feature families constant in >95% of candidate rows, forbidden-field use, position/agent dependence, or flat-log/trivial baselines beating CCT within the pre-specified margin.
+- Readiness decision: protocol ready for implementation of a non-scoring feature-readiness dry run, but not ready for immediate scoring.
+- Non-action confirmation: no experiment execution, scoring, ranking, gold-label comparison, H6-label comparison, calibration, tuning, grid search, LOSO, ablation, statistical test, corpus change, gold-label change, scoring-config restoration, or paper-ready result table was performed.
+
+## 2026-06-05 — Task 29 rescue candidate-step feature-readiness dry run
+- Provenance boundary: `configs/cct_scoring.yaml` remains absent/blocked; the dry run uses `configs/rescue_experiment_v1.yaml` and does not depend on or reproduce Task 18 scoring.
+- Implemented candidate-step feature extraction from `make_full_trace_prediction_view(record)` only, with raw-record rejection and no private/gold/provenance/scoring fields in output.
+- Dry-run output: 2,100 candidate-step rows across 420 traces, using 18 candidate-step causal-flow/visible structural features.
+- Leakage audit: PASS with 0 findings and no gold/H6 comparison.
+- Degeneracy finding: 17 unique feature vectors, 2,083 duplicate vectors (99.19%), no within-trace duplicate rows, and three >95% constant feature families (`has_visible_tool_call`, `has_visible_tool_output`, `has_visible_step_notes`).
+- Position/identity risk: no explicit position or agent-identity feature columns; position risk remains review because feature distributions differ systematically across s1–s5.
+- Readiness decision: `RESCUE_CANDIDATE_STEP_FEATURES_READY_FOR_SCORING = no`; recommend one candidate-step feature redesign pass or stopping the rescue path before any scoring.
+- Non-action confirmation: no scoring, ranking, gold-label comparison, H6-label comparison, calibration, tuning, grid search, LOSO, ablation, statistical test, corpus change, gold-label change, scoring-config restoration, or paper-ready result table was performed.
+
+## 2026-06-06 — Task 30 final rescue decision
+- Methodological amendment: although global candidate-step feature duplication was 99.19%, Task 29 found within-trace duplicate rows = 0, so one high-risk fixed-formula intra-trace rescue evaluation was allowed.
+- Leakage boundary: predictions were generated from prediction-view-safe candidate-step features and visible fields before private labels were read for evaluation; scenario/perturbation metadata was used only after prediction for stratified reporting.
+- Baseline set: majority_step, always_s2, random_step_seeded, first_step, last_step, flat_log_lexical_baseline, and non_cct_visible_heuristic_baseline. `flat_log_text_similarity_baseline` was omitted because terminal-outcome text is not exposed by the prediction view.
+- CCT variants: structural_sum, flow_only, tool_alignment_only, cross_agent_only, and visible_relation_overlap, all using fixed deterministic formulas with no learned weights.
+- Outcome: best CCT variant had 0.00% step accuracy; strongest baseline had 25.00% step accuracy. H1-R = unsupported and H2-R = unsupported.
+- Decision: rescue path stops under the current feature representation; return to Path B negative-evidence framing.
+- Non-action confirmation: no tuning, calibration, grid search, LOSO, ablation, statistical test, corpus change, gold-label change, scoring-config restoration, or paper-ready performance claim was performed.
+
+## 2026-06-06 — Task 31 final evidence synthesis after rescue stop
+- Consolidated the final experimental state after Task 30 closed the rescue path: H1-R and H2-R remain unsupported because the best fixed-formula CCT rescue variant scored 0.00% against a 25.00% strongest baseline and collapsed to `s1` on all 420 traces.
+- Article-use interpretation: the final rescue results are suitable only as negative/diagnostic evidence that the current causal-flow candidate-step featureization does not support attribution; they are not paper-ready performance-superiority evidence.
+- Path B remains the appropriate scientific backbone: full-trace benchmark/protocol construction, leakage/shortcut/provenance governance, and representation-degeneracy diagnostics.
+- Caveat: leakage safety and within-trace distinguishability were necessary but not sufficient; the final rescue demonstrates that fixed current CCT feature formulas can still behave like a position shortcut.
+- Non-actions: no additional scoring, tuning, calibration, grid search, LOSO, ablation, statistical tests, CCT variants, corpus/gold-label edits, or scoring-config restoration were introduced.
+
+## 2026-06-06 — Task 32 frozen evidence package for manuscript writing
+- Created the final manuscript evidence package index and crosswalk so writers can locate stable artifacts without reopening the experiment loop.
+- Crosschecked frozen numbers for manuscript use: 420 final rescue traces, 2,100 candidate-step rows, 17 candidate-step global feature vectors, 99.19% duplicate candidate-step vectors, 6 redesigned trace-level vectors, best CCT rescue accuracy 0.00%, strongest baseline 25.00%, H1-R/H2-R unsupported.
+- Preserved the interpretation boundary: numbers are diagnostic/negative evidence only and must not be framed as optimized performance tables or CCT superiority evidence.
+- Non-actions: no experiments, scoring, variants, tuning, calibration, ablation, statistical tests, corpus/gold-label edits, hypothesis revisions, or new experimental claims were introduced.

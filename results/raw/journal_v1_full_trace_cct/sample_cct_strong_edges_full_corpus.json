@@ -1,0 +1,314 @@
+{
+  "artifact_type": "sample_cct_strong_edges_full_corpus_audit",
+  "edge_counts_by_type": {
+    "cross_agent_dependency_edge": 4,
+    "downstream_dependency_edge": 4,
+    "tool_alignment_edge": 4
+  },
+  "edge_types_in_scope": [
+    "cross_agent_dependency_edge",
+    "downstream_dependency_edge",
+    "tool_alignment_edge"
+  ],
+  "edge_types_out_of_scope": [
+    "constraint_shift_edge",
+    "semantic_collision_edge",
+    "evidence_conflict_edge",
+    "evidence_omission_edge",
+    "correction_opportunity_edge",
+    "correction_attempt_edge",
+    "unresolved_caveat_edge"
+  ],
+  "sample_rule": "first clean trace and first perturbed trace from the full-corpus strong-edge audit payload",
+  "sample_trace_count": 2,
+  "source_full_artifact": "results/raw/journal_v1_full_trace_cct/cct_strong_edges_full_corpus.json",
+  "total_edge_count": 12,
+  "trace_audit_metadata": [
+    {
+      "case_variant_audit_metadata": "clean",
+      "perturbation_type_audit_metadata": "none",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C01_clean"
+    },
+    {
+      "case_variant_audit_metadata": "perturbed",
+      "perturbation_type_audit_metadata": "paraphrase",
+      "scenario_group_audit_metadata": "clean_broken_handoff",
+      "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01"
+    }
+  ],
+  "traces": [
+    {
+      "edge_count": 6,
+      "edges": [
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": false,
+            "step_delta": 1
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_clean:edge:001",
+          "edge_type": "downstream_dependency_edge",
+          "extraction_notes": "content_dependency_s1_to_s2_budget_check_handoff_trace_JV1FTMAIN_CLEBRO_C01_clean",
+          "extraction_rule_id": "visible_content_dependency_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s1:visible_content",
+          "source_step_id": "s1",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s2:dependent_action",
+          "target_step_id": "s2",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+          "visible_fields_used": [
+            "input_message",
+            "output_message",
+            "tool_output"
+          ]
+        },
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": false,
+            "step_delta": 2
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_clean:edge:002",
+          "edge_type": "downstream_dependency_edge",
+          "extraction_notes": "content_dependency_s1_to_s3_alternate_budget_check_trace_JV1FTMAIN_CLEBRO_C01_clean",
+          "extraction_rule_id": "visible_content_dependency_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s1:visible_content",
+          "source_step_id": "s1",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s3:dependent_action",
+          "target_step_id": "s3",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+          "visible_fields_used": [
+            "input_message",
+            "output_message",
+            "tool_output"
+          ]
+        },
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": true,
+            "step_delta": 0
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_clean:edge:003",
+          "edge_type": "tool_alignment_edge",
+          "extraction_notes": "tool_relation_align_s1_overlap_4_trace_JV1FTMAIN_CLEBRO_C01_clean",
+          "extraction_rule_id": "tool_output_to_step_output_overlap_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s1:tool_output",
+          "source_step_id": "s1",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s1:step_output",
+          "target_step_id": "s1",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+          "visible_fields_used": [
+            "tool_call",
+            "tool_output",
+            "output_message"
+          ]
+        },
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": true,
+            "step_delta": 0
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_clean:edge:004",
+          "edge_type": "tool_alignment_edge",
+          "extraction_notes": "tool_relation_align_s2_overlap_3_trace_JV1FTMAIN_CLEBRO_C01_clean",
+          "extraction_rule_id": "tool_output_to_step_output_overlap_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s2:tool_output",
+          "source_step_id": "s2",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s2:step_output",
+          "target_step_id": "s2",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+          "visible_fields_used": [
+            "tool_call",
+            "tool_output",
+            "output_message"
+          ]
+        },
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": false,
+            "step_delta": 1
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_clean:edge:005",
+          "edge_type": "cross_agent_dependency_edge",
+          "extraction_notes": "cross_agent_content_s1_to_s2_budget_check_handoff_trace_JV1FTMAIN_CLEBRO_C01_clean",
+          "extraction_rule_id": "cross_agent_content_overlap_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s1:cross_agent_content",
+          "source_step_id": "s1",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s2:cross_agent_use",
+          "target_step_id": "s2",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+          "visible_fields_used": [
+            "handoff_from",
+            "handoff_to",
+            "input_message",
+            "output_message",
+            "tool_output"
+          ]
+        },
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": false,
+            "step_delta": 2
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_clean:edge:006",
+          "edge_type": "cross_agent_dependency_edge",
+          "extraction_notes": "cross_agent_content_s1_to_s3_alternate_budget_check_trace_JV1FTMAIN_CLEBRO_C01_clean",
+          "extraction_rule_id": "cross_agent_content_overlap_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s1:cross_agent_content",
+          "source_step_id": "s1",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_clean:step:s3:cross_agent_use",
+          "target_step_id": "s3",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_clean",
+          "visible_fields_used": [
+            "handoff_from",
+            "handoff_to",
+            "input_message",
+            "output_message",
+            "tool_output"
+          ]
+        }
+      ],
+      "trace_id": "JV1FTMAIN_CLEBRO_C01_clean"
+    },
+    {
+      "edge_count": 6,
+      "edges": [
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": false,
+            "step_delta": 1
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01:edge:001",
+          "edge_type": "downstream_dependency_edge",
+          "extraction_notes": "content_dependency_s1_to_s2_budget_check_handoff_trace_FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "extraction_rule_id": "visible_content_dependency_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s1:visible_content",
+          "source_step_id": "s1",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s2:dependent_action",
+          "target_step_id": "s2",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "visible_fields_used": [
+            "input_message",
+            "output_message",
+            "tool_output"
+          ]
+        },
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": false,
+            "step_delta": 2
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01:edge:002",
+          "edge_type": "downstream_dependency_edge",
+          "extraction_notes": "content_dependency_s1_to_s3_alternate_budget_check_trace_FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "extraction_rule_id": "visible_content_dependency_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s1:visible_content",
+          "source_step_id": "s1",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s3:dependent_action",
+          "target_step_id": "s3",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "visible_fields_used": [
+            "input_message",
+            "output_message",
+            "tool_output"
+          ]
+        },
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": true,
+            "step_delta": 0
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01:edge:003",
+          "edge_type": "tool_alignment_edge",
+          "extraction_notes": "tool_relation_align_s1_overlap_4_trace_FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "extraction_rule_id": "tool_output_to_step_output_overlap_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s1:tool_output",
+          "source_step_id": "s1",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s1:step_output",
+          "target_step_id": "s1",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "visible_fields_used": [
+            "tool_call",
+            "tool_output",
+            "output_message"
+          ]
+        },
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": true,
+            "step_delta": 0
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01:edge:004",
+          "edge_type": "tool_alignment_edge",
+          "extraction_notes": "tool_relation_align_s2_overlap_3_trace_FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "extraction_rule_id": "tool_output_to_step_output_overlap_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s2:tool_output",
+          "source_step_id": "s2",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s2:step_output",
+          "target_step_id": "s2",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "visible_fields_used": [
+            "tool_call",
+            "tool_output",
+            "output_message"
+          ]
+        },
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": false,
+            "step_delta": 1
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01:edge:005",
+          "edge_type": "cross_agent_dependency_edge",
+          "extraction_notes": "cross_agent_content_s1_to_s2_budget_check_handoff_trace_FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "extraction_rule_id": "cross_agent_content_overlap_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s1:cross_agent_content",
+          "source_step_id": "s1",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s2:cross_agent_use",
+          "target_step_id": "s2",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "visible_fields_used": [
+            "handoff_from",
+            "handoff_to",
+            "input_message",
+            "output_message",
+            "tool_output"
+          ]
+        },
+        {
+          "audit_relation": {
+            "same_agent_visible_audit": false,
+            "step_delta": 2
+          },
+          "edge_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01:edge:006",
+          "edge_type": "cross_agent_dependency_edge",
+          "extraction_notes": "cross_agent_content_s1_to_s3_alternate_budget_check_trace_FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "extraction_rule_id": "cross_agent_content_overlap_v0",
+          "extraction_version": "cct_causal_edge_sample_v0",
+          "source_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s1:cross_agent_content",
+          "source_step_id": "s1",
+          "target_node_id": "trace:JV1FTMAIN_CLEBRO_C01_paraphrase_P01:step:s3:cross_agent_use",
+          "target_step_id": "s3",
+          "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01",
+          "visible_fields_used": [
+            "handoff_from",
+            "handoff_to",
+            "input_message",
+            "output_message",
+            "tool_output"
+          ]
+        }
+      ],
+      "trace_id": "JV1FTMAIN_CLEBRO_C01_paraphrase_P01"
+    }
+  ]
+}
