@@ -1,0 +1,136 @@
+protocol_id: rescue_experiment_v1
+protocol_version: 1
+status: design_only_not_executed
+created_utc: '2026-06-05'
+
+non_action_lock:
+  run_scoring: false
+  rank_steps: false
+  calibrate: false
+  tune_weights: false
+  grid_search: false
+  loso: false
+  ablate: false
+  statistical_tests: false
+  modify_corpus_or_gold_labels: false
+  produce_paper_ready_tables: false
+
+hypotheses:
+  H1_R: prediction-view-safe CCT step-level causal-flow features improve failure-step attribution over trivial and flat-log baselines.
+  H2_R: causal-flow graph features add diagnostic signal beyond flat textual/metadata baselines under identical prediction-view constraints.
+  H6_R: causal-flow relation patterns provide diagnostic signal for propagation, irreversibility, or recoverability only without private-label leakage.
+
+dataset:
+  version: BRACIS-Journal-v1
+  corpus_path: data/processed/journal_v1_full_trace/main_full_trace_all.jsonl
+  expected_trace_count: 420
+  prediction_view_function: cctdiag.io.full_trace_views.make_full_trace_prediction_view
+  evaluation_unit_h1_h2: candidate_step
+  evaluation_unit_h6: trace_or_candidate_relation_if_enabled
+
+randomness:
+  deterministic: true
+  seed: 20260605
+  seeded_components:
+    - random_step_seeded
+
+forbidden_input_fields:
+  - private_labels
+  - gold_failure_step
+  - gold_failure_agent
+  - gold_irreversibility
+  - gold_propagation
+  - gold_recoverability
+  - label_rationale
+  - propagation_evidence
+  - irreversibility_evidence
+  - recovery_opportunity
+  - provenance
+  - scenario_group
+  - perturbation_type
+  - case_variant
+  - correctness
+  - score
+  - rank
+
+audit_only_metadata:
+  - scenario_group
+  - perturbation_type
+  - case_variant
+
+baselines:
+  required:
+    - majority_step
+    - always_s2
+    - random_step_seeded
+    - first_step
+    - last_step
+    - flat_log_lexical_baseline
+    - flat_log_text_similarity_baseline_if_feasible
+    - non_cct_visible_heuristic_baseline
+
+cct_variants:
+  required:
+    - cct_structural_old_features_diagnostic_only
+    - cct_strong_edge_step_level_features
+    - cct_causal_flow_relation_features
+    - cct_visible_text_free_graph_features
+  optional:
+    - cct_lightweight_visible_textual_relation_features_if_leakage_safe
+
+feature_families:
+  trace_level:
+    - trace_visible_summary_counts
+    - total_causal_flow_edge_count
+  step_level_candidate:
+    - incoming_causal_flow_degree
+    - outgoing_causal_flow_degree
+    - downstream_dependency_participation
+    - tool_alignment_participation
+    - cross_agent_dependency_participation
+    - non_adjacent_dependency_count
+    - visible_handoff_participation
+  graph_level:
+    - graph_density
+    - edge_type_diversity
+    - duplicate_graph_signature
+  edge_level:
+    - edge_type
+    - adjacency_distance
+    - visible_field_family_used
+    - cross_agent_relation_flag
+    - tool_output_relation_flag
+
+metrics:
+  H1_R:
+    primary: failure_step_accuracy
+    secondary:
+      - macro_step_accuracy_audit_only_by_scenario_group
+      - macro_step_accuracy_audit_only_by_perturbation_type
+  H2_R:
+    primary: failure_step_accuracy_vs_strongest_flat_log_baseline
+    secondary:
+      - macro_improvement_audit_only
+  H6_R:
+    enabled_by_default: false
+    metrics_if_enabled:
+      - propagation_macro_f1_or_accuracy
+      - irreversibility_macro_f1_or_accuracy
+      - recoverability_macro_f1_or_accuracy
+
+acceptance_criteria:
+  H1_R:
+    minimum_step_accuracy_margin_over_best_baseline: 0.10
+    alternate_macro_step_accuracy_margin: 0.10
+  H2_R:
+    minimum_step_accuracy_margin_over_best_flat_log: 0.10
+  H6_R:
+    requires_separate_leakage_safe_enablement: true
+
+hard_blockers:
+  max_duplicate_candidate_step_feature_vector_rate: 0.50
+  max_constant_feature_rate: 0.95
+  leakage_audit_must_pass: true
+  forbidden_fields_in_inputs_block_run: true
+  position_or_agent_identity_dependence_blocks_claims: true
+  flat_log_win_or_tie_within_margin_blocks_h2_r: true
